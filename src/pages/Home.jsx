@@ -1,4 +1,3 @@
-import Introduction from "../components/introduction/Introduction";
 import Profile from "../components/profile/Profile";
 import WorkProcess from "../components/workProcess/WorkProcess";
 import Portfolio from "../components/portfolio/Portfolio";
@@ -15,7 +14,6 @@ const Home = () => {
     <div className="relative">
       <div className="introduction-profile-background">
         <div className="content">
-          <Introduction />
           <Profile />
         </div>
       </div>

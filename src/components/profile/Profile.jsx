@@ -6,7 +6,7 @@ import SocialMedia from "../common/socialMedia/SocialMedia";
 const Profile = () => {
   return (
     <div
-      className={`relative mx-4 xxl:mx-0.5 -bottom-20 lg:-bottom-28 z-10 rounded-2xl bg-white drop-shadow-2xl max-xl:mb-5 shadow-white xl:p-28 lg:p-20 md:p-16 sm:p-10 p-4`}
+      className={`relative mx-4 xxl:mx-0.5 -mt-14 lg:-mt-20 z-10 rounded-2xl drop-shadow-2xl max-xl:mb-5 shadow-white xl:p-28 lg:p-20 md:p-16 sm:p-10 p-4`}
       id="profile"
     >
       <div className="flex max-md:flex-col justify-between items-center gap-6">

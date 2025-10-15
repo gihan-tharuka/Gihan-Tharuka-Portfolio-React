@@ -1,4 +1,4 @@
-import logo from "../../../assets/logo.png";
+// logo image removed; using inline 'G' badge instead
 
 /* Footer nabLinks */
 const navItems = [
@@ -17,9 +17,11 @@ const Footer = () => {
     <div className="pt-25 md:pt-40 content max-2xl:px-3">
       <div className="flex max-md:flex-col justify-between mx-0 items-center h-full w-full text-neutral-200">
         <a href="#" className="flex items-center border-0">
-          <img src={logo} className="h-8 sm:h-14 rounded-2xl" alt="logo" />
+          <div className="flex items-center justify-center h-8 w-8 sm:h-14 sm:w-14 rounded-full bg-picto-primary text-white font-semibold text-lg sm:text-2xl">
+            G
+          </div>
           <p className="text-3xl sm:text-[32px] my-auto ms-[12px] font-semibold">
-            Brooklyn
+            Gihan Tharuka
           </p>
         </a>
         <div className="mx-7 max-md:my-7 text-center">
@@ -35,11 +37,11 @@ const Footer = () => {
           ))}
         </div>
         <p className="text-[12px] sm:text-[16px]">
-          Copyright &copy; {copyrightYear} Picto.
+          Copyright &copy; {copyrightYear} Gihan.
         </p>
       </div>
-      <p className="text-white text-center max-xs:text-[12px] max-md:text-[14px] w-full py-10">
-        Developed with ❤️ by{" "}
+      <p className="text-[#2A374A] text-center max-xs:text-[12px] max-md:text-[14px] w-full py-10">
+        Developed withby{" "}
         <a
           href="https://www.themewagon.com"
           className="underline font-bold"

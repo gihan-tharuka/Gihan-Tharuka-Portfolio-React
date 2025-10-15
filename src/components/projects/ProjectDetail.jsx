@@ -38,31 +38,16 @@ const ProjectDetail = () => {
             </section>
 
             <section className="mb-6">
-              <h2 className="text-xl font-semibold">Challenge</h2>
-              <p className="text-gray-600 mt-2">{project.challenge}</p>
-            </section>
-
-            <section className="mb-6">
-              <h2 className="text-xl font-semibold">Approach</h2>
-              <p className="text-gray-600 mt-2">{project.approach}</p>
-            </section>
-
-            <section className="mb-6">
-              <h2 className="text-xl font-semibold">Solution</h2>
-              <p className="text-gray-600 mt-2">{project.solution}</p>
-            </section>
-
-            <section className="mb-6">
-              <h2 className="text-xl font-semibold">Impact</h2>
-              <div className="grid sm:grid-cols-2 gap-4 mt-4">
-                {project.impact.map((it, idx) => (
-                  <div key={idx} className="bg-white border rounded p-4">
-                    <p className="font-semibold">{it.metric}</p>
-                    <p className="text-sm text-gray-500">Before: {it.before}</p>
-                    <p className="text-sm text-gray-500">After: {it.after}</p>
-                  </div>
-                ))}
-              </div>
+              <h2 className="text-xl font-semibold">Features</h2>
+              {project.features && project.features.length > 0 ? (
+                <ul className="list-disc list-inside mt-2 text-gray-600">
+                  {project.features.map((f, i) => (
+                    <li key={i}>{f}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="text-gray-500 mt-2">No features listed for this project.</p>
+              )}
             </section>
 
             <section>

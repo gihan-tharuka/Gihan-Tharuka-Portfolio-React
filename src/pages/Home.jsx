@@ -22,19 +22,22 @@ const Home = () => {
         <WorkProcess />
       </div> */}
       <Portfolio />
+      <div className="introduction-profile-background">
       <Expertise />
+      </div>
+      
       <div className="bg-gray-900">
         <WorkTogether />
       </div>
       {/* <div className="blog-background">
         <Blog />
       </div> */}
-      <div className="bg-soft-white">
+      <div className="introduction-profile-background">
         <div className="px-4 sm:px-6 md:px-12 lg:px-20">
           <Profession />
         </div>
       </div>
-      <HappyClients />
+      {/* <HappyClients /> */}
       {/* <Testimonial />
       <Contact /> */}
     </div>

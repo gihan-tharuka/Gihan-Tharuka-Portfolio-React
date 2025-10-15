@@ -50,6 +50,19 @@ const ProjectDetail = () => {
               )}
             </section>
 
+            <section className="mb-6">
+              <h2 className="text-xl font-semibold">Concepts used</h2>
+              {project.conceptsUsed && project.conceptsUsed.length > 0 ? (
+                <div className="flex flex-wrap gap-2 mt-3">
+                  {project.conceptsUsed.map((c, idx) => (
+                    <span key={idx} className="text-xs px-3 py-1 bg-gray-100 border rounded-full">{c}</span>
+                  ))}
+                </div>
+              ) : (
+                <p className="text-gray-500 mt-2">No architectural concepts listed.</p>
+              )}
+            </section>
+
             <section>
               <h2 className="text-xl font-semibold mb-4">Gallery</h2>
               <div className="grid sm:grid-cols-2 gap-4">
@@ -66,12 +79,22 @@ const ProjectDetail = () => {
               <p className="font-semibold">{project.role}</p>
 
               <div className="mt-4">
-                <p className="text-sm text-gray-500">Tools</p>
+                <p className="text-sm text-gray-500">Languages & frameworks</p>
                 <div className="flex flex-wrap gap-2 mt-2">
                   {project.tools.map((t) => (
                     <span key={t} className="text-xs px-2 py-1 bg-gray-100 rounded">{t}</span>
                   ))}
                 </div>
+                {project.otherServices && project.otherServices.length > 0 && (
+                  <div className="mt-4">
+                    <p className="text-sm text-gray-500">Other services</p>
+                    <div className="flex flex-wrap gap-2 mt-2">
+                      {project.otherServices.map((s) => (
+                        <span key={s} className="text-xs px-2 py-1 bg-gray-50 border rounded">{s}</span>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
 
               <div className="mt-4">

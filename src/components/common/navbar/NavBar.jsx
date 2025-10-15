@@ -6,6 +6,7 @@ const navItems = [
   { id: 2, name: "About", url: "profile" },
   // { id: 3, name: "Process", url: "work-process" },
   { id: 4, name: "Portfolio", url: "portfolio" },
+  { id: 5, name: "Projects", url: "/projects" },
   // { id: 5, name: "Blog", url: "blog" },
   { id: 6, name: "Services", url: "services" },
 ];
@@ -18,21 +19,31 @@ const handleMenuClick = () => {
 
 const menu = navItems.map((item) => (
   <li key={item.id} onMouseDown={(e) => e.preventDefault()}>
-    <Link
-      onClick={handleMenuClick}
-      to={item.url.toLowerCase()}
-      smooth={true}
-      duration={1000}
-      spy={true}
-      offset={-140}
-      activeStyle={{
-        backgroundColor: "#ff7a00",
-        color: "white",
-      }}
-      className={`hover:text-picto-primary px-5 py-3 mx-1`}
-    >
-      {item.name}
-    </Link>
+    {item.url && item.url.startsWith("/") ? (
+      <a
+        href={item.url}
+        className={`hover:text-picto-primary px-5 py-3 mx-1`}
+        onClick={handleMenuClick}
+      >
+        {item.name}
+      </a>
+    ) : (
+      <Link
+        onClick={handleMenuClick}
+        to={item.url.toLowerCase()}
+        smooth={true}
+        duration={1000}
+        spy={true}
+        offset={-140}
+        activeStyle={{
+          backgroundColor: "#ff7a00",
+          color: "white",
+        }}
+        className={`hover:text-picto-primary px-5 py-3 mx-1`}
+      >
+        {item.name}
+      </Link>
+    )}
   </li>
 ));
 

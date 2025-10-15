@@ -1,4 +1,4 @@
-import person from "../../assets/images/person2.png";
+import person from "../../assets/images/cv/gihan.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import SocialMedia from "../common/socialMedia/SocialMedia";
@@ -16,7 +16,7 @@ const Profile = () => {
             <img
               className="bg-soft-white h-[120%] object-cover"
               src={person}
-              alt=""
+              alt="Gihan Tharuka profile"
             />
           </div>
           {/* Social media section */}

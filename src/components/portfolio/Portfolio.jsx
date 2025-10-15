@@ -66,7 +66,7 @@ const projectData = [
 const Portfolio = () => {
   return (
     <div
-      className="content mt-10 md:mt-15 xl:mt-25 mb-10 md:mb-25 max-xxl:p-2"
+      className="content px-4 sm:px-6 md:px-12 lg:px-20 mt-10 md:mt-15 xl:mt-25 mb-10 md:mb-25 max-xxl:p-2"
       id="portfolio"
     >
       <div className="xl:mb-17.5 mb-5">
@@ -78,7 +78,7 @@ const Portfolio = () => {
           </p>
         </div>
       </div>
-      <div className="mx-auto flex justify-center">
+      <div className="mx-auto flex justify-center px-2 sm:px-4 md:px-0">
         <div className="grid xl:grid-cols-3 md:grid-cols-2 gap-6">
           {projectData.map((data, index) => (
             <Projects data={data} key={index} />

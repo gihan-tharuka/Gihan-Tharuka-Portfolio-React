@@ -33,8 +33,8 @@ const Home = () => {
         </div>
       </div>
       <HappyClients />
-      <Testimonial />
-      <Contact />
+      {/* <Testimonial />
+      <Contact /> */}
     </div>
   );
 };

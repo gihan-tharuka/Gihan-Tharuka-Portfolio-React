@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
-import logo from "../../../assets/logo.png";
 import { Link } from "react-scroll";
 
 const navItems = [
   { id: 1, name: "Home", url: "introduction" },
   { id: 2, name: "About", url: "profile" },
-  { id: 3, name: "Process", url: "work-process" },
+  // { id: 3, name: "Process", url: "work-process" },
   { id: 4, name: "Portfolio", url: "portfolio" },
-  { id: 5, name: "Blog", url: "blog" },
+  // { id: 5, name: "Blog", url: "blog" },
   { id: 6, name: "Services", url: "services" },
 ];
 
@@ -92,9 +91,11 @@ const NavBar = () => {
             duration={900}
             className="flex items-center border-0 lg:max-xxl:ps-5"
           >
-            <img src={logo} className="h-8 sm:h-14 rounded-2xl" alt="logo" />
+            <div className="flex items-center justify-center h-8 w-8 sm:h-14 sm:w-14 rounded-full bg-picto-primary text-white font-semibold text-lg sm:text-2xl">
+              G
+            </div>
             <p className="text-2xl sm:text-[32px] my-auto ms-[12px] font-semibold">
-              Brooklyn
+              Gihan Tharuka
             </p>
           </Link>
         </div>

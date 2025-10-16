@@ -21,7 +21,18 @@ const ProjectDetail = () => {
         const resolvePath = (raw) => {
           if (!raw) return fallback;
           try {
-            return raw.startsWith("/src") ? new URL(raw, import.meta.url).href : raw;
+            // If path begins with /src/ (repo-relative), convert to a relative path that
+            // new URL(..., import.meta.url) can resolve from this module.
+            if (raw.startsWith("/src/")) {
+              const relative = raw.replace(/^\/src\//, "../");
+              return new URL(relative, import.meta.url).href;
+            }
+            // If it looks like an asset path but doesn't start with /src, strip leading slash and resolve
+            if (raw.includes("/assets/")) {
+              const stripped = raw.replace(/^\//, "");
+              return new URL(stripped, import.meta.url).href;
+            }
+            return raw;
           } catch (e) {
             return fallback;
           }
@@ -87,7 +98,18 @@ const ProjectDetail = () => {
               <h2 className="text-xl font-semibold mb-4">Gallery</h2>
               <div className="grid sm:grid-cols-2 gap-4">
                 {project.gallery.map((g, i) => {
-                  const src = (g && g.startsWith("/src")) ? new URL(g, import.meta.url).href : g;
+                  let src = g;
+                  try {
+                    if (g && g.startsWith("/src/")) {
+                      const relative = g.replace(/^\/src\//, "../");
+                      src = new URL(relative, import.meta.url).href;
+                    } else if (g && g.includes("/assets/")) {
+                      const stripped = g.replace(/^\//, "");
+                      src = new URL(stripped, import.meta.url).href;
+                    }
+                  } catch (e) {
+                    src = g;
+                  }
                   return (
                     <img key={i} src={src} alt={`${project.title} gallery ${i + 1}`} className="w-full object-cover rounded" loading="lazy" />
                   );

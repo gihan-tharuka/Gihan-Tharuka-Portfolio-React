@@ -15,9 +15,16 @@ const Projects = () => {
             const rawImage = p.gallery?.[0] || p.heroImage;
             let image = rawImage;
             try {
-              // If path begins with /src or contains /assets, resolve it via Vite bundler URL
-              if (rawImage && (rawImage.startsWith("/src") || rawImage.includes("/assets/"))) {
-                image = new URL(rawImage.replace(/^\/src/, ""), import.meta.url).href;
+              // If path begins with /src (repo-relative), convert to a relative path
+              // that `new URL(..., import.meta.url)` can resolve from this module.
+              if (rawImage && rawImage.startsWith("/src/")) {
+                const relative = rawImage.replace(/^\/src\//, "../");
+                image = new URL(relative, import.meta.url).href;
+              } else if (rawImage && rawImage.includes("/assets/")) {
+                // For any asset-looking path that doesn't start with /src, try resolving by
+                // stripping a leading slash so it's relative to the module.
+                const stripped = rawImage.replace(/^\//, "");
+                image = new URL(stripped, import.meta.url).href;
               }
             } catch (err) {
               // fallback to rawImage if resolution fails

@@ -13,7 +13,16 @@ const Projects = () => {
         <div className="grid xl:grid-cols-3 md:grid-cols-2 gap-6">
           {projects.map((p) => {
             const rawImage = p.gallery?.[0] || p.heroImage;
-            const image = rawImage && rawImage.startsWith("/src") ? new URL(rawImage, import.meta.url).href : rawImage;
+            let image = rawImage;
+            try {
+              // If path begins with /src or contains /assets, resolve it via Vite bundler URL
+              if (rawImage && (rawImage.startsWith("/src") || rawImage.includes("/assets/"))) {
+                image = new URL(rawImage.replace(/^\/src/, ""), import.meta.url).href;
+              }
+            } catch (err) {
+              // fallback to rawImage if resolution fails
+              image = rawImage;
+            }
             const repoBase = import.meta.env.VITE_REPO_NAME ? `/${import.meta.env.VITE_REPO_NAME}` : (import.meta.env.BASE_URL || '');
             return (
               <ProjectCard

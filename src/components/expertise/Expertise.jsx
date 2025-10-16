@@ -1,5 +1,38 @@
 import { useEffect, useRef, useState } from "react";
 import skills from "../../data/skills";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCode,
+  faPalette,
+  faCubes,
+  faMobileAlt,
+  faFeather,
+  faWrench,
+  faServer,
+  faDatabase,
+  faCloud,
+} from "@fortawesome/free-solid-svg-icons";
+import { faJs, faReact, faPython, faPhp, faHtml5, faCss3, faAws } from "@fortawesome/free-brands-svg-icons";
+
+const iconMap = {
+  code: faCode,
+  palette: faPalette,
+  cubes: faCubes,
+  mobile: faMobileAlt,
+  feather: faFeather,
+  wrench: faWrench,
+  server: faServer,
+  database: faDatabase,
+  cloud: faCloud,
+  // brand icons
+  js: faJs,
+  react: faReact,
+  python: faPython,
+  php: faPhp,
+  html5: faHtml5,
+  css3: faCss3,
+  aws: faAws,
+};
 
 const SkillCard = ({ skill, animate }) => {
   return (
@@ -9,7 +42,14 @@ const SkillCard = ({ skill, animate }) => {
           className="h-9 w-9 rounded-full flex items-center justify-center"
           style={{ backgroundColor: skill.color }}
         >
-          <span className="text-white font-bold text-sm">{skill.name[0]}</span>
+          {/* render icon if available */}
+          {skill.brandIcon ? (
+            <FontAwesomeIcon icon={iconMap[skill.brandIcon]} className="text-white" />
+          ) : skill.icon ? (
+            <FontAwesomeIcon icon={iconMap[skill.icon]} className="text-white" />
+          ) : (
+            <span className="text-white font-bold text-sm">{skill.name[0]}</span>
+          )}
         </div>
         <div className="flex-1">
           <p className="font-semibold text-base">{skill.name}</p>

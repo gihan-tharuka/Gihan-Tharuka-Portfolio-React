@@ -11,26 +11,31 @@ const SkillCard = ({ skill, animate }) => {
         >
           <span className="text-white font-bold">{skill.name[0]}</span>
         </div>
-        <div>
+        <div className="flex-1">
           <p className="font-semibold text-lg">{skill.name}</p>
-          <p className="text-xs text-gray-400">{skill.type} · {skill.years} yrs</p>
         </div>
-      </div>
 
-      <div className="mt-4">
-        <div className="h-2 w-full bg-[#F3F3F3] rounded-full overflow-hidden">
-          <div
-            className="h-full bg-picto-primary rounded-full"
-            style={{ width: animate ? `${skill.level}%` : `0%`, transition: 'width 1200ms ease' }}
-            role="progressbar"
-            aria-valuemin={0}
-            aria-valuemax={100}
-            aria-valuenow={skill.level}
-            aria-label={`${skill.name} proficiency`}
-          ></div>
+        <div className="flex items-center gap-1" aria-label={`${skill.name} rating`}>
+          {Array.from({ length: 5 }).map((_, i) => {
+            const starIndex = i + 1;
+            const filledStars = Math.max(0, Math.min(5, Math.round((skill.level || 0) / 20)));
+            const filled = starIndex <= filledStars;
+            return (
+              <svg
+                key={i}
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                className={`w-4 h-4 ${filled ? 'text-picto-primary' : 'text-gray-300'} transition-colors`}
+                aria-hidden="true"
+              >
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.974a1 1 0 00.95.69h4.178c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.974c.3.921-.755 1.688-1.54 1.118L10 15.347l-3.495 2.62c-.784.57-1.838-.197-1.539-1.118l1.286-3.974a1 1 0 00-.364-1.118L2.508 9.401c-.783-.57-.38-1.81.588-1.81h4.178a1 1 0 00.95-.69l1.286-3.974z" />
+              </svg>
+            );
+          })}
         </div>
-        <div className="mt-2 text-xs text-gray-500">{skill.level}%</div>
       </div>
+      {/* Stars represent expertise level (1-5) calculated from numeric level */}
     </div>
   );
 };
@@ -63,7 +68,7 @@ const Expertise = () => {
     <section id="expertise" className="content px-4 sm:px-6 md:px-12 lg:px-20 py-12">
       <div className="text-center mb-8">
         <p className="section-title">Expertise</p>
-        <p className="text-gray-400 mt-4 max-w-2xl mx-auto">Languages, frameworks and tools I use regularly. Proficiency indicated by percentage and years of experience.</p>
+        <p className="text-gray-400 mt-4 max-w-2xl mx-auto">Languages, frameworks and tools I use regularly. Proficiency shown as a 1–5 star rating.</p>
       </div>
 
       <div ref={ref} className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

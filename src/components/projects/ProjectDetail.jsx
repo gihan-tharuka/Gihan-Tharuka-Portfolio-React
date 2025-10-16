@@ -40,11 +40,10 @@ const ProjectDetail = () => {
             <section className="mb-6">
               <h2 className="text-xl font-semibold">Features</h2>
               {project.features && project.features.length > 0 ? (
-                <div className="mt-3 grid gap-3">
+                <div className="mt-3 flex flex-col gap-2">
                   {project.features.map((f, i) => (
-                    <div key={i} className="py-2">
-                      <p className="font-semibold">{f.name}</p>
-                      <p className="text-sm text-gray-600">{f.description}</p>
+                    <div key={i} className="py-1">
+                      <p className="text-sm text-gray-700"><span className="font-semibold">{f.name}</span> - <span className="text-gray-600">{f.description}</span></p>
                     </div>
                   ))}
                 </div>

@@ -17,11 +17,13 @@ const handleMenuClick = () => {
   }
 };
 
+const repoBase = import.meta.env.VITE_REPO_NAME ? `/${import.meta.env.VITE_REPO_NAME}` : (import.meta.env.BASE_URL || '');
+
 const menu = navItems.map((item) => (
   <li key={item.id} onMouseDown={(e) => e.preventDefault()}>
     {item.url && item.url.startsWith("/") ? (
       <a
-        href={item.url}
+        href={`${repoBase}${item.url}`}
         className={`hover:text-picto-primary px-5 py-3 mx-1`}
         onClick={handleMenuClick}
       >

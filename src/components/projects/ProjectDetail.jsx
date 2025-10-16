@@ -40,11 +40,14 @@ const ProjectDetail = () => {
             <section className="mb-6">
               <h2 className="text-xl font-semibold">Features</h2>
               {project.features && project.features.length > 0 ? (
-                <ul className="list-disc list-inside mt-2 text-gray-600">
+                <div className="mt-3 grid gap-3">
                   {project.features.map((f, i) => (
-                    <li key={i}>{f}</li>
+                    <div key={i} className="py-2">
+                      <p className="font-semibold">{f.name}</p>
+                      <p className="text-sm text-gray-600">{f.description}</p>
+                    </div>
                   ))}
-                </ul>
+                </div>
               ) : (
                 <p className="text-gray-500 mt-2">No features listed for this project.</p>
               )}

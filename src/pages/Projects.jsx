@@ -11,7 +11,10 @@ const Projects = () => {
 
       <div className="mx-auto flex justify-center">
         <div className="grid xl:grid-cols-3 md:grid-cols-2 gap-6">
-          {projects.map((p) => {
+          {projects
+            .slice()
+            .sort((a, b) => (a.order || 0) - (b.order || 0))
+            .map((p) => {
             const rawImage = p.gallery?.[0] || p.heroImage;
             let image = rawImage;
             try {

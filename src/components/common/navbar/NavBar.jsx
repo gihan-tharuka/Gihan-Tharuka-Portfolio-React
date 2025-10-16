@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
+import { Link as RouterLink, useLocation } from "react-router-dom";
 
 const navItems = [
   { id: 1, name: "Home", url: "introduction" },
@@ -19,38 +20,55 @@ const handleMenuClick = () => {
 
 const repoBase = import.meta.env.VITE_REPO_NAME ? `/${import.meta.env.VITE_REPO_NAME}` : (import.meta.env.BASE_URL || '');
 
-const menu = navItems.map((item) => (
-  <li key={item.id} onMouseDown={(e) => e.preventDefault()}>
-    {item.url && item.url.startsWith("/") ? (
-      <a
-        href={`${repoBase}${item.url}`}
-        className={`hover:text-picto-primary px-5 py-3 mx-1`}
-        onClick={handleMenuClick}
-      >
-        {item.name}
-      </a>
-    ) : (
-      <Link
-        onClick={handleMenuClick}
-        to={item.url.toLowerCase()}
-        smooth={true}
-        duration={1000}
-        spy={true}
-        offset={-140}
-        activeStyle={{
-          backgroundColor: "#ff7a00",
-          color: "white",
-        }}
-        className={`hover:text-picto-primary px-5 py-3 mx-1`}
-      >
-        {item.name}
-      </Link>
-    )}
-  </li>
-));
+// menu will be created inside the NavBar component so we can access router location
 
 const NavBar = () => {
   const [position, setPosition] = useState(0);
+  const location = useLocation();
+
+  const inHome = location.pathname === '/' || location.pathname === repoBase + '/';
+
+  const menu = navItems.map((item) => (
+    <li key={item.id} onMouseDown={(e) => e.preventDefault()}>
+      {item.url && item.url.startsWith("/") ? (
+        // For absolute routes (like /projects), use router navigation so SPA routing works and basename is handled
+        <RouterLink
+          to={`${item.url}`}
+          className={`hover:text-picto-primary px-5 py-3 mx-1`}
+          onClick={handleMenuClick}
+        >
+          {item.name}
+        </RouterLink>
+      ) : (
+        // For in-page sections, use react-scroll when on home page; otherwise navigate to home route
+        inHome ? (
+          <ScrollLink
+            onClick={handleMenuClick}
+            to={item.url.toLowerCase()}
+            smooth={true}
+            duration={1000}
+            spy={true}
+            offset={-140}
+            activeStyle={{
+              backgroundColor: "#ff7a00",
+              color: "white",
+            }}
+            className={`hover:text-picto-primary px-5 py-3 mx-1`}
+          >
+            {item.name}
+          </ScrollLink>
+        ) : (
+          <RouterLink
+            to={`/`}
+            className={`hover:text-picto-primary px-5 py-3 mx-1`}
+            onClick={handleMenuClick}
+          >
+            {item.name}
+          </RouterLink>
+        )
+      )}
+    </li>
+  ));
 
   useEffect(() => {
     const handleScroll = () => {
@@ -97,20 +115,14 @@ const NavBar = () => {
             </ul>
           </div>
 
-          <Link
-            href="#introduction"
-            to={`introduction`}
-            smooth={true}
-            duration={900}
-            className="flex items-center border-0 lg:max-xxl:ps-5"
-          >
+          <RouterLink to={`/`} className="flex items-center border-0 lg:max-xxl:ps-5" onClick={handleMenuClick}>
             <div className="flex items-center justify-center h-8 w-8 sm:h-14 sm:w-14 rounded-full bg-picto-primary text-white font-semibold text-lg sm:text-2xl">
               G
             </div>
             <p className="text-2xl sm:text-[32px] my-auto ms-[12px] font-semibold">
               Gihan Tharuka
             </p>
-          </Link>
+          </RouterLink>
         </div>
 
         <div className="lg:flex items-center">
@@ -118,15 +130,21 @@ const NavBar = () => {
             {menu}
           </ul>
           <p className="">
-            <Link
-              className="btn btn-sm xs:btn-md sm:btn-lg btn-primary"
-              href="#contact"
-              to={`contact`}
-              smooth={true}
-              duration={900}
-            >
-              Contact
-            </Link>
+            {inHome ? (
+              <ScrollLink
+                className="btn btn-sm xs:btn-md sm:btn-lg btn-primary"
+                to={`contact`}
+                smooth={true}
+                duration={900}
+                onClick={handleMenuClick}
+              >
+                Contact
+              </ScrollLink>
+            ) : (
+              <RouterLink className="btn btn-sm xs:btn-md sm:btn-lg btn-primary" to={`/`} onClick={handleMenuClick}>
+                Contact
+              </RouterLink>
+            )}
           </p>
         </div>
       </div>

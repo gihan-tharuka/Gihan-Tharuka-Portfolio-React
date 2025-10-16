@@ -158,7 +158,7 @@ const ProjectDetail = () => {
               </div>
 
               <div className="mt-6">
-                <Link to="/" className="text-sm text-picto-primary">Back to projects</Link>
+                <Link to="/projects" className="text-sm text-picto-primary">Back to projects</Link>
               </div>
             </div>
           </aside>

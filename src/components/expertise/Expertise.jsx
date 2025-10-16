@@ -3,16 +3,16 @@ import skills from "../../data/skills";
 
 const SkillCard = ({ skill, animate }) => {
   return (
-    <div className="bg-white rounded-lg border border-gray-200 shadow-gray-300 p-6 hover:shadow-2xl transition-all">
-      <div className="flex items-center gap-4">
+    <div className="bg-white rounded-lg border border-gray-200 shadow-gray-300 p-3 hover:shadow-md transition-all">
+      <div className="flex items-center gap-3">
         <div
-          className="h-12 w-12 rounded-full flex items-center justify-center"
+          className="h-9 w-9 rounded-full flex items-center justify-center"
           style={{ backgroundColor: skill.color }}
         >
-          <span className="text-white font-bold">{skill.name[0]}</span>
+          <span className="text-white font-bold text-sm">{skill.name[0]}</span>
         </div>
         <div className="flex-1">
-          <p className="font-semibold text-lg">{skill.name}</p>
+          <p className="font-semibold text-base">{skill.name}</p>
         </div>
 
         <div className="flex items-center gap-1" aria-label={`${skill.name} rating`}>
@@ -26,7 +26,7 @@ const SkillCard = ({ skill, animate }) => {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
                 fill="currentColor"
-                className={`w-4 h-4 ${filled ? 'text-picto-primary' : 'text-gray-300'} transition-colors`}
+                className={`w-3 h-3 ${filled ? 'text-picto-primary' : 'text-gray-300'} transition-colors`}
                 aria-hidden="true"
               >
                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.974a1 1 0 00.95.69h4.178c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.974c.3.921-.755 1.688-1.54 1.118L10 15.347l-3.495 2.62c-.784.57-1.838-.197-1.539-1.118l1.286-3.974a1 1 0 00-.364-1.118L2.508 9.401c-.783-.57-.38-1.81.588-1.81h4.178a1 1 0 00.95-.69l1.286-3.974z" />
@@ -71,7 +71,7 @@ const Expertise = () => {
         <p className="text-gray-400 mt-4 max-w-2xl mx-auto">Languages, frameworks and tools I use regularly. Proficiency shown as a 1–5 star rating.</p>
       </div>
 
-      <div ref={ref} className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div ref={ref} className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {skills.map((s) => (
           <SkillCard key={s.id} skill={s} animate={animate} />
         ))}

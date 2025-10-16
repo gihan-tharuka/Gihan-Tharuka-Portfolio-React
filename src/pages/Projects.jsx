@@ -11,18 +11,23 @@ const Projects = () => {
 
       <div className="mx-auto flex justify-center">
         <div className="grid xl:grid-cols-3 md:grid-cols-2 gap-6">
-          {projects.map((p) => (
-            <ProjectCard
-              key={p.id}
-              data={{
-                image: p.gallery?.[0] || p.heroImage,
-                category: p.skills?.[0] || "Project",
-                title: p.title,
-                description: p.short,
-                link: `/projects/${p.slug}`,
-              }}
-            />
-          ))}
+          {projects.map((p) => {
+            const rawImage = p.gallery?.[0] || p.heroImage;
+            const image = rawImage && rawImage.startsWith("/src") ? new URL(rawImage, import.meta.url).href : rawImage;
+            const repoBase = import.meta.env.VITE_REPO_NAME ? `/${import.meta.env.VITE_REPO_NAME}` : (import.meta.env.BASE_URL || '');
+            return (
+              <ProjectCard
+                key={p.id}
+                data={{
+                  image,
+                  category: p.skills?.[0] || "Project",
+                  title: p.title,
+                  description: p.short,
+                  link: `${repoBase}/projects/${p.slug}`,
+                }}
+              />
+            );
+          })}
         </div>
       </div>
     </div>

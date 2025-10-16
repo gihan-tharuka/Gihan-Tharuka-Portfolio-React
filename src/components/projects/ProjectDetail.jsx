@@ -15,19 +15,37 @@ const ProjectDetail = () => {
 
   return (
     <div>
-      <div
-        className="relative h-[40vh] md:h-[55vh] lg:h-[65vh] bg-cover bg-center"
-        style={{ backgroundImage: `url(${project.heroImage})` }}
-        aria-hidden={false}
-      >
-        <div className="absolute inset-0 bg-black/30" />
-        <div className="content absolute inset-0 flex items-end pb-8">
-          <div className="text-white">
-            <h1 className="text-3xl md:text-5xl font-semibold">{project.title}</h1>
-            <p className="mt-2 text-gray-100">{project.short}</p>
+      {/** resolve hero and gallery paths that live under /src so Vite can serve them */}
+      {(() => {
+        const fallback = new URL("/src/assets/images/portfolio-images/card-3.png", import.meta.url).href;
+        const resolvePath = (raw) => {
+          if (!raw) return fallback;
+          try {
+            return raw.startsWith("/src") ? new URL(raw, import.meta.url).href : raw;
+          } catch (e) {
+            return fallback;
+          }
+        };
+
+        const heroSrc = resolvePath(project.heroImage);
+
+        return (
+          <div
+            className="relative h-[40vh] md:h-[55vh] lg:h-[65vh] bg-cover bg-center"
+            style={{ backgroundImage: `url(${heroSrc})` }}
+            aria-hidden={false}
+          >
+            <div className="absolute inset-0 bg-black/30" />
+            <div className="content absolute inset-0 flex items-end pb-8">
+              <div className="text-white">
+                <h1 className="text-3xl md:text-5xl font-semibold">{project.title}</h1>
+                <p className="mt-2 text-gray-100">{project.short}</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        );
+      })()}
+      
 
       <main className="content px-4 sm:px-6 md:px-12 lg:px-20 py-12">
         <div className="grid lg:grid-cols-3 gap-8">
@@ -68,9 +86,12 @@ const ProjectDetail = () => {
             <section>
               <h2 className="text-xl font-semibold mb-4">Gallery</h2>
               <div className="grid sm:grid-cols-2 gap-4">
-                {project.gallery.map((g, i) => (
-                  <img key={i} src={g} alt={`${project.title} gallery ${i + 1}`} className="w-full object-cover rounded" loading="lazy" />
-                ))}
+                {project.gallery.map((g, i) => {
+                  const src = (g && g.startsWith("/src")) ? new URL(g, import.meta.url).href : g;
+                  return (
+                    <img key={i} src={src} alt={`${project.title} gallery ${i + 1}`} className="w-full object-cover rounded" loading="lazy" />
+                  );
+                })}
               </div>
             </section>
           </article>

@@ -20,6 +20,9 @@ const Projects = () => {
               if (rawImage && rawImage.startsWith("/src/")) {
                 const relative = rawImage.replace(/^\/src\//, "../");
                 image = new URL(relative, import.meta.url).href;
+              } else if (rawImage && (rawImage.startsWith("http") || rawImage.startsWith("/"))) {
+                // Already-resolved absolute or root-relative URL from static import or CDN - use as-is
+                image = rawImage;
               } else if (rawImage && rawImage.includes("/assets/")) {
                 // For any asset-looking path that doesn't start with /src, try resolving by
                 // stripping a leading slash so it's relative to the module.

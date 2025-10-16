@@ -17,12 +17,11 @@ const ProjectDetail = () => {
     <div>
       {/** resolve hero and gallery paths that live under /src so Vite can serve them */}
       {(() => {
-        const fallback = new URL("/src/assets/images/portfolio-images/card-3.png", import.meta.url).href;
+        const fallback = new URL("../assets/images/portfolio-images/card-3.png", import.meta.url).href;
         const resolvePath = (raw) => {
           if (!raw) return fallback;
           try {
-            // If path begins with /src/ (repo-relative), convert to a relative path that
-            // new URL(..., import.meta.url) can resolve from this module.
+            // If path begins with /src/ (repo-relative), convert to a relative module path
             if (raw.startsWith("/src/")) {
               const relative = raw.replace(/^\/src\//, "../");
               return new URL(relative, import.meta.url).href;
@@ -38,7 +37,10 @@ const ProjectDetail = () => {
           }
         };
 
-        const heroSrc = resolvePath(project.heroImage);
+        // If the project already provides an imported URL (starts with '/' or 'http'), use it
+        const heroSrc = (typeof project.heroImage === 'string' && (project.heroImage.startsWith('/') || project.heroImage.startsWith('http')))
+          ? project.heroImage
+          : resolvePath(project.heroImage);
 
         return (
           <div
@@ -100,7 +102,10 @@ const ProjectDetail = () => {
                 {project.gallery.map((g, i) => {
                   let src = g;
                   try {
-                    if (g && g.startsWith("/src/")) {
+                    if (typeof g === 'string' && (g.startsWith('/') || g.startsWith('http'))) {
+                      // already resolved from static import
+                      src = g;
+                    } else if (g && g.startsWith("/src/")) {
                       const relative = g.replace(/^\/src\//, "../");
                       src = new URL(relative, import.meta.url).href;
                     } else if (g && g.includes("/assets/")) {

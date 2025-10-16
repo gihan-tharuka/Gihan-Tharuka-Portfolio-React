@@ -1,5 +1,11 @@
+import medicareAssist from "../assets/images/projects/medicare assist.jpg";
+import dinemateHero from "../assets/images/projects/dinemate-hero.png";
+import syosErp from "../assets/images/projects/syos erp system.jpg";
+import inventoryMgmt from "../assets/images/projects/inventory management system.jpg";
+import studentBlog from "../assets/images/projects/student blog.jpg";
+import healthMonitoring from "../assets/images/projects/health monitoring.jpg";
+
 const projects = [
-  
   {
     id: "medicare-assist-crm",
     slug: "medicare-assist-crm",
@@ -8,10 +14,8 @@ const projects = [
     role: "Full Stack Developer",
     year: 2025,
     duration: "6 months",
-    heroImage: "/src/assets/images/projects/medicare assist.jpg",
-    gallery: [
-      "/src/assets/images/projects/medicare assist.jpg",
-    ],
+    heroImage: medicareAssist,
+    gallery: [medicareAssist],
     tools: ["Laravel", "Blade", "Bootstrap", "Tailwind", "JavaScript"],
     skills: ["Backend", "Frontend", "Healthcare Workflows"],
     features: [
@@ -26,7 +30,7 @@ const projects = [
     conceptsUsed: ["MVC", "REST APIs", "Role-Based Access Control", "Server-side Rendering"],
     otherServices: ["MySQL", "Redis", "AWS S3", "SMTP"],
     links: { live: "#!", repo: "#!" },
-    seo: { description: "Medicare Assist CRM case study", ogImage: "/src/assets/images/projects/medicare-hero.png" },
+    seo: { description: "Medicare Assist CRM case study", ogImage: medicareAssist },
   },
   {
     id: "dine-mate-recommendation",
@@ -36,8 +40,8 @@ const projects = [
     role: "Data Scientist & Backend Engineer",
     year: 2024,
     duration: "5 months",
-  heroImage: "/src/assets/images/projects/dinemate-hero.png",
-  gallery: ["/src/assets/images/projects/dinemate-hero.png"],
+    heroImage: dinemateHero,
+    gallery: [dinemateHero],
     tools: ["Python 3.10+", "Flask", "Scikit-learn", "Pandas", "NumPy"],
     skills: ["ML", "Backend", "Optimization"],
     features: [
@@ -50,7 +54,7 @@ const projects = [
     conceptsUsed: ["Collaborative Filtering", "Linear Programming", "Explainable AI"],
     otherServices: ["MySQL", "Joblib", "PuLP", "SHAP"],
     links: { live: "#!", repo: "#!" },
-    seo: { description: "Dine Mate recommendation engine", ogImage: "/src/assets/images/projects/dinemate-hero.png" },
+    seo: { description: "Dine Mate recommendation engine", ogImage: dinemateHero },
   },
   {
     id: "syos-erp-v3",
@@ -60,8 +64,8 @@ const projects = [
     role: "Full Stack Engineer",
     year: 2023,
     duration: "8 months",
-  heroImage: "/src/assets/images/projects/syos erp system.jpg",
-  gallery: ["/src/assets/images/projects/syos erp system.jpg"],
+    heroImage: syosErp,
+    gallery: [syosErp],
     tools: ["Java Servlets", "JSP", "HTML", "CSS"],
     skills: ["Backend", "Inventory Management", "Reporting"],
     features: [
@@ -73,7 +77,7 @@ const projects = [
     conceptsUsed: ["Monolithic Java Web", "MVC", "Transactional Integrity"],
     otherServices: ["MySQL", "JasperReports"],
     links: { live: "#!", repo: "#!" },
-    seo: { description: "SYOS-ERP retail management system", ogImage: "/src/assets/images/projects/syos-hero.png" },
+    seo: { description: "SYOS-ERP retail management system", ogImage: syosErp },
   },
   {
     id: "stock-management-system",
@@ -83,8 +87,8 @@ const projects = [
     role: "Desktop Developer",
     year: 2022,
     duration: "3 months",
-  heroImage: "/src/assets/images/projects/inventory management system.jpg",
-  gallery: ["/src/assets/images/projects/inventory management system.jpg"],
+    heroImage: inventoryMgmt,
+    gallery: [inventoryMgmt],
     tools: ["C#", ".NET Framework", "Windows Forms"],
     skills: ["Desktop Apps", "Inventory"],
     features: [
@@ -96,7 +100,7 @@ const projects = [
     conceptsUsed: ["CRUD", "Audit Trails", "MVVM-like Patterns"],
     otherServices: ["MySQL", "MySqlConnector"],
     links: { live: "#!", repo: "#!" },
-    seo: { description: "Stock Management System desktop app", ogImage: "/src/assets/images/projects/stock-hero.png" },
+    seo: { description: "Stock Management System desktop app", ogImage: inventoryMgmt },
   },
   {
     id: "apiit-students-blog",
@@ -106,8 +110,8 @@ const projects = [
     role: "Full Stack Developer",
     year: 2024,
     duration: "5 months",
-  heroImage: "/src/assets/images/projects/student blog.jpg",
-  gallery: ["/src/assets/images/projects/student blog.jpg"],
+    heroImage: studentBlog,
+    gallery: [studentBlog],
     tools: ["Laravel", "Blade", "Bootstrap", "Tailwind"],
     skills: ["Web", "CMS", "Community"],
     features: [
@@ -120,7 +124,7 @@ const projects = [
     conceptsUsed: ["CMS Patterns", "Content Moderation", "Search"],
     otherServices: ["MySQL", "Cloudinary", "OAuth"],
     links: { live: "#!", repo: "#!" },
-    seo: { description: "APIIT students community blog", ogImage: "/src/assets/images/projects/apiit-hero.png" },
+    seo: { description: "APIIT students community blog", ogImage: studentBlog },
   },
   {
     id: "medisys-patient-monitoring",
@@ -130,8 +134,8 @@ const projects = [
     role: "Frontend Engineer",
     year: 2025,
     duration: "4 months",
-  heroImage: "/src/assets/images/projects/health monitoring.jpg",
-  gallery: ["/src/assets/images/projects/health monitoring.jpg"],
+    heroImage: healthMonitoring,
+    gallery: [healthMonitoring],
     tools: ["React 19", "React Router 7", "Bootstrap 5"],
     skills: ["Realtime", "Data Viz", "Frontend"],
     features: [
@@ -144,7 +148,7 @@ const projects = [
     conceptsUsed: ["Websockets", "Serverless APIs", "Time-series Analysis"],
     otherServices: ["AWS Lambda", "API Gateway", "DynamoDB", "AWS Amplify"],
     links: { live: "#!", repo: "#!" },
-    seo: { description: "MediSys patient monitoring dashboard", ogImage: "/src/assets/images/projects/medisys-hero.png" },
+    seo: { description: "MediSys patient monitoring dashboard", ogImage: healthMonitoring },
   },
 ];
 

@@ -6,7 +6,20 @@ const Projects = ({ data }) => {
     <div className="max-w-106 rounded-lg outline-[#FFFFFF] hover:shadow-2xl duration-300 transition-all shadow-gray-300 border border-gray-200">
       <img src={data?.image} alt={`${data?.title} image`} />
       <div className="p-4 xs:p-8">
-        <p className="text-gray-400 text-xs font-medium">{data?.category}</p>
+        {/* render all skill badges if present */}
+        {data?.skills && data.skills.length > 0 && (
+          <div className="mb-3 flex flex-wrap gap-2">
+            {data.skills.map((s, i) => (
+              <span
+                key={i}
+                className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-full border border-gray-200"
+                title={s}
+              >
+                {s}
+              </span>
+            ))}
+          </div>
+        )}
         <p className="text-gray-900 text-md xxs:text-lg font-semibold pt-1 mb-3">
           {data?.title}
         </p>

@@ -42,7 +42,7 @@ const Projects = () => {
                 key={p.id}
                 data={{
                   image,
-                  category: p.skills?.[0] || "Project",
+                  skills: p.skills || [],
                   title: p.title,
                   description: p.short,
                   link: `${repoBase}/projects/${p.slug}`,

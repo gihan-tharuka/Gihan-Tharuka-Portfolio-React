@@ -1,0 +1,18 @@
+.contact-card {
+  transition: transform 150ms ease, background-color 150ms ease;
+}
+.contact-card:hover {
+  transform: translateY(-4px);
+}
+.icon-wrapper {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ensure text wraps nicely for small screens */
+.contact-card p {
+  word-break: break-word;
+}

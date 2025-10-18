@@ -7,7 +7,6 @@ import Profession from "../components/profession/Profession";
 import Expertise from "../components/expertise/Expertise";
 import HappyClients from "../components/happyClients/HappyClients";
 import Testimonial from "../components/testimonial/Testimonial";
-import Contact from "../components/contact/Contact";
 import "../../index.css";
 
 const Home = () => {
@@ -38,8 +37,8 @@ const Home = () => {
         </div>
       </div>
       {/* <HappyClients /> */}
-      {/* <Testimonial />
-      <Contact /> */}
+      {/* <Testimonial /> */}
+      
     </div>
   );
 };

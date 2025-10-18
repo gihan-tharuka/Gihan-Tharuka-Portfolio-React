@@ -3,21 +3,21 @@ import Roles from "./Roles";
 const rolesData = [
   {
     id: 1,
-    title: "User Experience (UX)",
+    title: "Back end development",
     description:
-      "I design intuitive and enjoyable experiences by understanding user needs, conducting research, and creating wireframes and prototypes that enhance usability.",
+      "I build and maintain server-side logic, databases, and APIs to power applications — focusing on performance, security, and scalability.",
   },
   {
     id: 2,
-    title: "User Interface (UI)",
+    title: "Front end development",
     description:
-      "I craft visually appealing and consistent interfaces, focusing on layout, color, and typography to ensure a seamless and engaging user journey.",
+      "I implement responsive, accessible, and high-performance user interfaces using modern frameworks and best practices.",
   },
   {
     id: 3,
-    title: "Web Development",
+    title: "Deployment",
     description:
-      "I build responsive and high-performance web applications using modern technologies, ensuring accessibility, scalability, and maintainability.",
+      "I deploy applications reliably to production using CI/CD, cloud platforms, and automated build pipelines to ensure fast and safe releases.",
   },
 ];
 

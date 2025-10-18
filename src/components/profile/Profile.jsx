@@ -33,19 +33,21 @@ const Profile = () => {
           <h2
             className={`text-2xl xxs:text-3xl sm:text-4xl lg:text-[38px] text-[min(24px,38px)] max-md:text-center font-semibold mb-8`}
           >
-            I am Professional User Experience Designer
+            I am a Full Stack Developer
           </h2>
           <div
             className={`text-xs xs:text-[16px] lg:text-lg font-normal max-md:text-center text-gray-600`}
           >
             <p className={``}>
-              I design and develop services for customers specializing creating
-              stylish, modern websites, web services and online stores. My
-              passion is to design digital user experiences.
+              I build resilient, scalable web applications from end-to-end —
+              crafting clean APIs, efficient backends, and polished user
+              interfaces. I focus on delivering reliable systems that solve
+              real problems and provide great user experiences.
             </p>
             <p className="mt-3">
-              I design and develop services for customers specializing creating
-              stylish, modern websites, web services.
+              My stack spans server-side development, databases, and frontend
+              engineering. I value clean architecture, automated tests, and
+              continuous delivery to move fast without sacrificing quality.
             </p>
           </div>
           <div className="mt-8 flex max-md:justify-center">

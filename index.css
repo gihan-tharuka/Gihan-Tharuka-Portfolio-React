@@ -19,9 +19,9 @@
   --breakpoint-xxs: 21.25rem; /* COMMENT: 340px */
   --breakpoint-xs: 23.125rem; /* COMMENT: 363px */
   --breakpoint-xxl: 82.5rem; /* COMMENT: 1320px */
-  /* Primary theme color (changed from purple to orange) */
-  --color-picto-primary: #ff7a00; /* vivid orange */
-  --color-picto-primary-dark: #cc5a00; /* darker orange for hover */
+  /* Primary theme color (changed to blue) */
+  --color-picto-primary: #2563eb; /* vivid blue (blue-600) */
+  --color-picto-primary-dark: #1e40af; /* darker blue for hover (blue-800) */
   --color-soft-white: #f0f1f3;
   --color-soft-dark: #87909d;
 }
@@ -48,15 +48,15 @@ body {
 .introduction-profile-background {
   background: radial-gradient(
       circle at 12% 100%,
-      #fff2deF5 1% 5px,
+      #eaf2ff80 1% 5px,
       transparent 15%
     ),
     /* bottom left */
-      radial-gradient(circle at 95% -15%, #ffd19a66 5%, transparent 30%),
+      radial-gradient(circle at 95% -15%, #cfe7ff66 5%, transparent 30%),
     /* top right */
-      radial-gradient(circle at center right, #ffe8d9b2 2%, transparent 35%); /* center right */
+      radial-gradient(circle at center right, #dbeffd66 2%, transparent 35%); /* center right */
 }
 .blog-background {
-  background: radial-gradient(circle at -10% 0%, #ffd19a66 1%, transparent 25%),
-    radial-gradient(circle at 110% 30%, #ffe8d9b2 5%, transparent 25%);
+  background: radial-gradient(circle at -10% 0%, #cfe7ff66 1%, transparent 25%),
+    radial-gradient(circle at 110% 30%, #dbeffd66 5%, transparent 25%);
 }

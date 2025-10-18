@@ -12,7 +12,7 @@ const WorkSteps = ({ data, style }) => {
     >
       <div
         className={`w-11 h-11 sm:w-18 sm:h-18 ${
-          hover ? "bg-picto-primary" : "bg-[#FFF1E680]"
+          hover ? "bg-picto-primary" : "bg-[#EAF2FF80]"
         } text-center center rounded-md`}
       >
         <svg
@@ -21,7 +21,7 @@ const WorkSteps = ({ data, style }) => {
           xmlns="http://www.w3.org/2000/svg"
           className="max-sm:p-2 sm:w-8 sm:h-8"
         >
-          <path d={data?.svgPath} fill={`${hover ? "#FFFFFF" : "#CC5A00"}`} />
+          <path d={data?.svgPath} fill={`${hover ? "#FFFFFF" : "var(--color-picto-primary-dark)"}`} />
         </svg>
       </div>
       <div className="mt-3 xs:mt-4 sm:mt-8">

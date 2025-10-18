@@ -5,7 +5,7 @@ const Loading = () => {
     <div
       className={`flex justify-center items-center fixed bottom-0 bg-white h-[100vh] w-[100vw] mx-auto z-50 `}
     >
-  <HashLoader color="#ff7a00" speedMultiplier={2} size={80} />
+  <HashLoader color="#2563eb" speedMultiplier={2} size={80} />
     </div>
   );
 };

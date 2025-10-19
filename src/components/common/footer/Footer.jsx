@@ -15,8 +15,8 @@ const copyrightYear = new Date().getFullYear();
 const Footer = () => {
   return (
     <div className="pt-25 md:pt-40 content max-2xl:px-3">
-      <div className="flex max-md:flex-col justify-between mx-0 items-center h-full w-full text-neutral-200">
-        <a href="#" className="flex items-center border-0">
+      <div className="flex flex-col md:flex-row justify-between mx-0 items-center h-full w-full text-neutral-200">
+        <a href="#" className="flex items-center border-0 mb-4 md:mb-0">
           <div className="flex items-center justify-center h-8 w-8 sm:h-14 sm:w-14 rounded-full bg-picto-primary text-white font-semibold text-lg sm:text-2xl">
             G
           </div>
@@ -24,7 +24,7 @@ const Footer = () => {
             Gihan Tharuka
           </p>
         </a>
-        <div className="mx-7 max-md:my-7 text-center">
+        <div className="mx-7 my-4 md:my-0 text-center w-full md:w-auto">
           {navItems.map((item) => (
             <a
               key={item.id}
@@ -36,7 +36,7 @@ const Footer = () => {
             </a>
           ))}
         </div>
-        <p className="text-[12px] sm:text-[16px]">
+        <p className="text-[12px] sm:text-[16px] mt-4 md:mt-0">
           Copyright &copy; {copyrightYear} Gihan.
         </p>
       </div>

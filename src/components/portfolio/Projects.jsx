@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Projects = ({ data }) => {
   return (
-    <div className="max-w-106 rounded-lg outline-[#FFFFFF] hover:shadow-2xl duration-300 transition-all shadow-gray-300 border border-gray-200">
+    <div className="max-w-106 rounded-lg outline-[#FFFFFF] hover:shadow-2xl duration-300 transition-all shadow-gray-300 border border-gray-300 bg-white">
       <div className="h-48 overflow-hidden bg-gray-50">
         <img className="w-full h-full object-cover" src={data?.image} alt={`${data?.title} image`} />
       </div>

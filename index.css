@@ -60,3 +60,17 @@ body {
   background: radial-gradient(circle at -10% 0%, #ffd19a66 1%, transparent 25%),
     radial-gradient(circle at 110% 30%, #ffe8d9b2 5%, transparent 25%);
 }
+
+/* Project card fallback styles (plain CSS to ensure mobile visibility) */
+.project-card {
+  background: #ffffff;
+  border: 1px solid #e2e0e0; /* slightly darker gray for mobile contrast */
+  border-radius: 0.5rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  transition: box-shadow .2s ease, transform .15s ease;
+}
+.project-card:hover{
+  box-shadow: 0 18px 36px rgba(0,0,0,0.12);
+  transform: translateY(-2px);
+}
+

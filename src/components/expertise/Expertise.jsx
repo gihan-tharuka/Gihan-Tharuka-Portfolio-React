@@ -36,7 +36,7 @@ const iconMap = {
 
 const SkillCard = ({ skill, animate }) => {
   return (
-    <div className="bg-white rounded-lg border border-gray-200 shadow-gray-300 p-3 hover:shadow-md transition-all">
+    <div className="bg-white rounded-lg p-3 hover:shadow-md transition-all expertise-card">
       <div className="flex items-center gap-3">
         <div
           className="h-9 w-9 rounded-full flex items-center justify-center"

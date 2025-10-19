@@ -74,3 +74,32 @@ body {
   transform: translateY(-2px);
 }
 
+/* Skill badge fallback for consistent borders on mobile */
+.skill-badge{
+  display:inline-block;
+  padding: .25rem .5rem;
+  background: #f5f5f5;
+  color: #374151; /* gray-700 like */
+  border-radius: 9999px;
+  border: 1px solid #e2e0e0; /* gray-300 */
+  font-size: 0.75rem;
+}
+
+/* Expertise card fallback */
+.expertise-card{
+  background: #ffffff;
+  border: 1px solid #e2e0e0;
+  border-radius: 0.5rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+}
+.expertise-card:hover{box-shadow:0 14px 30px rgba(0,0,0,0.08);}
+
+/* Contact card fallback */
+.contact-card{
+  background: #ffffff; /* slight translucent white similar to original */
+  border: 1px solid #e2e0e0;
+  border-radius: 0.5rem; 
+  
+}
+
+

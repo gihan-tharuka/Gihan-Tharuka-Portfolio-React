@@ -14,7 +14,7 @@ const Projects = ({ data }) => {
             {data.skills.map((s, i) => (
               <span
                 key={i}
-                className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-full border border-gray-200"
+                className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-full skill-badge"
                 title={s}
               >
                 {s}

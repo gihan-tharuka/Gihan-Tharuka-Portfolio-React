@@ -50,7 +50,7 @@ const Contact = () => {
               href={c.href}
               target="_blank"
               rel="noreferrer"
-              className="contact-card bg-white/5 hover:bg-white/10 rounded-lg p-4 flex flex-col items-start border border-white/12 hover:border-white/18 transition-transform transition-colors duration-150"
+              className="contact-card rounded-lg p-4 flex flex-col items-start transition-transform transition-colors duration-150"
             >
               <div className="flex items-center gap-3">
                 <span className="icon-wrapper text-picto-primary">

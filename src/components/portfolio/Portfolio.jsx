@@ -1,4 +1,5 @@
 import Projects from "./Projects";
+import { Link } from "react-router-dom";
 import projects from "../../data/projects";
 
 const Portfolio = () => {
@@ -47,7 +48,8 @@ const Portfolio = () => {
                     skills: p.skills || [],
                     title: p.title,
                     description: p.short,
-                    link: `${repoBase}/projects/${p.slug}`,
+                    // use a router-relative path (client-side) — router's basename handles repo base
+                    link: `/projects/${p.slug}`,
                   }}
                 />
               );
@@ -55,12 +57,12 @@ const Portfolio = () => {
         </div>
       </div>
       <div className="text-center">
-        <a
-          href="/projects"
+        <Link
+          to="/projects"
           className="btn btn-primary py-3 px-6 mt-12.5 text-center text-[16px] font-semibold"
         >
           More Project
-        </a>
+        </Link>
       </div>
     </div>
   );

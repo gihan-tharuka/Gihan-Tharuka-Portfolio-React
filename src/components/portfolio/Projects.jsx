@@ -1,5 +1,6 @@
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 const Projects = ({ data }) => {
   return (
@@ -31,15 +32,15 @@ const Projects = ({ data }) => {
         >
           {data?.description}
         </p>
-        <a
-          href={data?.link}
+        <Link
+          to={data?.link}
           className="btn hover:border-picto-primary hover:text-picto-primary bg-white text-sm xs:text-[16px] font-semibold hover:gap-3 xs:hover:gap-4 transition-all duration-300 mt-5 xs:py-5.75 px-6 max-sm:w-full"
         >
           Project Details
           <span className="ms-1 xs:ms-3">
             <FontAwesomeIcon icon={faArrowRight} size="l" className="" />
           </span>
-        </a>
+        </Link>
         {/* </p> */}
       </div>
     </div>

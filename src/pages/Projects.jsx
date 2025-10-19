@@ -36,7 +36,6 @@ const Projects = () => {
               // fallback to rawImage if resolution fails
               image = rawImage;
             }
-            const repoBase = import.meta.env.VITE_REPO_NAME ? `/${import.meta.env.VITE_REPO_NAME}` : (import.meta.env.BASE_URL || '');
             return (
               <ProjectCard
                 key={p.id}
@@ -45,7 +44,8 @@ const Projects = () => {
                   skills: p.skills || [],
                   title: p.title,
                   description: p.short,
-                  link: `${repoBase}/projects/${p.slug}`,
+                  // router-relative path (client-side). Router basename handles repo base.
+                  link: `/projects/${p.slug}`,
                 }}
               />
             );

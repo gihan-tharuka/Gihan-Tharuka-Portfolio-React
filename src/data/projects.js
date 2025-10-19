@@ -12,8 +12,7 @@ const projects = [
     slug: "romaquest-travel-app",
     title: "RomaQuest Travel App",
     order: 1,
-    short:
-      "RomaQuest is a travel app developed with Flutter, designed to immerse users in the captivating allure of Rome, the Eternal City. With an intuitive interface and seamless navigation, this app brings the ancient wonders and modern delights of Rome to your fingertips.",
+    short: "A Flutter mobile app showcasing skills in UI design, state management, offline-first data, platform APIs and geolocation.",
     role: "Mobile Developer",
     year: 2023,
     duration: "4 months",

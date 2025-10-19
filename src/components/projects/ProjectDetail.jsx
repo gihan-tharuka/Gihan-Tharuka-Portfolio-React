@@ -153,8 +153,12 @@ const ProjectDetail = () => {
               </div>
 
               <div className="mt-6 flex gap-2">
-                <a href={project.links.live} className="btn btn-primary" target="_blank" rel="noreferrer">Live</a>
-                <a href={project.links.repo} className="btn" target="_blank" rel="noreferrer">Repo</a>
+                {project.links && project.links.live && project.links.live !== "#!" && (
+                  <a href={project.links.live} className="btn btn-primary" target="_blank" rel="noreferrer">Live</a>
+                )}
+                {project.links && project.links.repo && (
+                  <a href={project.links.repo} className="btn" target="_blank" rel="noreferrer">Repo</a>
+                )}
               </div>
 
               <div className="mt-6">

@@ -9,12 +9,12 @@ const Profile = () => {
       className={`relative mx-4 xxl:mx-0.5 -mt-14 lg:-mt-20 z-10 rounded-2xl drop-shadow-2xl max-xl:mb-5 shadow-white xl:p-28 lg:p-20 md:p-16 sm:p-10 p-4`}
       id="profile"
     >
-      <div className="flex max-md:flex-col justify-between items-center gap-6">
+    <div className="flex flex-col md:flex-row justify-between items-center gap-6">
         {/* Profile image */}
-        <div className="xxl:max-w-106 w-auto h-auto xxl:max-h-126">
-          <div className="max-w-106 h-117 object-fill overflow-hidden rounded-xl">
+        <div className="w-full md:w-auto md:max-w-[26rem] h-auto xxl:max-h-126">
+          <div className="w-full h-auto object-fill overflow-hidden rounded-xl">
             <img
-              className="bg-soft-white h-[120%] object-cover"
+              className="w-full h-auto bg-soft-white object-cover"
               src={person}
               alt="Gihan Tharuka profile"
             />
@@ -29,7 +29,7 @@ const Profile = () => {
           </div>
         </div>
 
-        <div className="max-sm:w-full w-[33rem]">
+  <div className="w-full md:w-[33rem]">
           <h2
             className={`text-2xl xxs:text-3xl sm:text-4xl lg:text-[38px] text-[min(24px,38px)] max-md:text-center font-semibold mb-8`}
           >

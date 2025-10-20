@@ -1,4 +1,6 @@
 import { useParams, Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import projects from "../../data/projects";
 
 const ProjectDetail = () => {
@@ -73,8 +75,13 @@ const ProjectDetail = () => {
               {project.features && project.features.length > 0 ? (
                 <div className="mt-3 flex flex-col gap-2">
                   {project.features.map((f, i) => (
-                    <div key={i} className="py-1">
-                      <p className="text-sm text-gray-700"><span className="font-semibold">{f.name}</span> - <span className="text-gray-600">{f.description}</span></p>
+                    <div key={i} className="py-1 flex items-start gap-3">
+                      <span className="text-picto-primary flex-shrink-0 mt-0.5">
+                        <FontAwesomeIcon icon={faCheckCircle} className="w-5 h-5" />
+                      </span>
+                      <div className="min-w-0">
+                        <p className="text-sm text-gray-700"><span className="font-semibold">{f.name}</span> - <span className="text-gray-600">{f.description}</span></p>
+                      </div>
                     </div>
                   ))}
                 </div>

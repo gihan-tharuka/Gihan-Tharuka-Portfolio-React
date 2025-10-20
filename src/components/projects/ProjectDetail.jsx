@@ -1,11 +1,13 @@
 import { useParams, Link } from "react-router-dom";
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
+import { faCheckCircle, faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import projects from "../../data/projects";
 
 const ProjectDetail = () => {
   const { slug } = useParams();
   const project = projects.find((p) => p.slug === slug);
+  const [featuresOpen, setFeaturesOpen] = useState(false);
 
   if (!project) {
     return (
@@ -51,10 +53,11 @@ const ProjectDetail = () => {
             aria-hidden={false}
           >
             <div className="absolute inset-0 bg-black/30" />
-            <div className="content absolute inset-0 flex items-end pb-8">
-              <div className="text-white">
-                <h1 className="text-3xl md:text-5xl font-semibold">{project.title}</h1>
-                <p className="mt-2 text-gray-100">{project.short}</p>
+            <div className="content absolute inset-0 flex items-end">
+              <div className="w-full flex justify-start ">
+                <div className="bg-black/70 text-white p-2 ">
+                  <h1 className="text-2xl md:text-5xl font-semibold">{project.title}</h1>
+                </div>
               </div>
             </div>
           </div>
@@ -71,9 +74,24 @@ const ProjectDetail = () => {
             </section>
 
             <section className="mb-6">
-              <h2 className="text-xl font-semibold">Features</h2>
-              {project.features && project.features.length > 0 ? (
-                <div className="mt-3 flex flex-col gap-2">
+              <div className="flex items-center justify-between">
+                <h2 className="text-xl font-semibold">Features</h2>
+                {project.features && project.features.length > 0 && (
+                  <button
+                    type="button"
+                    aria-expanded={featuresOpen}
+                    aria-controls="features-list"
+                    onClick={() => setFeaturesOpen((s) => !s)}
+                    className="inline-flex items-center gap-2 text-sm text-gray-600 hover:text-picto-primary"
+                  >
+                    <span>{project.features.length} items</span>
+                    <FontAwesomeIcon icon={featuresOpen ? faChevronUp : faChevronDown} />
+                  </button>
+                )}
+              </div>
+
+              {featuresOpen && project.features && project.features.length > 0 && (
+                <div id="features-list" className="mt-3 flex flex-col gap-2">
                   {project.features.map((f, i) => (
                     <div key={i} className="py-1 flex items-start gap-3">
                       <span className="text-picto-primary flex-shrink-0 mt-0.5">
@@ -85,8 +103,6 @@ const ProjectDetail = () => {
                     </div>
                   ))}
                 </div>
-              ) : (
-                <p className="text-gray-500 mt-2">No features listed for this project.</p>
               )}
             </section>
 
@@ -103,6 +119,7 @@ const ProjectDetail = () => {
               )}
             </section>
 
+            {/*
             <section>
               <h2 className="text-xl font-semibold mb-4">Gallery</h2>
               <div className="grid sm:grid-cols-2 gap-4">
@@ -128,12 +145,12 @@ const ProjectDetail = () => {
                 })}
               </div>
             </section>
+            */}
           </article>
 
           <aside className="lg:col-span-1">
             <div className="sticky top-28 bg-white border rounded-lg p-4 shadow-sm">
-              <p className="text-sm text-gray-500">Role</p>
-              <p className="font-semibold">{project.role}</p>
+              {/* Role removed as requested */}
 
               <div className="mt-4">
                 <p className="text-sm text-gray-500">Languages & frameworks</p>

@@ -8,6 +8,9 @@ const ProjectDetail = () => {
   const { slug } = useParams();
   const project = projects.find((p) => p.slug === slug);
   const [featuresOpen, setFeaturesOpen] = useState(false);
+  const [languagesOpen, setLanguagesOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [conceptsOpen, setConceptsOpen] = useState(false);
 
   if (!project) {
     return (
@@ -66,7 +69,7 @@ const ProjectDetail = () => {
       
 
       <main className="content px-4 sm:px-6 md:px-12 lg:px-20 py-12">
-        <div className="grid lg:grid-cols-3 gap-8">
+  <div className="grid lg:grid-cols-3 gap-0 lg:gap-8">
           <article className="lg:col-span-2">
             <section className="mb-6">
               <h2 className="text-xl font-semibold">Summary</h2>
@@ -107,15 +110,28 @@ const ProjectDetail = () => {
             </section>
 
             <section className="mb-6">
-              <h2 className="text-xl font-semibold">Concepts used</h2>
-              {project.conceptsUsed && project.conceptsUsed.length > 0 ? (
-                <div className="flex flex-wrap gap-2 mt-3">
+              <div className="flex items-center justify-between">
+                <h2 className="text-xl font-semibold">Concepts used</h2>
+                {project.conceptsUsed && project.conceptsUsed.length > 0 && (
+                  <button
+                    type="button"
+                    aria-expanded={conceptsOpen}
+                    aria-controls="concepts-list"
+                    onClick={() => setConceptsOpen((s) => !s)}
+                    className="inline-flex items-center gap-2 text-sm text-gray-600 hover:text-picto-primary"
+                  >
+                    <span>{project.conceptsUsed.length} items</span>
+                    <FontAwesomeIcon icon={conceptsOpen ? faChevronUp : faChevronDown} />
+                  </button>
+                )}
+              </div>
+
+              {conceptsOpen && project.conceptsUsed && project.conceptsUsed.length > 0 && (
+                <div id="concepts-list" className="flex flex-wrap gap-2 mt-3">
                   {project.conceptsUsed.map((c, idx) => (
                     <span key={idx} className="text-xs px-3 py-1 bg-gray-100 border rounded-full">{c}</span>
                   ))}
                 </div>
-              ) : (
-                <p className="text-gray-500 mt-2">No architectural concepts listed.</p>
               )}
             </section>
 
@@ -149,31 +165,62 @@ const ProjectDetail = () => {
           </article>
 
           <aside className="lg:col-span-1">
-            <div className="sticky top-28 bg-white border rounded-lg p-4 shadow-sm">
+            <div className="sticky top-28 bg-white border rounded-lg p-4 shadow-sm ">
               {/* Role removed as requested */}
 
               <div className="mt-4">
-                <p className="text-sm text-gray-500">Languages & frameworks</p>
-                <div className="flex flex-wrap gap-2 mt-2">
-                  {project.tools.map((t) => (
-                    <span key={t} className="text-xs px-2 py-1 bg-gray-100 rounded">{t}</span>
-                  ))}
-                </div>
-                {project.otherServices && project.otherServices.length > 0 && (
-                  <div className="mt-4">
-                    <p className="text-sm text-gray-500">Other services</p>
+                  <div className="flex items-center justify-between">
+                    <p className="text-xl font-semibold">Languages & frameworks</p>
+                    {project.tools && project.tools.length > 0 && (
+                      <button
+                        type="button"
+                        aria-expanded={languagesOpen}
+                        onClick={() => setLanguagesOpen((s) => !s)}
+                        className="inline-flex items-center gap-2 text-sm text-gray-600 hover:text-picto-primary"
+                      >
+                        <span>{project.tools.length} items</span>
+                        <FontAwesomeIcon icon={languagesOpen ? faChevronUp : faChevronDown} />
+                      </button>
+                    )}
+                  </div>
+
+                    {languagesOpen && project.tools && project.tools.length > 0 && (
                     <div className="flex flex-wrap gap-2 mt-2">
-                      {project.otherServices.map((s) => (
-                        <span key={s} className="text-xs px-2 py-1 bg-gray-50 border rounded">{s}</span>
+                      {project.tools.map((t) => (
+                        <span key={t} className="text-xs px-2 py-1 bg-gray-100 rounded">{t}</span>
                       ))}
                     </div>
-                  </div>
-                )}
+                  )}
+
+                  {project.otherServices && project.otherServices.length > 0 && (
+                    <div className="mt-4">
+                      <div className="flex items-center justify-between">
+                        <p className="text-xl font-semibold">Other services</p>
+                        <button
+                          type="button"
+                          aria-expanded={servicesOpen}
+                          onClick={() => setServicesOpen((s) => !s)}
+                          className="inline-flex items-center gap-2 text-sm text-gray-600 hover:text-picto-primary"
+                        >
+                          <span>{project.otherServices.length} items</span>
+                          <FontAwesomeIcon icon={servicesOpen ? faChevronUp : faChevronDown} />
+                        </button>
+                      </div>
+
+                      {servicesOpen && (
+                        <div className="flex flex-wrap gap-2 mt-2 ">
+                          {project.otherServices.map((s) => (
+                            <span key={s} className="text-xs px-2 py-1 bg-gray-50 border rounded">{s}</span>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  )}
               </div>
 
               <div className="mt-4">
-                <p className="text-sm text-gray-500">Duration</p>
-                <p className="font-semibold">{project.duration}</p>
+                <p className="text-xl font-semibold">Duration</p>
+                <p className="text-sm text-gray-500">{project.duration}</p>
               </div>
 
               <div className="mt-6 flex gap-2">

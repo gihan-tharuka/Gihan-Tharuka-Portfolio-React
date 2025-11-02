@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle, faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import projects from "../../data/projects";
@@ -11,6 +11,23 @@ const ProjectDetail = () => {
   const [languagesOpen, setLanguagesOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [conceptsOpen, setConceptsOpen] = useState(false);
+
+  // On first mount, open collapsible sections by default for desktop
+  // and keep them closed for mobile. This sets only the initial state
+  // so manual toggles by the user aren't overridden on resize.
+  useEffect(() => {
+    try {
+      const isDesktop = window.matchMedia && window.matchMedia("(min-width: 1024px)").matches;
+      if (isDesktop) {
+        setFeaturesOpen(true);
+        setLanguagesOpen(true);
+        setServicesOpen(true);
+        setConceptsOpen(true);
+      }
+    } catch (e) {
+      // ignore in non-browser environments
+    }
+  }, []);
 
   if (!project) {
     return (

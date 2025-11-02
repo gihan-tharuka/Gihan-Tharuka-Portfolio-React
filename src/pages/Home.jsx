@@ -25,8 +25,9 @@ const Home = () => {
       <Portfolio />
       <div className="introduction-profile-background">
       <Expertise />
-  <Education />
+  
       </div>
+      <Education />
       
       <div className="bg-gray-900">
         <WorkTogether />

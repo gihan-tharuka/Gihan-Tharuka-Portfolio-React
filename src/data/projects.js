@@ -5,6 +5,7 @@ import inventoryMgmt from "../assets/images/projects/inventory management system
 import studentBlog from "../assets/images/projects/student blog.jpg";
 import healthMonitoring from "../assets/images/projects/health monitoring.jpg";
 import travelApp from "../assets/images/projects/travelapp.png";
+import gym from "../assets/images/projects/gym.jpg";
 
 const projects = [
   {
@@ -186,6 +187,34 @@ const projects = [
     otherServices: ["AWS Lambda", "API Gateway", "DynamoDB", "AWS Amplify","S3", "Cognito", "CloudWatch", "SNS", "IAM", "SQS", ],
   links: { live: "#!", repo: "https://github.com/gihan-tharuka/medicare-patient-monitoring.git" },
     seo: { description: "MediSys patient monitoring dashboard", ogImage: healthMonitoring },
+  },
+  {
+    id: "flexi-fit",
+    slug: "flexi-fit",
+    title: "Flexi-Fit - Fitness Center Management",
+    order: 8,
+    short: "Laravel-based fitness center management system with Livewire interactivity, Filament admin, Tailwind CSS and Vite.",
+    role: "Full Stack Developer",
+    year: 2024,
+    duration: "6 months",
+    heroImage: gym,
+    gallery: [gym],
+    tools: ["Laravel 10", "PHP 8.2+", "Livewire", "Filament", "Tailwind CSS", "Vite", "MySQL"],
+    skills: ["Full Stack", "Laravel", "PHP"],
+    features: [
+      { name: "User Authentication & Roles", description: "Members, trainers and admins with role-based access control and permissions." },
+      { name: "Membership Management", description: "Plans, subscriptions, renewals and billing status with subscription lifecycle handling." },
+      { name: "Workout & Routine Management", description: "Create and assign workouts, routines and exercises for members and trainers." },
+      { name: "Progress Tracking", description: "Track body measurements, exercise history and progress charts for members." },
+      { name: "Scheduling & Bookings", description: "Class scheduling, trainer appointments and room/resource booking with calendar integrations." },
+      { name: "Payments & Billing", description: "Invoice generation, payments, refunds and gateway integrations (Stripe, PayPal)." },
+      { name: "File & Media Uploads", description: "Upload images and documents using Spatie Media Library for member profiles and assets." },
+      { name: "Admin UI", description: "Filament-powered admin panel for CRUD, reporting and resource management." },
+    ],
+    conceptsUsed: ["Livewire reactive UIs", "Filament admin", "RBAC", "Payment workflows", "Media management", "REST APIs"],
+    otherServices: ["MySQL", "Spatie Media Library", "Stripe", "SMTP", "AWS S3"],
+    links: { live: "#!", repo: "https://github.com/gihan-tharuka/flexi-fit" },
+    seo: { description: "Flexi-Fit fitness center management system (Laravel + Livewire)", ogImage: studentBlog },
   },
 ];
 

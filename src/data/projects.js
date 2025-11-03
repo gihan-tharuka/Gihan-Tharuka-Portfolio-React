@@ -5,6 +5,7 @@ import inventoryMgmt from "../assets/images/projects/inventory management system
 import studentBlog from "../assets/images/projects/student blog.jpg";
 import healthMonitoring from "../assets/images/projects/health monitoring.jpg";
 import travelApp from "../assets/images/projects/travelapp.png";
+import garage from "../assets/images/projects/garage.jpg";
 import gym from "../assets/images/projects/gym.jpg";
 
 const projects = [
@@ -47,8 +48,8 @@ const projects = [
     role: "Full Stack Developer",
     year: 2024,
     duration: "6 months",
-    heroImage: medicareAssist,
-    gallery: [medicareAssist],
+  heroImage: medicareAssist,
+  gallery: [medicareAssist],
     tools: ["Laravel", "Blade", "Bootstrap", "Tailwind", "JavaScript"],
     skills: ["Full Stack", "Laravel","PHP"],
     features: [
@@ -216,6 +217,33 @@ const projects = [
     links: { live: "#!", repo: "https://github.com/gihan-tharuka/flexi-fit" },
     seo: { description: "Flexi-Fit fitness center management system (Laravel + Livewire)", ogImage: studentBlog },
   },
+    {
+      id: "automate-service-system",
+      slug: "automate-service-system",
+      title: "AutoMate - Automotive Service Management System",
+      order: 9,
+      short: "Comprehensive service management for garages and service centers built with Laravel, Livewire and Filament.",
+      role: "Full Stack Developer",
+      year: 2024,
+      duration: "5 months",
+    heroImage: garage,
+    gallery: [garage],
+      tools: ["Laravel 12", "Livewire 3", "Filament 4", "Tailwind CSS", "Vite", "Laravel Fortify", "Jetstream", "DomPDF"],
+      skills: ["Full Stack", "Laravel", "Filament"],
+      features: [
+        { name: "Vehicle Management", description: "Manage customer vehicles, service history and vehicle metadata." },
+        { name: "Job Cards", description: "Create, assign and track service jobs with detailed requirements and statuses." },
+        { name: "Invoicing", description: "Generate invoices with line items, payment tracking and PDF exports." },
+        { name: "Inventory", description: "Track parts and stock movements with low-stock alerts." },
+        { name: "Customer Portal", description: "Customers can view vehicles, bookings and service history." },
+        { name: "Technician Assignment", description: "Assign and schedule technicians for specific jobs with workload view." },
+        { name: "Analytics & Reporting", description: "Business insights, revenue and service performance dashboards." },
+      ],
+      conceptsUsed: ["Filament resources", "Livewire reactive UIs", "RBAC", "PDF generation", "Scheduling & bookings"],
+      otherServices: ["SQLite (dev)", "MySQL", "DomPDF", "AWS S3", "SMTP"],
+      links: { live: "#!", repo: "https://github.com/gihan-tharuka/automate" },
+      seo: { description: "AutoMate - automotive service management system (Laravel + Filament)", ogImage: medicareAssist },
+    },
 ];
 
 export default projects;

@@ -3,10 +3,10 @@ import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const socialIcons = [
-  { icon: faLinkedin, link: "https://www.linkedin.com/", title: "LinkedIn" },
-  { icon: faGithub, link: "https://github.com/", title: "GitHub" },
-  { icon: faEnvelope, link: "mailto:gihan@example.com", title: "Email" },
-  { icon: faPhone, link: "tel:+947XXXXXXXX", title: "Phone" },
+  { icon: faLinkedin, link: "https://www.linkedin.com/in/gihan-tharuka-7b592b296", title: "LinkedIn" },
+  { icon: faGithub, link: "https://github.com/gihan-tharuka", title: "GitHub" },
+  { icon: faEnvelope, link: "mailto:gihantharuka2499@gmail.com", title: "Email" },
+  { icon: faPhone, link: "tel:+94722701880", title: "Phone" },
 ];
 
 const SocialMedia = () => {

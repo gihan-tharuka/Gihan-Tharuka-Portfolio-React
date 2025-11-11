@@ -7,8 +7,8 @@ const contacts = [
   {
     id: 1,
     label: "Email",
-    value: "gihan@example.com",
-    href: "mailto:gihan@example.com",
+    value: "gihantharuka2499@gmail.com",
+    href: "mailto:gihantharuka2499@gmail.com",
     icon: faEnvelope,
   },
   {
@@ -22,14 +22,14 @@ const contacts = [
     id: 3,
     label: "LinkedIn",
     value: "linkedin.com/in/gihan-tharuka",
-    href: "https://www.linkedin.com/",
+    href: "https://www.linkedin.com/in/gihan-tharuka-7b592b296",
     icon: faLinkedin,
   },
   {
     id: 4,
     label: "Mobile",
-    value: "+94 7XX XXX XXX",
-    href: "tel:+947XXXXXXXX",
+    value: "+94 72 270 1880",
+    href: "tel:+94722701880",
     icon: faPhone,
   },
 ];

@@ -83,6 +83,15 @@ const SkillCard = ({ skill, animate }) => {
 const Expertise = () => {
   const ref = useRef(null);
   const [animate, setAnimate] = useState(false);
+  const [selectedFilter, setSelectedFilter] = useState("All");
+
+  // Get unique skill types from skills array
+  const skillTypes = ["All", "Language", "Framework", "Cloud", "Database", "Tool", "Styling"];
+
+  // Filter skills based on selected type
+  const filteredSkills = selectedFilter === "All" 
+    ? skills 
+    : skills.filter((skill) => skill.type === selectedFilter);
 
   useEffect(() => {
     const node = ref.current;
@@ -111,8 +120,25 @@ const Expertise = () => {
         <p className="text-gray-400 mt-4 max-w-2xl mx-auto">Languages, frameworks and tools I use regularly. Proficiency shown as a 1–5 star rating.</p>
       </div>
 
+      {/* Filter Buttons */}
+      <div className="flex flex-wrap justify-center gap-2 mb-8">
+        {skillTypes.map((type) => (
+          <button
+            key={type}
+            onClick={() => setSelectedFilter(type)}
+            className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+              selectedFilter === type
+                ? "bg-picto-primary text-white shadow-md"
+                : "bg-white text-gray-700 hover:bg-gray-100"
+            }`}
+          >
+            {type}
+          </button>
+        ))}
+      </div>
+
       <div ref={ref} className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {skills.map((s) => (
+        {filteredSkills.map((s) => (
           <SkillCard key={s.id} skill={s} animate={animate} />
         ))}
       </div>

@@ -2,6 +2,7 @@ import person from "../../assets/images/cv/gihan.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import SocialMedia from "../common/socialMedia/SocialMedia";
+import pdf from "../../data/Gihan-Tharuka-Resume.pdf";
 
 const Profile = () => {
   return (
@@ -59,7 +60,7 @@ const Profile = () => {
             </a>
             <a
               className={`btn xxs:btn-lg px-6 max-xs:px-2 xxs:py-3 hover:border-picto-primary bg-white duration-300 transition-all hover:text-picto-primary  ms-4 text-xs xxs:text-[14px] sm:text-[16px]`}
-              href="/Gihan Tharuka Resume.pdf"
+              href={pdf}
               download="Gihan-Tharuka-Resume.pdf"
             >
               <FontAwesomeIcon icon={faDownload} /> Download CV

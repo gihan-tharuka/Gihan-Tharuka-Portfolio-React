@@ -58,7 +58,7 @@ const SkillCard = ({ skill, animate }) => {
         <div className="flex items-center gap-1" aria-label={`${skill.name} rating`}>
           {Array.from({ length: 5 }).map((_, i) => {
             const starIndex = i + 1;
-            const filledStars = Math.max(0, Math.min(5, Math.round((skill.level || 0) / 20)));
+            const filledStars = Math.max(0, Math.min(5, Math.round(skill.level || 0)));
             const filled = starIndex <= filledStars;
             return (
               <svg

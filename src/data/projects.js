@@ -11,6 +11,7 @@ import gym from "../assets/images/projects/gym.jpg";
 const projects = [
   {
     id: "romaquest-travel-app",
+    filtertag: "Flutter",
     slug: "romaquest-travel-app",
     title: "RomaQuest Travel App",
     order: 7,
@@ -41,6 +42,7 @@ const projects = [
   },
   {
     id: "medicare-assist-crm",
+    filtertag: "Laravel",
     slug: "medicare-assist-crm",
     title: "Medicare Assist - CRM for Healthcare",
     order: 9,
@@ -68,6 +70,7 @@ const projects = [
   },
   {
     id: "dine-mate-recommendation",
+    filtertag: "Python",
     slug: "dine-mate-recommendation",
     title: "Dine Mate - Food Recommendation System",
     order: 6,
@@ -93,6 +96,7 @@ const projects = [
   },
   {
     id: "syos-erp-v3",
+    filtertag: "Java",
     slug: "syos-erp-v3",
     title: "SYOS-ERP - Retail ERP System",
     order: 5,
@@ -117,6 +121,7 @@ const projects = [
   },
   {
     id: "stock-management-system",
+    filtertag: "C#",
     slug: "stock-management-system",
     title: "Stock Management System",
     order: 8,
@@ -141,6 +146,7 @@ const projects = [
   },
   {
     id: "apiit-students-blog",
+    filtertag: "Laravel",
     slug: "apiit-students-blog",
     title: "APIIT Students Blog",
     order: 4,
@@ -166,6 +172,7 @@ const projects = [
   },
   {
     id: "medisys-patient-monitoring",
+    filtertag: "AWS",
     slug: "medisys-patient-monitoring",
     title: "MediSys - Patient Monitoring System",
     order: 3,
@@ -191,6 +198,7 @@ const projects = [
   },
   {
     id: "flexi-fit",
+    filtertag: "Laravel",
     slug: "flexi-fit",
     title: "Flexi-Fit - Fitness Center Management",
     order: 2,
@@ -217,9 +225,10 @@ const projects = [
     links: { live: "#!", repo: "https://github.com/gihan-tharuka/flexi-fit" },
     seo: { description: "Flexi-Fit fitness center management system (Laravel + Livewire)", ogImage: studentBlog },
   },
-    {
-      id: "automate-service-system",
-      slug: "automate-service-system",
+  {
+    id: "automate-service-system",
+    filtertag: "Laravel",
+    slug: "automate-service-system",
       title: "AutoMate - Automotive Service Management System",
       order: 1,
       short: "Full-stack automotive service platform built with Laravel, Livewire, and PostgreSQL, featuring real-time inventory tracking, technician assignment, automated invoicing, and RBAC deployed on AWS.",

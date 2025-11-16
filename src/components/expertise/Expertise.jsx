@@ -131,6 +131,7 @@ const Expertise = () => {
                 ? "bg-picto-primary text-white shadow-md"
                 : "bg-white text-gray-700 hover:bg-gray-100"
             }`}
+            style={{ border: '1px solid #9CA3AF' }}
           >
             {type}
           </button>

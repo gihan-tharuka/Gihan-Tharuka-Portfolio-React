@@ -1,8 +1,17 @@
+import { useState } from "react";
 import Projects from "./Projects";
 import { Link } from "react-router-dom";
 import projects from "../../data/projects";
 
 const Portfolio = () => {
+  const [selectedFilter, setSelectedFilter] = useState("All");
+
+  // Filter tags in specific order
+  const projectTypes = ["All", "Laravel", "AWS", "Java", "C#", "Python", "Flutter"];
+
+  // Filter projects based on selected type
+  const filteredProjects = selectedFilter === "All" ? projects : projects.filter((p) => p.filtertag === selectedFilter);
+
   return (
     <div
       className="content px-4 sm:px-6 md:px-12 lg:px-20 mt-10 md:mt-15 xl:mt-25 mb-10 md:mb-25 max-xxl:p-2"
@@ -17,9 +26,28 @@ const Portfolio = () => {
           </p>
         </div>
       </div>
+
+      {/* Filter Buttons */}
+      <div className="flex flex-wrap justify-center gap-2 mb-8">
+        {projectTypes.map((type) => (
+          <button
+            key={type}
+            onClick={() => setSelectedFilter(type)}
+            className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+              selectedFilter === type
+                ? "bg-picto-primary text-white shadow-md"
+                : "bg-white text-gray-700 hover:bg-gray-100"
+            }`}
+            style={{ border: '1px solid #9CA3AF' }}
+          >
+            {type}
+          </button>
+        ))}
+      </div>
+
       <div className="mx-auto flex justify-center px-2 sm:px-4 md:px-0">
         <div className="grid xl:grid-cols-3 md:grid-cols-2 gap-6">
-          {projects
+          {filteredProjects
             .slice()
             .sort((a, b) => (a.order || 0) - (b.order || 0))
             .map((p) => {

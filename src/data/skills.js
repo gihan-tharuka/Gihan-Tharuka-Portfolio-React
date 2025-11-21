@@ -39,6 +39,12 @@ const skills = [
   { id: "googleanalytics", name: "Google Analytics", type: "Tool", level: 3, years: 2, color: "#E37400", icon: "wrench" },
   { id: "github", name: "GitHub", type: "Tool", level: 5, years: 5, color: "#181717", icon: "wrench" },
 
+  { id: "junit", name: "JUnit", type: "Tool", level: 4, years: 3, color: "#25A18E", icon: "wrench" },
+
+  { id: "postman", name: "Postman", type: "Tool", level: 4, years: 2, color: "#FF6C37", icon: "wrench" },
+
+  { id: "bootstrap", name: "Bootstrap", type: "Framework", level: 5, years: 4, color: "#7952B3", icon: "cubes" },
+
 ];
 
 export default skills;

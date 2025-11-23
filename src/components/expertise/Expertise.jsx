@@ -88,10 +88,13 @@ const Expertise = () => {
   // Get unique skill types from skills array
   const skillTypes = ["All", "Language", "Framework", "Cloud", "Database", "Tool", "Styling"];
 
+  // Sort skills by order field
+  const sortedSkills = [...skills].sort((a, b) => a.order - b.order);
+
   // Filter skills based on selected type
-  const filteredSkills = selectedFilter === "All" 
-    ? skills 
-    : skills.filter((skill) => skill.type === selectedFilter);
+  const filteredSkills = selectedFilter === "All"
+    ? sortedSkills
+    : sortedSkills.filter((skill) => skill.type === selectedFilter);
 
   useEffect(() => {
     const node = ref.current;

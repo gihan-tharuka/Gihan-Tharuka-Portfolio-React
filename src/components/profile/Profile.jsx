@@ -40,14 +40,14 @@ const Profile = () => {
             className={`text-xs xs:text-[16px] lg:text-lg font-normal max-md:text-center text-gray-600`}
           >
             <p className={``}>
-              I build resilient, scalable web applications from end-to-end —
+              I build reliable, scalable full-stack applications
               crafting clean APIs, efficient backends, and polished user
               interfaces. I focus on delivering reliable systems that solve
               real problems and provide great user experiences.
             </p>
             <p className="mt-3">
-              My stack spans server-side development, databases, and frontend
-              engineering. I value clean architecture, automated tests, and
+              My stack spans server-side development, databases, cloud services, and frontend
+              engineering. I value clean architecture, test automation, and
               continuous delivery to move fast without sacrificing quality.
             </p>
           </div>

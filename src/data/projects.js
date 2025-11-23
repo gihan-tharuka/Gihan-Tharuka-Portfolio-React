@@ -100,7 +100,7 @@ const projects = [
     slug: "syos-erp-v3",
     title: "SYOS-ERP - Retail ERP System",
     order: 5,
-    short: "A Java Servlets-based retail system featuring e-commerce, inventory, multi-role access, and analytics. Engineered with a clean architecture and SOLID principles, ensuring robust concurrency handling and comprehensive JUnit test coverage.",
+    short: "A Java Servlets-based retail system featuring e-commerce, inventory, multi-role access, and analytics. Engineered with clean architecture, SOLID principles, and design patterns (MVC, Singleton, Observer, DAO) to deliver robust concurrency and comprehensive JUnit test coverage.",
     role: "Full Stack Engineer",
     year: 2025,
     duration: "6 months",

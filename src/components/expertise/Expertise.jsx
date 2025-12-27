@@ -117,31 +117,76 @@ const Expertise = () => {
   }, []);
 
   return (
-    <section id="expertise" className="content px-4 sm:px-6 md:px-12 lg:px-20 py-12">
-      <div className="text-center mb-8">
-        <p className="section-title">Expertise</p>
-        <p className="text-gray-400 mt-4 max-w-2xl mx-auto">Languages, frameworks and tools I use regularly. Proficiency shown as a 1–5 star rating.</p>
+    <section id="expertise" className="content px-4 sm:px-6 md:px-12 lg:px-20 py-16 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 bg-gradient-to-br from-picto-primary/5 via-transparent to-orange-100/5 pointer-events-none"></div>
+
+      {/* Floating decorative elements */}
+      <div className="absolute top-20 left-10 w-20 h-20 bg-picto-primary/10 rounded-full blur-xl opacity-50 animate-pulse"></div>
+      <div className="absolute top-32 right-16 w-16 h-16 bg-orange-300/15 rounded-full blur-lg opacity-60 animate-pulse" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute bottom-32 left-20 w-12 h-12 bg-picto-primary/8 rounded-full blur-md opacity-40 animate-pulse" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute bottom-20 right-12 w-24 h-24 bg-orange-200/12 rounded-full blur-2xl opacity-30 animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+
+      <div className="relative z-10 text-center mb-12">
+        <div className="inline-block mb-4">
+          <span className="inline-block px-4 py-2 bg-picto-primary/10 text-picto-primary font-semibold text-sm rounded-full border border-picto-primary/20">
+            Technical Skills
+          </span>
+        </div>
+        <h2 className="section-title mb-6 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
+          Expertise & Proficiency
+        </h2>
+        <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+          A comprehensive showcase of my technical expertise across various domains.
+          Each skill displays proficiency levels with interactive progress indicators and experience metrics.
+        </p>
       </div>
 
       {/* Filter Buttons */}
-      <div className="flex flex-wrap justify-center gap-2 mb-8">
-        {skillTypes.map((type) => (
-          <button
-            key={type}
-            onClick={() => setSelectedFilter(type)}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-              selectedFilter === type
-                ? "bg-picto-primary text-white shadow-md"
-                : "bg-white text-gray-700 hover:bg-gray-100"
-            }`}
-            style={{ border: '1px solid #9CA3AF' }}
-          >
-            {type}
-          </button>
-        ))}
+      <div className="flex flex-wrap justify-center gap-3 mb-12">
+        {skillTypes.map((type, index) => {
+          const isActive = selectedFilter === type;
+          const skillCount = type === "All"
+            ? sortedSkills.length
+            : sortedSkills.filter(skill => skill.type === type).length;
+
+          return (
+            <button
+              key={type}
+              onClick={() => setSelectedFilter(type)}
+              className={`group relative px-6 py-3 rounded-2xl text-sm font-semibold transition-all duration-300 transform hover:scale-105 ${
+                isActive
+                  ? "bg-gradient-to-r from-picto-primary to-orange-400 text-white shadow-lg shadow-picto-primary/30"
+                  : "bg-white/80 backdrop-blur-sm text-gray-700 hover:bg-white hover:text-picto-primary border border-gray-200 hover:border-picto-primary/30 hover:shadow-md"
+              }`}
+              style={{ animationDelay: `${index * 50}ms` }}
+            >
+              <span className="relative z-10 flex items-center gap-2">
+                {type}
+                <span className={`px-2 py-0.5 rounded-full text-xs font-bold ${
+                  isActive
+                    ? "bg-white/20 text-white"
+                    : "bg-picto-primary/10 text-picto-primary group-hover:bg-picto-primary/20"
+                }`}>
+                  {skillCount}
+                </span>
+              </span>
+
+              {/* Hover effect */}
+              {!isActive && (
+                <div className="absolute inset-0 bg-gradient-to-r from-picto-primary/5 to-orange-100/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              )}
+
+              {/* Active state shimmer */}
+              {isActive && (
+                <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-picto-primary rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              )}
+            </button>
+          );
+        })}
       </div>
 
-      <div ref={ref} className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <div ref={ref} className="grid gap-6 sm:gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4">
         {filteredSkills.map((s) => (
           <SkillCard key={s.id} skill={s} animate={animate} />
         ))}

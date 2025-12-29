@@ -177,3 +177,9 @@ body {
   background-size: 200% 200%;
   animation: gradientShift 3s ease infinite;
 }
+
+/* Active navigation item styles */
+.active-nav-item {
+  color: var(--color-picto-primary) !important;
+  background-color: rgba(255, 122, 0, 0.05) !important;
+}

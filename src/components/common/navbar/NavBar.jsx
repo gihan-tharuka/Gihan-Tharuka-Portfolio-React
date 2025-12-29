@@ -52,10 +52,11 @@ const NavBar = () => {
             duration={1000}
             spy={true}
             offset={-140}
+            activeClass="active-nav-item"
             className="group relative px-4 py-2 mx-1 rounded-xl text-gray-700 hover:text-picto-primary font-medium transition-all duration-300 hover:bg-picto-primary/5"
           >
             <span className="relative z-10">{item.name}</span>
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-picto-primary to-orange-400 group-hover:w-full transition-all duration-300 ease-out"></div>
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-picto-primary to-orange-400 group-hover:w-full active-nav-item:w-full transition-all duration-300 ease-out"></div>
           </ScrollLink>
         ) : (
           <RouterLink

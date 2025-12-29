@@ -51,9 +51,12 @@ const Projects = ({ data }) => {
         {/* Enhanced description */}
         <p
           style={{ lineHeight: "1.6", letterSpacing: "0%" }}
-          className="text-gray-600 text-sm xxs:text-base text-wrap leading-relaxed"
+          className="text-gray-600 text-sm xxs:text-base text-wrap leading-relaxed line-clamp-3"
         >
-          {data?.description}
+          {data?.description?.length > 120
+            ? `${data.description.substring(0, 120)}...`
+            : data?.description
+          }
         </p>
 
         {/* Modernized button */}

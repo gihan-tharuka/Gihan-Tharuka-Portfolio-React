@@ -151,13 +151,11 @@ const Profile = () => {
                 </div>
               </div>
 
-              {/* Main image container - hexagonal shape */}
-              <div className="relative z-10 w-64 h-64 mx-auto group">
+              {/* Main image container - circular shape */}
+              <div className="relative z-10 w-72 h-72 md:w-80 md:h-80 mx-auto group">
                 <div className="w-full h-full relative overflow-hidden shadow-2xl shadow-gray-200/60 hover:shadow-3xl hover:shadow-picto-primary/20 transition-all duration-500 group-hover:scale-105">
-                  {/* Hexagonal clip path */}
-                  <div className="w-full h-full relative" style={{
-                    clipPath: 'polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%)'
-                  }}>
+                  {/* Circular image */}
+                  <div className="w-full h-full relative rounded-full overflow-hidden">
                     <img
                       className="w-full h-full bg-soft-white object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110 group-hover:contrast-105 group-hover:saturate-110 filter"
                       src={person}
@@ -166,13 +164,15 @@ const Profile = () => {
                     />
                   </div>
 
-                  {/* Hexagonal border overlay */}
+                  {/* Circular border overlay */}
                   <svg
                     viewBox="0 0 200 200"
                     className="absolute inset-0 w-full h-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                   >
-                    <polygon
-                      points="100,10 170,50 170,130 100,170 30,130 30,50"
+                    <circle
+                      cx="100"
+                      cy="100"
+                      r="95"
                       fill="none"
                       stroke="#ff7a00"
                       strokeWidth="3"

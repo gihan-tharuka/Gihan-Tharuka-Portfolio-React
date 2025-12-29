@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import person from "../../assets/images/cv/gihan.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload, faCode, faRocket, faStar } from "@fortawesome/free-solid-svg-icons";
+import { faShieldAlt } from "@fortawesome/free-solid-svg-icons";
 import SocialMedia from "../common/socialMedia/SocialMedia";
 import pdf from "../../data/Gihan-Tharuka-Resume.pdf";
 
@@ -86,6 +87,10 @@ const Profile = () => {
               <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-orange-100/20 to-picto-primary/10 rounded-full border border-orange-300/30">
                 <FontAwesomeIcon icon={faRocket} className="text-orange-500" />
                 <span className="text-sm font-medium text-gray-700">Performance</span>
+              </div>
+              <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-100/20 to-picto-primary/10 rounded-full border border-green-300/30">
+                <FontAwesomeIcon icon={faShieldAlt} className="text-green-600" />
+                <span className="text-sm font-medium text-gray-700">Security</span>
               </div>
             </div>
 

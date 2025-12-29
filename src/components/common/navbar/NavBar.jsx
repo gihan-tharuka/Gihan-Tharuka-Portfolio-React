@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { Link as RouterLink, useLocation } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const navItems = [
   { id: 1, name: "Home", url: "introduction" },
@@ -24,6 +25,7 @@ const repoBase = import.meta.env.VITE_REPO_NAME ? `/${import.meta.env.VITE_REPO_
 
 const NavBar = () => {
   const [position, setPosition] = useState(0);
+  const [scrollProgress, setScrollProgress] = useState(0);
   const location = useLocation();
 
   const inHome = location.pathname === '/' || location.pathname === repoBase + '/';
@@ -71,8 +73,15 @@ const NavBar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setPosition(window.scrollY);
+      const scrolled = window.scrollY;
+      setPosition(scrolled);
+
+      // Calculate scroll progress
+      const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = documentHeight > 0 ? (scrolled / documentHeight) * 100 : 0;
+      setScrollProgress(progress);
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -80,14 +89,23 @@ const NavBar = () => {
   }, []);
 
   return (
-    <div
-      className={`sticky top-0 ${
-        position > 50
-          ? "bg-white/90 backdrop-blur-md border-b border-gray-200/50 shadow-lg shadow-gray-100/50"
-          : "bg-white/80 backdrop-blur-sm border-b border-white/50"
-      } z-50 transition-all duration-500`}
-    >
-      <div className="navbar flex justify-between mx-auto content py-2">
+    <>
+      {/* Scroll Progress Indicator */}
+      <div className="fixed top-0 left-0 w-full h-1 bg-gray-200 z-50">
+        <div
+          className="h-full bg-gradient-to-r from-picto-primary to-orange-400 transition-all duration-300 ease-out"
+          style={{ width: `${scrollProgress}%` }}
+        ></div>
+      </div>
+
+      <div
+        className={`sticky top-0 ${
+          position > 50
+            ? "bg-white/90 backdrop-blur-md border-b border-gray-200/50 shadow-lg shadow-gray-100/50"
+            : "bg-white/80 backdrop-blur-sm border-b border-white/50"
+        } z-40 transition-all duration-500`}
+      >
+        <div className="navbar flex justify-between mx-auto content py-3">
         <div className="flex items-center justify-between">
           <div className="dropdown lg:hidden">
             <div tabIndex={0} role="button" className="btn btn-ghost hover:bg-picto-primary/10 rounded-xl transition-all duration-300">
@@ -158,6 +176,7 @@ const NavBar = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

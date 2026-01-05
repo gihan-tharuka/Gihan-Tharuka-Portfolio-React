@@ -47,8 +47,8 @@ const Profile = () => {
             </p>
             <p className="mt-3">
               My stack spans server-side development, databases, and frontend
-              engineering. I value clean architecture, automated tests, and
-              continuous delivery to move fast without sacrificing quality.
+              engineering. I value clean architecture, security, and
+              performance to move fast without sacrificing quality.
             </p>
           </div>
           <div className="mt-8 flex max-md:justify-center">

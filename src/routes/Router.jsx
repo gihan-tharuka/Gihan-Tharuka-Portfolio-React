@@ -4,6 +4,7 @@ import Loading from "../components/common/loading/Loading";
 const Home = lazy(() => import("../pages/Home"));
 const ProjectDetail = lazy(() => import("../components/projects/ProjectDetail"));
 const ProjectsPage = lazy(() => import("../pages/Projects"));
+const About = lazy(() => import("../pages/About"));
 const Main = lazy(() => import("../layouts/Main"));
 
 const repoName = import.meta.env.VITE_REPO_NAME || "";
@@ -21,6 +22,10 @@ export const router = createBrowserRouter(
         {
           path: "/",
           element: <Home></Home>,
+        },
+        {
+          path: "/about",
+          element: <About />,
         },
         {
           path: "/projects",

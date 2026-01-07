@@ -46,9 +46,9 @@ const Profile = () => {
               real problems and provide great user experiences.
             </p>
             <p className="mt-3">
-              My stack spans server-side development, databases, cloud services, and frontend
-              engineering. I value clean architecture, test automation, and
-              continuous delivery to move fast without sacrificing quality.
+              My stack spans server-side development, databases, and frontend
+              engineering. I value clean architecture, security, and
+              performance to move fast without sacrificing quality.
             </p>
           </div>
           <div className="mt-8 flex max-md:justify-center">

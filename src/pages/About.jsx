@@ -4,6 +4,7 @@ import { faExternalLinkAlt, faHand, faRocket, faUsers, faBuilding, faWrench, faG
 import person from "../assets/images/cv/gihan.jpg";
 import gymImage from "../assets/images/projects/gym.jpg";
 import garageImage from "../assets/images/projects/garage.jpg";
+import studentBlogImage from "../assets/images/projects/student blog.jpg";
 
 const About = () => {
   return (
@@ -102,21 +103,57 @@ const About = () => {
             <FontAwesomeIcon icon={faUsers} className="text-picto-primary" />
             Working in Agile & Cross-Functional Teams
           </h2>
-          <p className="text-base md:text-lg text-gray-600 mb-6">
+          <p className="text-base md:text-lg text-gray-600 mb-8">
             During my coursework, I worked in a <strong>Scrum-based Agile environment</strong> on a university student portal project delivered across multiple sprints. What made this experience unique was rotating through different responsibilities within the same project.
           </p>
-          <p className="text-base md:text-lg text-gray-600 mb-6">
-            I gained practical exposure to:
-          </p>
-          <ul className="list-disc list-inside text-base md:text-lg text-gray-600 mb-6 ml-6">
-            <li>Requirements gathering and stakeholder communication</li>
-            <li>User stories, acceptance criteria, and documentation</li>
-            <li>Sprint planning, reviews, retrospectives, and daily stand-ups</li>
-            <li>Collaboration between development, QA, and business roles</li>
-          </ul>
-          <p className="text-base md:text-lg text-gray-600 mb-6">
-            This helped me understand not only *how* software is built, but *why* communication, planning, and feedback loops are critical to successful delivery.
-          </p>
+
+          {/* APIIT University Portal Project Card */}
+          <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+            <div className="md:flex">
+              <div className="md:w-1/3">
+                <img
+                  src={studentBlogImage}
+                  alt="APIIT University Portal"
+                  className="w-full h-48 md:h-full object-cover"
+                />
+              </div>
+              <div className="md:w-2/3 p-6">
+                <h3 className="text-2xl font-semibold mb-3 text-picto-primary">APIIT University Portal</h3>
+                <p className="text-gray-600 mb-4">
+                  A <strong>comprehensive student portal system</strong> developed in an Agile Scrum environment with rotating team responsibilities across multiple sprints.
+                </p>
+
+                <div className="mb-4">
+                  <h4 className="font-semibold mb-2 flex items-center gap-2">
+                    <FontAwesomeIcon icon={faLightbulb} className="text-picto-primary" />
+                    Key Achievements & Exposure
+                  </h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    <div className="flex items-center gap-2">
+                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm" />
+                      <span className="text-sm">Requirements gathering and stakeholder communication</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm" />
+                      <span className="text-sm">User stories, acceptance criteria, and documentation</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm" />
+                      <span className="text-sm">Sprint planning, reviews, retrospectives, and daily stand-ups</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm" />
+                      <span className="text-sm">Collaboration between development, QA, and business roles</span>
+                    </div>
+                  </div>
+                </div>
+
+                <p className="text-gray-600 text-sm italic">
+                  This experience taught me not only *how* software is built, but *why* communication, planning, and feedback loops are critical to successful delivery in cross-functional teams.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 

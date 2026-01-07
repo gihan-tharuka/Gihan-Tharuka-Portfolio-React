@@ -5,6 +5,7 @@ import person from "../assets/images/cv/gihan.jpg";
 import gymImage from "../assets/images/projects/gym.jpg";
 import garageImage from "../assets/images/projects/garage.jpg";
 import studentBlogImage from "../assets/images/projects/student blog.jpg";
+import portfolioImage from "../assets/images/projects/portfolio.jpg";
 
 const About = () => {
   return (
@@ -299,20 +300,57 @@ const About = () => {
             <FontAwesomeIcon icon={faGlobe} className="text-picto-primary" />
             Working with International Clients
           </h2>
-          <p className="text-base md:text-lg text-gray-600 mb-6">
-            I've also worked with <strong>international clients</strong>, including delivering a portfolio website for a photography and videography business based in <strong>Japan</strong>.
+          <p className="text-base md:text-lg text-gray-600 mb-8">
+            I've worked with <strong>international clients</strong>, delivering high-quality solutions despite geographical and timezone challenges.
           </p>
-          <p className="text-base md:text-lg text-gray-600 mb-6">
-            Despite the time zone difference, I ensured smooth collaboration through:
-          </p>
-          <ul className="list-disc list-inside text-base md:text-lg text-gray-600 mb-6 ml-6">
-            <li>Clear milestone-based delivery</li>
-            <li>Asynchronous communication</li>
-            <li>Regular updates and feedback loops</li>
-          </ul>
-          <p className="text-base md:text-lg text-gray-600 mb-6">
-            This experience strengthened my ability to communicate clearly, manage expectations, and deliver quality work in remote settings.
-          </p>
+
+          {/* Hevinly Portfolio Website Project Card */}
+          <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+            <div className="md:flex">
+              <div className="md:w-1/3">
+                <img
+                  src={portfolioImage}
+                  alt="Hevinly Portfolio Website"
+                  className="w-full h-48 md:h-full object-cover"
+                />
+              </div>
+              <div className="md:w-2/3 p-6">
+                <h3 className="text-2xl font-semibold mb-3 text-picto-primary">Hevinly - Portfolio Website</h3>
+                <p className="text-gray-600 mb-4">
+                  A <strong>professional portfolio website</strong> developed for a photography and videography business based in <strong>Japan</strong>, showcasing their work with an elegant, responsive design.
+                </p>
+
+                <div className="mb-4">
+                  <h4 className="font-semibold mb-2 flex items-center gap-2">
+                    <FontAwesomeIcon icon={faLightbulb} className="text-picto-primary" />
+                    Remote Collaboration Achievements
+                  </h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    <div className="flex items-center gap-2">
+                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm" />
+                      <span className="text-sm">Clear milestone-based delivery</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm" />
+                      <span className="text-sm">Asynchronous communication</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm" />
+                      <span className="text-sm">Regular updates and feedback loops</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm" />
+                      <span className="text-sm">Timezone difference management</span>
+                    </div>
+                  </div>
+                </div>
+
+                <p className="text-gray-600 text-sm italic">
+                  This international project experience strengthened my ability to communicate clearly, manage expectations, and deliver quality work in remote settings across different cultures and timezones.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 

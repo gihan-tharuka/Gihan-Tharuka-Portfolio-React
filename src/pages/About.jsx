@@ -103,7 +103,7 @@ const About = () => {
             <li>Deployment and hosting setup</li>
           </ul>
           <p className="text-base md:text-lg text-gray-600 mb-6">
-            I intentionally rebuilt this system from scratch using the <strong>latest Laravel and Filament stack</strong>, without reusing previous code, to strengthen my understanding of the full lifecycle. After evaluating multiple deployment options, I chose <strong>Railway</strong> for its Laravel-friendly setup, cost efficiency, and scalability.
+            I intentionally rebuilt this system from scratch using the <strong>latest Laravel and Filament stack</strong>, without reusing previous code, to strengthen my understanding of the full lifecycle. After evaluating multiple deployment options, I chose <strong>Laravel Cloud</strong> for its Laravel-friendly setup, cost efficiency, and scalability.
           </p>
           <p className="text-base md:text-lg text-gray-600 mb-6">
             The product is currently evolving based on feedback from additional automobile service centers.
@@ -114,7 +114,7 @@ const About = () => {
       {/* Working with International Clients */}
       <div className="introduction-profile-background">
         <div className="content px-4 sm:px-6 md:px-12 lg:px-20 py-16">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-8">Working with International Clients (Remote Experience)</h2>
+          <h2 className="text-3xl md:text-4xl font-semibold mb-8">Working with International Clients </h2>
           <p className="text-base md:text-lg text-gray-600 mb-6">
             I've also worked with <strong>international clients</strong>, including delivering a portfolio website for a photography and videography business based in <strong>Japan</strong>.
           </p>

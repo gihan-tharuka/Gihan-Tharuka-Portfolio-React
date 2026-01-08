@@ -11,12 +11,36 @@ const About = () => {
   return (
     <div className="relative">
       {/* Hero Section with Profile Image */}
-      
-      
+      <div className="introduction-profile-background">
+        <div className="content px-4 sm:px-6 md:px-12 lg:px-20 py-16">
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+            {/* Profile Image */}
+            <div className="flex-shrink-0">
+              <div className="relative">
+                <img
+                  src={person}
+                  alt="Gihan Tharuka"
+                  className="w-48 h-48 lg:w-64 lg:h-64 rounded-full object-cover shadow-2xl border-4 border-white"
+                />
+                <div className="absolute -bottom-2 -right-2 bg-picto-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
+                  Full Stack Developer
+                </div>
+              </div>
+            </div>
 
-      
-
-      
+            {/* Introduction Content */}
+            <div className="flex-1 text-center lg:text-left">
+              <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
+                Hi, I'm <span className="text-picto-primary">Gihan Tharuka</span>
+              </h1>
+              <p className="text-lg lg:text-xl text-gray-600 mb-6 leading-relaxed">
+                A passionate full-stack developer with expertise in modern web technologies,
+                bringing ideas to life through clean code and innovative solutions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Working in Agile & Cross-Functional Teams */}
       <div className="bg-soft-white">

@@ -11,91 +11,12 @@ const About = () => {
   return (
     <div className="relative">
       {/* Hero Section with Profile Image */}
-      <div className="introduction-profile-background">
-        <div className="content px-4 sm:px-6 md:px-12 lg:px-20 py-16">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-12">
-            <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-2xl border-4 border-white">
-              <img
-                src={person}
-                alt="Gihan Tharuka"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="text-center md:text-left">
-              <h1 className="section-title mb-4">About Me</h1>
-              <p className="text-lg md:text-xl text-gray-700 max-w-2xl">
-                Passionate Software Engineer & SaaS Builder
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      
+      
 
-      {/* Visual Separator */}
-      <div className="bg-gradient-to-r from-picto-primary to-orange-400 h-1"></div>
+      
 
-      {/* Hi, I'm Gihan */}
-      <div className="bg-soft-white">
-        <div className="content px-4 sm:px-6 md:px-12 lg:px-20 py-16">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-8 flex items-center gap-3">
-            <FontAwesomeIcon icon={faHand} className="text-picto-primary" />
-            Hi, I'm Gihan 👋
-          </h2>
-          <p className="text-base md:text-lg text-gray-600 mb-6">
-            I'm a <strong>Software Engineer and SaaS builder</strong> who enjoys turning real-world problems into clean, reliable, and scalable software. I focus on <strong>end-to-end ownership</strong> — from understanding business needs to designing, building, and deploying production-ready applications.
-          </p>
-          <p className="text-base md:text-lg text-gray-600 mb-6">
-            I'm particularly interested in <strong>remote-first roles</strong>, product-driven teams, and environments where engineering decisions are closely aligned with real user impact.
-          </p>
-        </div>
-      </div>
-
-      {/* My Journey */}
-      <div className="introduction-profile-background">
-        <div className="content px-4 sm:px-6 md:px-12 lg:px-20 py-16">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-12 flex items-center gap-3 justify-center">
-            <FontAwesomeIcon icon={faRocket} className="text-picto-primary" />
-            My Journey
-          </h2>
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-picto-primary h-full hidden md:block"></div>
-
-            {/* Timeline items */}
-            <div className="space-y-12">
-              {/* Degree Completion */}
-              <div className="flex flex-col md:flex-row items-center md:items-start">
-                <div className="md:w-1/2 md:pr-8 md:text-right mb-4 md:mb-0">
-                  <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-picto-primary">
-                    <h3 className="text-xl font-semibold text-picto-primary mb-2">September 2025</h3>
-                    <h4 className="text-lg font-medium mb-3">Degree Completion</h4>
-                    <p className="text-gray-600">
-                      Completed Software Engineering degree. Instead of rushing into the job market, I focused on building real products and gaining practical experience.
-                    </p>
-                  </div>
-                </div>
-                <div className="w-4 h-4 bg-picto-primary rounded-full border-4 border-white shadow-lg mx-auto md:mx-0"></div>
-                <div className="md:w-1/2 md:pl-8 mt-4 md:mt-0"></div>
-              </div>
-
-              {/* Hands-on Experience */}
-              <div className="flex flex-col md:flex-row items-center md:items-start">
-                <div className="md:w-1/2 md:pr-8 mt-4 md:mt-0"></div>
-                <div className="w-4 h-4 bg-picto-primary rounded-full border-4 border-white shadow-lg mx-auto md:mx-0"></div>
-                <div className="md:w-1/2 md:pl-8 mt-4 md:mt-0">
-                  <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-picto-primary">
-                    <h3 className="text-xl font-semibold text-picto-primary mb-2">2024 - Present</h3>
-                    <h4 className="text-lg font-medium mb-3">Hands-on Experience & Growth</h4>
-                    <p className="text-gray-600">
-                      Worked in Agile teams, co-founded SaaS products, and delivered systems for real businesses locally and internationally. This shifted my mindset from "writing code" to "solving business problems with software."
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      
 
       {/* Working in Agile & Cross-Functional Teams */}
       <div className="bg-soft-white">

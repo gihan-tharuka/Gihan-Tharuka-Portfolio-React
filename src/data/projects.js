@@ -222,7 +222,7 @@ const projects = [
     ],
     conceptsUsed: ["MVC Architecture","Livewire reactive UIs", "RBAC"],
     otherServices: ["Spatie Media Library","Hostinger", "Cloudflare","Filament"],
-    links: { live: "#!", repo: "https://github.com/gihan-tharuka/flexi-fit" },
+    links: { live: "https://flexifit-v1-master-aamsmm.laravel.cloud/", repo: "https://github.com/gihan-tharuka/Flexifit-FG-Demo.git" },
     seo: { description: "Flexi-Fit fitness center management system (Laravel + Livewire)", ogImage: studentBlog },
   },
   {
@@ -251,7 +251,7 @@ const projects = [
       conceptsUsed: ["Livewire reactive UIs", "RBAC", "MVC Architecture"],
       otherServices: [  "AWS S3", "Laravel Cloud", "Cloudflare", "Google Analytics", "Jetstream", "Filament","Livewire",
       ],
-      links: { live: "#!", repo: "https://github.com/gihan-tharuka/automate" },
+      links: { live: "https://revlineautomotors.com/", repo: "https://github.com/gihan-tharuka/AutoMate-FG-Demo.git" },
       seo: { description: "AutoMate - automotive service management system (Laravel + Filament)", ogImage: garage },
     },
 ];

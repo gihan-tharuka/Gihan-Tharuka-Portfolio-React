@@ -8,8 +8,9 @@ const navItems = [
   { id: 3, name: "Expertise", url: "expertise" },
   { id: 4, name: "Education", url: "education" },
   { id: 5, name: "Services", url: "services" },
-  // { id: 6, name: "Projects", url: "/projects" },
-  // { id: 7, name: "Contact", url: "contact" },
+  { id: 6, name: "About", url: "/about" },
+  // { id: 7, name: "Projects", url: "/projects" },
+  // { id: 8, name: "Contact", url: "contact" },
 ];
 
 const handleMenuClick = () => {

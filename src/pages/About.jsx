@@ -32,16 +32,13 @@ const About = () => {
             {/* Introduction Content */}
             <div className="flex-1 text-center lg:text-left">
               <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
-                Hi, I'm <span className="text-picto-primary">Gihan Tharuka</span>
+                Explore<span className="text-picto-primary ml-4">My Journey</span>
               </h1>
-              <p className="text-lg lg:text-xl text-gray-600 mb-6 leading-relaxed">
-                A passionate full-stack developer with expertise in modern web technologies,
-                bringing ideas to life through clean code and innovative solutions.
-              </p>
+             
 
               {/* Interactive Navigation Cards */}
               <div className="mt-8">
-                <h3 className="text-xl font-semibold text-gray-800 mb-4 text-center lg:text-left">Explore My Journey</h3>
+                
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   <ScrollLink
                     to="agile-teams"

@@ -7,8 +7,6 @@ const ProjectsPage = lazy(() => import("../pages/Projects"));
 const About = lazy(() => import("../pages/About"));
 const Main = lazy(() => import("../layouts/Main"));
 
-const repoName = import.meta.env.VITE_REPO_NAME || "";
-
 export const router = createBrowserRouter(
   [
     {
@@ -38,5 +36,5 @@ export const router = createBrowserRouter(
       ],
     },
   ],
-  { basename: `/${repoName}` }
+  { basename: "/" }
 );

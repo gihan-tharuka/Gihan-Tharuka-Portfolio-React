@@ -4,11 +4,12 @@ import { Link as RouterLink, useLocation } from "react-router-dom";
 
 const navItems = [
   { id: 1, name: "Home", url: "introduction" },
-  { id: 2, name: "Portfolio", url: "portfolio" },
-  { id: 3, name: "Expertise", url: "expertise" },
-  { id: 4, name: "Education", url: "education" },
-  { id: 5, name: "Services", url: "services" },
-  { id: 6, name: "About", url: "/about" },
+  { id: 2, name: "Experience", url: "/about" },
+  { id: 3, name: "Portfolio", url: "portfolio" },
+  { id: 4, name: "Expertise", url: "expertise" },
+  { id: 5, name: "Education", url: "education" },
+  { id: 6, name: "Services", url: "services" },
+  
   // { id: 7, name: "Projects", url: "/projects" },
   // { id: 8, name: "Contact", url: "contact" },
 ];

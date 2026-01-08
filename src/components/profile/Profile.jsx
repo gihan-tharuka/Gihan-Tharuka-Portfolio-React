@@ -1,6 +1,7 @@
 import person from "../../assets/images/cv/gihan.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 import SocialMedia from "../common/socialMedia/SocialMedia";
 import pdf from "../../data/Gihan-Tharuka-Resume.pdf";
 
@@ -65,6 +66,12 @@ const Profile = () => {
             >
               <FontAwesomeIcon icon={faDownload} /> Download CV
             </a>
+            <Link
+              className={`btn xxs:btn-lg px-6 max-xs:px-2 xxs:py-3 hover:border-picto-primary btn-primary duration-300 transition-all hover:text-picto-primary ms-4 text-xs xxs:text-[14px] sm:text-[16px]`}
+              to="/about"
+            >
+              My Experience
+            </Link>
           </div>
         </div>
       </div>

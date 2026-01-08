@@ -66,11 +66,11 @@ const About = () => {
                         </div>
                       </ScrollLink>
                       {/* Arrow for mobile */}
-                      <FontAwesomeIcon icon={faArrowRight} className="text-picto-primary/60 text-lg mt-2 lg:hidden rotate-90" />
+                      {/* <FontAwesomeIcon icon={faArrowRight} className="text-picto-primary/60 text-lg mt-2 lg:hidden rotate-90" /> */}
                     </div>
 
                     {/* Connecting Arrow - Desktop */}
-                    <FontAwesomeIcon icon={faArrowRight} className="text-picto-primary/60 text-xl hidden lg:block" />
+                    {/* <FontAwesomeIcon icon={faArrowRight} className="text-picto-primary/60 text-xl hidden lg:block" /> */}
 
                     {/* Step 2: Product Thinking */}
                     <div className="flex flex-col items-center group">
@@ -91,11 +91,11 @@ const About = () => {
                         </div>
                       </ScrollLink>
                       {/* Arrow for mobile */}
-                      <FontAwesomeIcon icon={faArrowRight} className="text-picto-primary/60 text-lg mt-2 lg:hidden rotate-90" />
+                      {/* <FontAwesomeIcon icon={faArrowRight} className="text-picto-primary/60 text-lg mt-2 lg:hidden rotate-90" /> */}
                     </div>
 
                     {/* Connecting Arrow - Desktop */}
-                    <FontAwesomeIcon icon={faArrowRight} className="text-picto-primary/60 text-xl hidden lg:block" />
+                    {/* <FontAwesomeIcon icon={faArrowRight} className="text-picto-primary/60 text-xl hidden lg:block" /> */}
 
                     {/* Step 3: Full Ownership */}
                     <div className="flex flex-col items-center group">
@@ -116,11 +116,11 @@ const About = () => {
                         </div>
                       </ScrollLink>
                       {/* Arrow for mobile */}
-                      <FontAwesomeIcon icon={faArrowRight} className="text-picto-primary/60 text-lg mt-2 lg:hidden rotate-90" />
+                      {/* <FontAwesomeIcon icon={faArrowRight} className="text-picto-primary/60 text-lg mt-2 lg:hidden rotate-90" /> */}
                     </div>
 
                     {/* Connecting Arrow - Desktop */}
-                    <FontAwesomeIcon icon={faArrowRight} className="text-picto-primary/60 text-xl hidden lg:block" />
+                    {/* <FontAwesomeIcon icon={faArrowRight} className="text-picto-primary/60 text-xl hidden lg:block" /> */}
 
                     {/* Step 4: International Work */}
                     <div className="flex flex-col items-center group">

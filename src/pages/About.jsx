@@ -36,115 +36,144 @@ const About = () => {
               </h1>
              
 
-              {/* Interactive Navigation Cards */}
+              {/* Interactive Navigation Journey */}
               <div className="mt-8">
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  <ScrollLink
-                    to="agile-teams"
-                    smooth={true}
-                    duration={800}
-                    offset={-100}
-                    className="group cursor-pointer"
-                  >
-                    <div className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl p-4 hover:shadow-lg hover:border-picto-primary transition-all duration-300 hover:-translate-y-1">
-                      <div className="flex items-center gap-3 mb-2">
-                        <div className="w-10 h-10 bg-picto-primary/10 rounded-lg flex items-center justify-center group-hover:bg-picto-primary/20 transition-colors">
-                          <FontAwesomeIcon icon={faUsers} className="text-picto-primary text-lg" />
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-gray-800 group-hover:text-picto-primary transition-colors">Agile Teams</h4>
+                <h3 className="text-xl font-semibold text-gray-800 mb-6 text-center lg:text-left">My Professional Journey</h3>
+
+                {/* Journey Roadmap Layout */}
+                <div className="relative">
+                  {/* Connection Lines - Desktop */}
+                  <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-picto-primary/30 via-picto-primary/50 to-picto-primary/30 -translate-y-1/2 z-0"></div>
+
+                  {/* Journey Steps */}
+                  <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-2">
+                    {/* Step 1: Agile Teams */}
+                    <div className="flex flex-col items-center group">
+                      <div className="w-3 h-3 bg-picto-primary rounded-full mb-2 hidden lg:block"></div>
+                      <ScrollLink
+                        to="agile-teams"
+                        smooth={true}
+                        duration={800}
+                        offset={-100}
+                        className="cursor-pointer transform transition-all duration-300 hover:scale-105"
+                      >
+                        <div className="bg-white/90 backdrop-blur-sm border-2 border-gray-200 rounded-xl p-4 hover:border-picto-primary hover:shadow-xl transition-all duration-300 min-w-[160px] text-center">
+                          <div className="w-12 h-12 bg-picto-primary/10 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-picto-primary/20 transition-colors">
+                            <FontAwesomeIcon icon={faUsers} className="text-picto-primary text-xl" />
+                          </div>
+                          <h4 className="font-semibold text-gray-800 mb-1 group-hover:text-picto-primary transition-colors">Agile Teams</h4>
                           <p className="text-xs text-gray-600">Scrum & Collaboration</p>
                         </div>
-                      </div>
-                      <FontAwesomeIcon icon={faArrowRight} className="text-picto-primary text-sm ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
+                      </ScrollLink>
+                      {/* Arrow for mobile */}
+                      <FontAwesomeIcon icon={faArrowRight} className="text-picto-primary/60 text-lg mt-2 lg:hidden rotate-90" />
                     </div>
-                  </ScrollLink>
 
-                  <ScrollLink
-                    to="product-thinking"
-                    smooth={true}
-                    duration={800}
-                    offset={-100}
-                    className="group cursor-pointer"
-                  >
-                    <div className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl p-4 hover:shadow-lg hover:border-picto-primary transition-all duration-300 hover:-translate-y-1">
-                      <div className="flex items-center gap-3 mb-2">
-                        <div className="w-10 h-10 bg-picto-primary/10 rounded-lg flex items-center justify-center group-hover:bg-picto-primary/20 transition-colors">
-                          <FontAwesomeIcon icon={faBuilding} className="text-picto-primary text-lg" />
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-gray-800 group-hover:text-picto-primary transition-colors">Product Thinking</h4>
+                    {/* Connecting Arrow - Desktop */}
+                    <FontAwesomeIcon icon={faArrowRight} className="text-picto-primary/60 text-xl hidden lg:block" />
+
+                    {/* Step 2: Product Thinking */}
+                    <div className="flex flex-col items-center group">
+                      <div className="w-3 h-3 bg-picto-primary rounded-full mb-2 hidden lg:block"></div>
+                      <ScrollLink
+                        to="product-thinking"
+                        smooth={true}
+                        duration={800}
+                        offset={-100}
+                        className="cursor-pointer transform transition-all duration-300 hover:scale-105"
+                      >
+                        <div className="bg-white/90 backdrop-blur-sm border-2 border-gray-200 rounded-xl p-4 hover:border-picto-primary hover:shadow-xl transition-all duration-300 min-w-[160px] text-center">
+                          <div className="w-12 h-12 bg-picto-primary/10 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-picto-primary/20 transition-colors">
+                            <FontAwesomeIcon icon={faBuilding} className="text-picto-primary text-xl" />
+                          </div>
+                          <h4 className="font-semibold text-gray-800 mb-1 group-hover:text-picto-primary transition-colors">Product Thinking</h4>
                           <p className="text-xs text-gray-600">SaaS & Business</p>
                         </div>
-                      </div>
-                      <FontAwesomeIcon icon={faArrowRight} className="text-picto-primary text-sm ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
+                      </ScrollLink>
+                      {/* Arrow for mobile */}
+                      <FontAwesomeIcon icon={faArrowRight} className="text-picto-primary/60 text-lg mt-2 lg:hidden rotate-90" />
                     </div>
-                  </ScrollLink>
 
-                  <ScrollLink
-                    to="full-ownership"
-                    smooth={true}
-                    duration={800}
-                    offset={-100}
-                    className="group cursor-pointer"
-                  >
-                    <div className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl p-4 hover:shadow-lg hover:border-picto-primary transition-all duration-300 hover:-translate-y-1 md:col-span-2 lg:col-span-1">
-                      <div className="flex items-center gap-3 mb-2">
-                        <div className="w-10 h-10 bg-picto-primary/10 rounded-lg flex items-center justify-center group-hover:bg-picto-primary/20 transition-colors">
-                          <FontAwesomeIcon icon={faWrench} className="text-picto-primary text-lg" />
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-gray-800 group-hover:text-picto-primary transition-colors">Full Ownership</h4>
+                    {/* Connecting Arrow - Desktop */}
+                    <FontAwesomeIcon icon={faArrowRight} className="text-picto-primary/60 text-xl hidden lg:block" />
+
+                    {/* Step 3: Full Ownership */}
+                    <div className="flex flex-col items-center group">
+                      <div className="w-3 h-3 bg-picto-primary rounded-full mb-2 hidden lg:block"></div>
+                      <ScrollLink
+                        to="full-ownership"
+                        smooth={true}
+                        duration={800}
+                        offset={-100}
+                        className="cursor-pointer transform transition-all duration-300 hover:scale-105"
+                      >
+                        <div className="bg-white/90 backdrop-blur-sm border-2 border-gray-200 rounded-xl p-4 hover:border-picto-primary hover:shadow-xl transition-all duration-300 min-w-[160px] text-center">
+                          <div className="w-12 h-12 bg-picto-primary/10 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-picto-primary/20 transition-colors">
+                            <FontAwesomeIcon icon={faWrench} className="text-picto-primary text-xl" />
+                          </div>
+                          <h4 className="font-semibold text-gray-800 mb-1 group-hover:text-picto-primary transition-colors">Full Ownership</h4>
                           <p className="text-xs text-gray-600">End-to-End Development</p>
                         </div>
-                      </div>
-                      <FontAwesomeIcon icon={faArrowRight} className="text-picto-primary text-sm ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
+                      </ScrollLink>
+                      {/* Arrow for mobile */}
+                      <FontAwesomeIcon icon={faArrowRight} className="text-picto-primary/60 text-lg mt-2 lg:hidden rotate-90" />
                     </div>
-                  </ScrollLink>
 
-                  <ScrollLink
-                    to="international-work"
-                    smooth={true}
-                    duration={800}
-                    offset={-100}
-                    className="group cursor-pointer"
-                  >
-                    <div className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl p-4 hover:shadow-lg hover:border-picto-primary transition-all duration-300 hover:-translate-y-1">
-                      <div className="flex items-center gap-3 mb-2">
-                        <div className="w-10 h-10 bg-picto-primary/10 rounded-lg flex items-center justify-center group-hover:bg-picto-primary/20 transition-colors">
-                          <FontAwesomeIcon icon={faGlobe} className="text-picto-primary text-lg" />
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-gray-800 group-hover:text-picto-primary transition-colors">International Work</h4>
+                    {/* Connecting Arrow - Desktop */}
+                    <FontAwesomeIcon icon={faArrowRight} className="text-picto-primary/60 text-xl hidden lg:block" />
+
+                    {/* Step 4: International Work */}
+                    <div className="flex flex-col items-center group">
+                      <div className="w-3 h-3 bg-picto-primary rounded-full mb-2 hidden lg:block"></div>
+                      <ScrollLink
+                        to="international-work"
+                        smooth={true}
+                        duration={800}
+                        offset={-100}
+                        className="cursor-pointer transform transition-all duration-300 hover:scale-105"
+                      >
+                        <div className="bg-white/90 backdrop-blur-sm border-2 border-gray-200 rounded-xl p-4 hover:border-picto-primary hover:shadow-xl transition-all duration-300 min-w-[160px] text-center">
+                          <div className="w-12 h-12 bg-picto-primary/10 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-picto-primary/20 transition-colors">
+                            <FontAwesomeIcon icon={faGlobe} className="text-picto-primary text-xl" />
+                          </div>
+                          <h4 className="font-semibold text-gray-800 mb-1 group-hover:text-picto-primary transition-colors">International Work</h4>
                           <p className="text-xs text-gray-600">Global Collaboration</p>
                         </div>
-                      </div>
-                      <FontAwesomeIcon icon={faArrowRight} className="text-picto-primary text-sm ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
+                      </ScrollLink>
+                      {/* Arrow for mobile */}
+                      <FontAwesomeIcon icon={faArrowRight} className="text-picto-primary/60 text-lg mt-2 lg:hidden rotate-90" />
                     </div>
-                  </ScrollLink>
 
-                  <ScrollLink
-                    to="work-philosophy"
-                    smooth={true}
-                    duration={800}
-                    offset={-100}
-                    className="group cursor-pointer"
-                  >
-                    <div className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl p-4 hover:shadow-lg hover:border-picto-primary transition-all duration-300 hover:-translate-y-1">
-                      <div className="flex items-center gap-3 mb-2">
-                        <div className="w-10 h-10 bg-picto-primary/10 rounded-lg flex items-center justify-center group-hover:bg-picto-primary/20 transition-colors">
-                          <FontAwesomeIcon icon={faCog} className="text-picto-primary text-lg" />
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-gray-800 group-hover:text-picto-primary transition-colors">Work Philosophy</h4>
+                    {/* Connecting Arrow - Desktop */}
+                    <FontAwesomeIcon icon={faArrowRight} className="text-picto-primary/60 text-xl hidden lg:block" />
+
+                    {/* Step 5: Work Philosophy */}
+                    <div className="flex flex-col items-center group">
+                      <div className="w-3 h-3 bg-picto-primary rounded-full mb-2 hidden lg:block"></div>
+                      <ScrollLink
+                        to="work-philosophy"
+                        smooth={true}
+                        duration={800}
+                        offset={-100}
+                        className="cursor-pointer transform transition-all duration-300 hover:scale-105"
+                      >
+                        <div className="bg-white/90 backdrop-blur-sm border-2 border-gray-200 rounded-xl p-4 hover:border-picto-primary hover:shadow-xl transition-all duration-300 min-w-[160px] text-center">
+                          <div className="w-12 h-12 bg-picto-primary/10 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-picto-primary/20 transition-colors">
+                            <FontAwesomeIcon icon={faCog} className="text-picto-primary text-xl" />
+                          </div>
+                          <h4 className="font-semibold text-gray-800 mb-1 group-hover:text-picto-primary transition-colors">Work Philosophy</h4>
                           <p className="text-xs text-gray-600">How I Approach Work</p>
                         </div>
-                      </div>
-                      <FontAwesomeIcon icon={faArrowRight} className="text-picto-primary text-sm ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
+                      </ScrollLink>
                     </div>
-                  </ScrollLink>
+                  </div>
                 </div>
+
+                {/* Journey Description */}
+                <p className="text-sm text-gray-600 mt-6 text-center max-w-2xl mx-auto">
+                  Click on each milestone to explore my professional growth journey, from learning agile methodologies
+                  to delivering end-to-end solutions for international clients.
+                </p>
               </div>
             </div>
           </div>

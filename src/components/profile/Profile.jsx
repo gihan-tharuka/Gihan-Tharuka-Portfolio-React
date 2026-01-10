@@ -52,7 +52,7 @@ const Profile = () => {
               performance to move fast without sacrificing quality.
             </p>
           </div>
-          <div className="mt-8 flex max-md:justify-center">
+          <div className="mt-8 flex flex-col md:flex-row max-md:justify-center max-md:items-center gap-4 md:gap-0">
             <a
               className="btn xxs:btn-lg px-6 max-xs:px-2 xxs:py-3 btn-primary text-xs xxs:text-[14px] sm:text-[16px]"
               href="#portfolio"
@@ -60,14 +60,14 @@ const Profile = () => {
               My Projects
             </a>
             <a
-              className={`btn xxs:btn-lg px-6 max-xs:px-2 xxs:py-3 hover:border-picto-primary bg-white duration-300 transition-all hover:text-picto-primary  ms-4 text-xs xxs:text-[14px] sm:text-[16px]`}
+              className={`btn xxs:btn-lg px-6 max-xs:px-2 xxs:py-3 hover:border-picto-primary bg-white duration-300 transition-all hover:text-picto-primary md:ms-4 text-xs xxs:text-[14px] sm:text-[16px]`}
               href={pdf}
               download="Gihan-Tharuka-Resume.pdf"
             >
               <FontAwesomeIcon icon={faDownload} /> Download CV
             </a>
             <Link
-              className={`btn xxs:btn-lg px-6 max-xs:px-2 xxs:py-3 hover:border-picto-primary btn-primary duration-300 transition-all hover:text-picto-primary ms-4 text-xs xxs:text-[14px] sm:text-[16px]`}
+              className={`btn xxs:btn-lg px-6 max-xs:px-2 xxs:py-3 hover:border-picto-primary btn-primary duration-300 transition-all hover:text-picto-primary md:ms-4 text-xs xxs:text-[14px] sm:text-[16px]`}
               to="/about"
             >
               My Experience

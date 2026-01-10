@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faExternalLinkAlt, faHand, faRocket, faUsers, faBuilding, faWrench, faGlobe, faCog, faHandshake, faCode, faLightbulb, faCheckCircle, faStar, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Link as ScrollLink } from "react-scroll";
+import { Link } from "react-router-dom";
 import person from "../assets/images/cv/gihan.jpg";
 import gymImage from "../assets/images/projects/gym.jpg";
 import garageImage from "../assets/images/projects/garage.jpg";
@@ -177,7 +178,12 @@ const About = () => {
                 />
               </div>
               <div className="md:w-2/3 p-6">
-                <h3 className="text-2xl font-semibold mb-3 text-picto-primary">APIIT University Portal</h3>
+                <div className="flex justify-between items-center mb-3">
+                  <h3 className="text-2xl font-semibold text-picto-primary">APIIT University Portal</h3>
+                  <Link to="/projects/apiit-students-blog" className="btn btn-sm px-4 py-2 btn-primary text-sm">
+                    View Project
+                  </Link>
+                </div>
                 <p className="text-gray-600 mb-4">
                   A <strong>comprehensive student portal system</strong> developed in an Agile Scrum environment with rotating team responsibilities across multiple sprints.
                 </p>
@@ -238,7 +244,12 @@ const About = () => {
                 />
               </div>
               <div className="md:w-2/3 p-6">
-                <h3 className="text-2xl font-semibold mb-3 text-picto-primary">FlexiFit – Fitness Center Management SaaS</h3>
+                <div className="flex justify-between items-center mb-3">
+                  <h3 className="text-2xl font-semibold text-picto-primary">FlexiFit – Fitness Center Management SaaS</h3>
+                  <Link to="/projects/flexi-fit" className="btn btn-sm px-4 py-2 btn-primary text-sm">
+                    View Project
+                  </Link>
+                </div>
                 <p className="text-gray-600 mb-4">
                   A <strong>cloud-based fitness center management system</strong> designed to solve day-to-day operational challenges faced by gym owners and members.
                 </p>
@@ -300,7 +311,12 @@ const About = () => {
                 />
               </div>
               <div className="md:w-2/3 p-6">
-                <h3 className="text-2xl font-semibold mb-3 text-picto-primary">AutoMate – Automobile Service Center Management System</h3>
+                <div className="flex justify-between items-center mb-3">
+                  <h3 className="text-2xl font-semibold text-picto-primary">AutoMate – Automobile Service Center Management System</h3>
+                  <Link to="/projects/automate-service-system" className="btn btn-sm px-4 py-2 btn-primary text-sm">
+                    View Project
+                  </Link>
+                </div>
                 <p className="text-gray-600 mb-4">
                   A <strong>cloud-based automobile service center management system</strong> developed for a newly opened service center. Unlike FlexiFit, this project was <strong>designed, built, and deployed entirely by me</strong>.
                 </p>

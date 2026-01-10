@@ -389,7 +389,12 @@ const About = () => {
                 />
               </div>
               <div className="md:w-2/3 p-6">
-                <h3 className="text-2xl font-semibold mb-3 text-picto-primary">Hevinly - Portfolio Website</h3>
+                <div className="flex justify-between items-center mb-3">
+                  <h3 className="text-2xl font-semibold text-picto-primary">Hevinly - Portfolio Website</h3>
+                  <Link to="/projects/hevin-portfolio-website" className="btn btn-sm px-4 py-2 btn-primary text-sm">
+                    View Project
+                  </Link>
+                </div>
                 <p className="text-gray-600 mb-4">
                   A <strong>professional portfolio website</strong> developed for a photography and videography business based in <strong>Japan</strong>, showcasing their work with an elegant, responsive design.
                 </p>

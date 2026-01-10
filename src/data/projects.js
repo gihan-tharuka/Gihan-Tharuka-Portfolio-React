@@ -7,6 +7,7 @@ import healthMonitoring from "../assets/images/projects/health monitoring.jpg";
 import travelApp from "../assets/images/projects/travelapp.png";
 import garage from "../assets/images/projects/garage.jpg";
 import gym from "../assets/images/projects/gym.jpg";
+import portfolio from "../assets/images/projects/portfolio.jpg";
 
 const projects = [
   {
@@ -254,6 +255,33 @@ const projects = [
       links: { live: "https://revlineautomotors.com/", repo: "https://github.com/gihan-tharuka/AutoMate-FG-Demo.git" },
       seo: { description: "AutoMate - automotive service management system (Laravel + Filament)", ogImage: garage },
     },
+  {
+    id: "hevin-portfolio-website",
+    filtertag: "Web Development",
+    slug: "hevin-portfolio-website",
+    title: "Hevinly - Portfolio Website",
+    order: 10,
+    short: "A professional portfolio website developed for Hevin Randika, a videographer and photographer based in Japan. Features bilingual support (English/Japanese), responsive design, and showcases documentary, commercial, and social media content.",
+    role: "Full Stack Developer",
+    year: 2025,
+    duration: "3 months",
+    heroImage: portfolio,
+    gallery: [portfolio],
+    tools: ["HTML", "Tailwind CSS", "JavaScript", "Font Awesome", "Google Fonts"],
+    skills: ["Full Stack", "Frontend", "Web Development"],
+    features: [
+      { name: "Bilingual Support", description: "English and Japanese language support with dynamic translation." },
+      { name: "Responsive Design", description: "Mobile-first design that works across all device sizes." },
+      { name: "Portfolio Showcase", description: "Categorized display of documentary, commercial, and Instagram Reel content." },
+      { name: "Interactive Navigation", description: "Smooth scrolling and animated transitions throughout the site." },
+      { name: "Social Media Integration", description: "Direct links to YouTube, Instagram, LinkedIn, Facebook, and Threads." },
+      { name: "Contact Forms", description: "Functional contact forms for client inquiries." },
+    ],
+    conceptsUsed: ["Responsive Design", "Internationalization", "Static Site Architecture", "Cross-browser Compatibility", "SEO Optimization"],
+    otherServices: ["GitHub Pages Deployment", "Custom Domain Setup", "Performance Optimization"],
+    links: { live: "https://www.ropeholdersmedia.com/", repo: "https://github.com/hevinperiyapperuma/Hevin" },
+    seo: { description: "Hevinly - Professional videography and photography portfolio website", ogImage: portfolio },
+  },
 ];
 
 export default projects;

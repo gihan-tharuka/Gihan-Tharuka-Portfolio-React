@@ -7,13 +7,11 @@ const SPARedirect = () => {
 
   useEffect(() => {
     // Check if this is a redirected SPA route from 404.html
-    const searchParams = new URLSearchParams(location.search);
-    const spaPath = searchParams.get('/');
-
-    if (spaPath) {
-      // Remove the leading slash if present and decode the path
-      const cleanPath = spaPath.startsWith('/') ? spaPath : `/${spaPath}`;
-      const decodedPath = cleanPath.replace(/~and~/g, '&');
+    // The 404.html creates URLs like: domain.com/?/about
+    if (location.search.startsWith('/?/')) {
+      // Extract the path from the search string
+      const spaPath = location.search.slice(2); // Remove the '/?' prefix
+      const decodedPath = spaPath.replace(/~and~/g, '&');
 
       // Navigate to the clean route, replacing the current history entry
       navigate(decodedPath, { replace: true });

@@ -73,20 +73,12 @@ const ProjectDetail = () => {
             aria-hidden={false}
           >
             <div className="absolute inset-0 bg-black/30" />
-            <div className="content absolute inset-0 flex items-end">
-              <div className="w-full flex justify-start ">
-                <div className="bg-black/70 text-white p-2 ">
-                  <h1 className="text-2xl md:text-5xl font-semibold">{project.title}</h1>
-                </div>
-              </div>
-            </div>
           </div>
         );
       })()}
-      
-
       <main className="content px-4 sm:px-6 md:px-12 lg:px-20 py-12">
-  <div className="grid lg:grid-cols-3 gap-0 lg:gap-8">
+        <h1 className="text-2xl md:text-4xl font-bold mb-8">{project.title}</h1>
+        <div className="grid lg:grid-cols-3 gap-0 lg:gap-8">
           <article className="lg:col-span-2">
             <section className="mb-6">
               <h2 className="text-xl font-semibold">Summary</h2>

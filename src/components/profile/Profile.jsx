@@ -76,7 +76,7 @@ const Profile = () => {
                       className="w-full h-full object-cover filter"
                       src={person}
                       alt="Gihan Tharuka profile"
-                      style={{ transform: 'scale(1.2)' }}
+                      
                     />
                   </div>
                 </div>

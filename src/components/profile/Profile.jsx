@@ -102,6 +102,29 @@ const Profile = () => {
                 <SocialMedia />
               </div>
             </div>
+
+            {/* CTA buttons - moved below social media */}
+            <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center opacity-100 transition-all duration-500 delay-500">
+              <a
+                href="#contact"
+                className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-picto-primary to-orange-400 hover:from-orange-400 hover:to-picto-primary text-white font-bold text-lg px-8 py-4 rounded-2xl shadow-2xl shadow-picto-primary/25 hover:shadow-3xl hover:shadow-picto-primary/40 transform hover:scale-105 transition-all duration-300 overflow-hidden"
+              >
+                <span className="relative z-10">Let's Work Together</span>
+                <FontAwesomeIcon icon={faRocket} className="relative z-10 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+
+                {/* Button shine effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -skew-x-12 translate-x-full group-hover:translate-x-0"></div>
+              </a>
+
+              <a
+                href={pdf}
+                download="Gihan-Tharuka-Resume.pdf"
+                className="group inline-flex items-center gap-3 bg-white border-2 border-gray-200 hover:border-picto-primary text-gray-700 hover:text-picto-primary font-semibold text-lg px-8 py-4 rounded-2xl hover:bg-picto-primary/5 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                <FontAwesomeIcon icon={faDownload} className="transition-transform duration-300 group-hover:animate-bounce" />
+                <span>Download CV</span>
+              </a>
+            </div>
           </div>
 
           {/* Right Content - Text Content */}
@@ -155,28 +178,7 @@ const Profile = () => {
               </div>
             </div>
 
-            {/* CTA buttons */}
-            <div className={`flex flex-col sm:flex-row gap-4 transition-all duration-700 delay-500 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-              <a
-                href="#contact"
-                className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-picto-primary to-orange-400 hover:from-orange-400 hover:to-picto-primary text-white font-bold text-lg px-8 py-4 rounded-2xl shadow-2xl shadow-picto-primary/25 hover:shadow-3xl hover:shadow-picto-primary/40 transform hover:scale-105 transition-all duration-300 overflow-hidden"
-              >
-                <span className="relative z-10">Let's Work Together</span>
-                <FontAwesomeIcon icon={faRocket} className="relative z-10 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
 
-                {/* Button shine effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -skew-x-12 translate-x-full group-hover:translate-x-0"></div>
-              </a>
-
-              <a
-                href={pdf}
-                download="Gihan-Tharuka-Resume.pdf"
-                className="group inline-flex items-center gap-3 bg-white border-2 border-gray-200 hover:border-picto-primary text-gray-700 hover:text-picto-primary font-semibold text-lg px-8 py-4 rounded-2xl hover:bg-picto-primary/5 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-              >
-                <FontAwesomeIcon icon={faDownload} className="transition-transform duration-300 group-hover:animate-bounce" />
-                <span>Download CV</span>
-              </a>
-            </div>
           </div>
         </div>
       </div>

@@ -84,42 +84,25 @@ const Profile = () => {
               </div>
 
               {/* Main image container - circular shape */}
-              <div className="relative z-10 w-72 h-72 md:w-80 md:h-80 mx-auto group">
-                <div className="w-full h-full relative overflow-hidden shadow-2xl shadow-gray-200/60 hover:shadow-3xl hover:shadow-picto-primary/20 transition-all duration-500 group-hover:scale-105">
+              <div className="relative z-10 w-72 h-72 md:w-80 md:h-80 mx-auto">
+                <div className="w-full h-full relative overflow-hidden shadow-2xl shadow-gray-200/60">
                   {/* Circular image */}
                   <div className="w-full h-full relative rounded-full overflow-hidden">
                     <img
-                      className="w-full h-full bg-soft-white object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110 group-hover:contrast-105 group-hover:saturate-110 filter"
+                      className="w-full h-full bg-soft-white object-cover filter"
                       src={person}
                       alt="Gihan Tharuka profile"
                       style={{ transform: 'scale(1.2)' }}
                     />
                   </div>
-
-                  {/* Circular border overlay */}
-                  <svg
-                    viewBox="0 0 200 200"
-                    className="absolute inset-0 w-full h-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                  >
-                    <circle
-                      cx="100"
-                      cy="100"
-                      r="95"
-                      fill="none"
-                      stroke="#ff7a00"
-                      strokeWidth="3"
-                      strokeOpacity="0.6"
-                      className="drop-shadow-sm"
-                    />
-                  </svg>
                 </div>
               </div>
+            </div>
 
-              {/* Enhanced social media section */}
-              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 translate-y-4 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-300">
-                <div className="px-8 py-4 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-100/60 ring-1 ring-white/20">
-                  <SocialMedia />
-                </div>
+            {/* Enhanced social media section - now below the image */}
+            <div className="mt-6 text-center opacity-100 transition-all duration-500 delay-300">
+              <div className="inline-block px-8 py-4 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-100/60 ring-1 ring-white/20">
+                <SocialMedia />
               </div>
             </div>
           </div>

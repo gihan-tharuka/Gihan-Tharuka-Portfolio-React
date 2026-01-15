@@ -33,7 +33,7 @@ const Profile = () => {
   }, []);
 
   return (
-    <section ref={ref} className="relative py-20 md:py-8 overflow-hidden bg-gradient-to-br from-slate-50 via-white to-gray-50" id="profile">
+    <section ref={ref} className="relative py-8 md:py-8 overflow-hidden bg-gradient-to-br from-slate-50 via-white to-gray-50" id="profile">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-32 h-32 bg-picto-primary/5 rounded-full blur-2xl animate-pulse"></div>
@@ -51,9 +51,6 @@ const Profile = () => {
             <div className="relative w-full max-w-md mx-auto">
               {/* Decorative background shapes */}
               <div className="absolute inset-0 flex items-center justify-center">
-                {/* Large circle background */}
-                <div className="w-80 h-80 bg-gradient-to-br from-picto-primary/10 to-orange-100/20 rounded-full opacity-30 animate-pulse"></div>
-
                 {/* Floating geometric shapes */}
                 <div className="absolute top-8 left-8 w-12 h-12 bg-picto-primary/20 rounded-lg rotate-45 opacity-60 animate-pulse"></div>
                 <div className="absolute top-16 right-12 w-8 h-8 bg-orange-300/30 rounded-full opacity-70 animate-pulse" style={{ animationDelay: '1s' }}></div>
@@ -61,7 +58,7 @@ const Profile = () => {
                 <div className="absolute bottom-12 right-20 w-10 h-10 bg-orange-200/40 rounded-full opacity-60 animate-pulse" style={{ animationDelay: '0.5s' }}></div>
 
                 {/* Hexagonal frame */}
-                <div className="absolute inset-0 flex items-center justify-center">
+                {/* <div className="absolute inset-0 flex items-center justify-center">
                   <div className="relative w-72 h-72 opacity-20">
                     <svg viewBox="0 0 200 200" className="w-full h-full">
                       <defs>
@@ -80,16 +77,16 @@ const Profile = () => {
                       />
                     </svg>
                   </div>
-                </div>
+                </div> */}
               </div>
 
               {/* Main image container - circular shape */}
               <div className="relative z-10 w-72 h-72 md:w-80 md:h-80 mx-auto">
-                <div className="w-full h-full relative overflow-hidden shadow-2xl shadow-gray-200/60">
+                <div className="w-full h-full relative overflow-hidden ">
                   {/* Circular image */}
                   <div className="w-full h-full relative rounded-full overflow-hidden">
                     <img
-                      className="w-full h-full bg-soft-white object-cover filter"
+                      className="w-full h-full object-cover filter"
                       src={person}
                       alt="Gihan Tharuka profile"
                       style={{ transform: 'scale(1.2)' }}

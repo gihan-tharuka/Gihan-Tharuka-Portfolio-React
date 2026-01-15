@@ -7,8 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Portfolio = () => {
   const [selectedFilter, setSelectedFilter] = useState("All");
-  const [animate, setAnimate] = useState(false);
-  const ref = useRef(null);
+  const [animate, setAnimate] = useState(true);
 
   // Filter tags in specific order
   const projectTypes = ["All", "Laravel", "AWS", "Java", "C#", "Python", "Flutter", "Web Development"];
@@ -16,28 +15,8 @@ const Portfolio = () => {
   // Filter projects based on selected type
   const filteredProjects = selectedFilter === "All" ? projects : projects.filter((p) => p.filtertag === selectedFilter);
 
-  useEffect(() => {
-    const node = ref.current;
-    if (!node) return;
-
-    const obs = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setAnimate(true);
-            obs.disconnect();
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
-
-    obs.observe(node);
-    return () => obs.disconnect();
-  }, []);
-
   return (
-    <section ref={ref} className="relative py-8 md:py-12 overflow-hidden bg-gradient-to-br from-white via-gray-50 to-slate-50" id="portfolio">
+    <section className="relative py-8 md:py-12 overflow-hidden bg-gradient-to-br from-white via-gray-50 to-slate-50" id="portfolio">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-32 h-32 bg-picto-primary/5 rounded-full blur-2xl animate-pulse"></div>

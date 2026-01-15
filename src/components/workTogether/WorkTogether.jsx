@@ -3,31 +3,10 @@ import { faArrowRight, faRocket, faLightbulb, faHandshake } from "@fortawesome/f
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const WorkTogether = () => {
-  const ref = useRef(null);
-  const [animate, setAnimate] = useState(false);
-
-  useEffect(() => {
-    const node = ref.current;
-    if (!node) return;
-
-    const obs = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setAnimate(true);
-            obs.disconnect();
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
-
-    obs.observe(node);
-    return () => obs.disconnect();
-  }, []);
+  const [animate, setAnimate] = useState(true);
 
   return (
-    <section ref={ref} className="relative py-20 md:py-12 overflow-hidden">
+    <section className="relative py-20 md:py-12 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black">
         {/* Gradient overlays */}

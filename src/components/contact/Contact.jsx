@@ -110,31 +110,10 @@ const ContactCard = ({ contact, animate, delay }) => {
 };
 
 const Contact = () => {
-  const ref = useRef(null);
-  const [animate, setAnimate] = useState(false);
-
-  useEffect(() => {
-    const node = ref.current;
-    if (!node) return;
-
-    const obs = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setAnimate(true);
-            obs.disconnect();
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
-
-    obs.observe(node);
-    return () => obs.disconnect();
-  }, []);
+  const [animate, setAnimate] = useState(true);
 
   return (
-    <section ref={ref} className="relative py-8 md:py-12 overflow-hidden bg-gradient-to-br from-slate-900 via-gray-900 to-black" id="contact">
+    <section className="relative py-8 md:py-12 overflow-hidden bg-gradient-to-br from-slate-900 via-gray-900 to-black" id="contact">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-32 h-32 bg-picto-primary/10 rounded-full blur-2xl animate-pulse"></div>

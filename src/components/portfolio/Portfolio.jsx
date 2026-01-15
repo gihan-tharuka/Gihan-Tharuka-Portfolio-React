@@ -11,7 +11,7 @@ const Portfolio = () => {
   const ref = useRef(null);
 
   // Filter tags in specific order
-  const projectTypes = ["All", "Laravel", "AWS", "Java", "C#", "Python", "Flutter"];
+  const projectTypes = ["All", "Laravel", "AWS", "Java", "C#", "Python", "Flutter", "Web Development"];
 
   // Filter projects based on selected type
   const filteredProjects = selectedFilter === "All" ? projects : projects.filter((p) => p.filtertag === selectedFilter);
@@ -49,7 +49,7 @@ const Portfolio = () => {
 
       <div className="relative z-10 content px-4 sm:px-6 md:px-12 lg:px-20">
         {/* Header section */}
-        <div className={`text-center mb-16 transition-all duration-700 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className="text-center mb-16 transition-all duration-700 opacity-100 translate-y-0">
           <div className="inline-block mb-4">
             <span className="inline-flex items-center gap-2 px-4 py-2 bg-picto-primary/10 text-picto-primary font-semibold text-sm rounded-full border border-picto-primary/20">
               <FontAwesomeIcon icon={faBriefcase} />
@@ -74,7 +74,7 @@ const Portfolio = () => {
         </div>
 
         {/* Filter Buttons */}
-        <div className={`flex flex-wrap justify-center gap-3 mb-12 transition-all duration-700 delay-200 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className="flex flex-wrap justify-center gap-3 mb-12 transition-all duration-700 delay-200 opacity-100 translate-y-0">
           <div className="flex items-center gap-2 mb-2 mr-4">
             <FontAwesomeIcon icon={faFilter} className="text-picto-primary" />
             <span className="text-sm font-medium text-gray-600">Filter by Technology:</span>
@@ -122,29 +122,12 @@ const Portfolio = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className={`transition-all duration-700 delay-400 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className="transition-all duration-700 delay-400 opacity-100 translate-y-0">
           <div className="grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 gap-8">
             {filteredProjects
               .slice()
               .sort((a, b) => (a.order || 0) - (b.order || 0))
               .map((p, index) => {
-                const rawImage = p.gallery?.[0] || p.heroImage;
-                let image = rawImage;
-                try {
-                  if (rawImage && rawImage.startsWith("/src/")) {
-                    const relative = rawImage.replace(/^\/src\//, "../");
-                    image = new URL(relative, import.meta.url).href;
-                  } else if (rawImage && (rawImage.startsWith("http") || rawImage.startsWith("/"))) {
-                    image = rawImage;
-                  } else if (rawImage && rawImage.includes("/assets/")) {
-                    const stripped = rawImage.replace(/^\//, "");
-                    image = new URL(stripped, import.meta.url).href;
-                  }
-                } catch (err) {
-                  image = rawImage;
-                }
-
-                const repoBase = import.meta.env.VITE_REPO_NAME ? `/${import.meta.env.VITE_REPO_NAME}` : (import.meta.env.BASE_URL || '');
                 return (
                   <div
                     key={p.id}
@@ -153,7 +136,7 @@ const Portfolio = () => {
                   >
                     <Projects
                       data={{
-                        image,
+                        image: p.heroImage,
                         skills: p.skills || [],
                         title: p.title,
                         description: p.short,
@@ -167,7 +150,7 @@ const Portfolio = () => {
         </div>
 
         {/* CTA Section */}
-        <div className={`text-center mt-16 transition-all duration-1000 delay-600 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className="text-center mt-16 transition-all duration-1000 delay-600 opacity-100 translate-y-0">
           <div className="flex items-center justify-center gap-4 mb-6">
             <div className="w-12 h-px bg-gradient-to-r from-transparent via-picto-primary to-transparent"></div>
             <FontAwesomeIcon icon={faRocket} className="text-picto-primary" />

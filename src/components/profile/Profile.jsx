@@ -45,82 +45,7 @@ const Profile = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
-          {/* Left Content */}
-          <div className={`space-y-8 transition-all duration-700 ${animate ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
-            {/* Animated badge */}
-            <div className={`inline-block transition-all duration-700 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-              <span className="inline-flex items-center gap-2 px-4 py-2 bg-picto-primary/10 text-picto-primary font-semibold text-sm rounded-full border border-picto-primary/20">
-                <FontAwesomeIcon icon={faStar} className="animate-pulse" />
-                Full Stack Developer
-              </span>
-            </div>
-
-            {/* Main heading */}
-            <div className="space-y-4">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
-                <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
-                  Hi, I'm
-                </span>
-                <br />
-                <span className="bg-gradient-to-r from-picto-primary via-orange-400 to-picto-primary bg-clip-text text-transparent">
-                  Gihan Tharuka
-                </span>
-              </h1>
-            </div>
-
-            {/* Description */}
-            <div className="space-y-4 text-lg text-gray-600 leading-relaxed max-w-lg">
-              <p>
-                I'm a passionate Full Stack Developer who transforms ideas into digital experiences.
-                With expertise in modern web technologies, I create scalable applications that make a difference.
-              </p>
-              <p>
-                My journey is driven by curiosity, innovation, and the relentless pursuit of excellence
-                in everything I build.
-              </p>
-            </div>
-
-            {/* Key highlights */}
-            <div className={`flex flex-wrap gap-4 transition-all duration-700 delay-300 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-              <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-picto-primary/10 to-orange-100/20 rounded-full border border-picto-primary/20">
-                <FontAwesomeIcon icon={faCode} className="text-picto-primary" />
-                <span className="text-sm font-medium text-gray-700">Clean Code</span>
-              </div>
-              <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-orange-100/20 to-picto-primary/10 rounded-full border border-orange-300/30">
-                <FontAwesomeIcon icon={faRocket} className="text-orange-500" />
-                <span className="text-sm font-medium text-gray-700">Performance</span>
-              </div>
-              <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-100/20 to-picto-primary/10 rounded-full border border-green-300/30">
-                <FontAwesomeIcon icon={faShieldAlt} className="text-green-600" />
-                <span className="text-sm font-medium text-gray-700">Security</span>
-              </div>
-            </div>
-
-            {/* CTA buttons */}
-            <div className={`flex flex-col sm:flex-row gap-4 transition-all duration-700 delay-500 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-              <a
-                href="#contact"
-                className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-picto-primary to-orange-400 hover:from-orange-400 hover:to-picto-primary text-white font-bold text-lg px-8 py-4 rounded-2xl shadow-2xl shadow-picto-primary/25 hover:shadow-3xl hover:shadow-picto-primary/40 transform hover:scale-105 transition-all duration-300 overflow-hidden"
-              >
-                <span className="relative z-10">Let's Work Together</span>
-                <FontAwesomeIcon icon={faRocket} className="relative z-10 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
-
-                {/* Button shine effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -skew-x-12 translate-x-full group-hover:translate-x-0"></div>
-              </a>
-
-              <a
-                href={pdf}
-                download="Gihan-Tharuka-Resume.pdf"
-                className="group inline-flex items-center gap-3 bg-white border-2 border-gray-200 hover:border-picto-primary text-gray-700 hover:text-picto-primary font-semibold text-lg px-8 py-4 rounded-2xl hover:bg-picto-primary/5 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-              >
-                <FontAwesomeIcon icon={faDownload} className="transition-transform duration-300 group-hover:animate-bounce" />
-                <span>Download CV</span>
-              </a>
-            </div>
-          </div>
-
-          {/* Right Content - Profile Image */}
+          {/* Left Content - Profile Image */}
           <div className={`relative transition-all duration-700 delay-300 ${animate ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
             {/* Creative profile image container */}
             <div className="relative w-full max-w-md mx-auto">
@@ -196,6 +121,81 @@ const Profile = () => {
                   <SocialMedia />
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* Right Content - Text Content */}
+          <div className={`space-y-8 transition-all duration-700 ${animate ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
+            {/* Animated badge */}
+            <div className={`inline-block transition-all duration-700 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+              <span className="inline-flex items-center gap-2 px-4 py-2 bg-picto-primary/10 text-picto-primary font-semibold text-sm rounded-full border border-picto-primary/20">
+                <FontAwesomeIcon icon={faStar} className="animate-pulse" />
+                Full Stack Developer
+              </span>
+            </div>
+
+            {/* Main heading */}
+            <div className="space-y-4">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
+                <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
+                  Hi, I'm
+                </span>
+                <br />
+                <span className="bg-gradient-to-r from-picto-primary via-orange-400 to-picto-primary bg-clip-text text-transparent">
+                  Gihan Tharuka
+                </span>
+              </h1>
+            </div>
+
+            {/* Description */}
+            <div className="space-y-4 text-lg text-gray-600 leading-relaxed max-w-lg">
+              <p>
+                I'm a passionate Full Stack Developer who transforms ideas into digital experiences.
+                With expertise in modern web technologies, I create scalable applications that make a difference.
+              </p>
+              <p>
+                My journey is driven by curiosity, innovation, and the relentless pursuit of excellence
+                in everything I build.
+              </p>
+            </div>
+
+            {/* Key highlights */}
+            <div className={`flex flex-wrap gap-4 transition-all duration-700 delay-300 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+              <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-picto-primary/10 to-orange-100/20 rounded-full border border-picto-primary/20">
+                <FontAwesomeIcon icon={faCode} className="text-picto-primary" />
+                <span className="text-sm font-medium text-gray-700">Clean Code</span>
+              </div>
+              <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-orange-100/20 to-picto-primary/10 rounded-full border border-orange-300/30">
+                <FontAwesomeIcon icon={faRocket} className="text-orange-500" />
+                <span className="text-sm font-medium text-gray-700">Performance</span>
+              </div>
+              <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-100/20 to-picto-primary/10 rounded-full border border-green-300/30">
+                <FontAwesomeIcon icon={faShieldAlt} className="text-green-600" />
+                <span className="text-sm font-medium text-gray-700">Security</span>
+              </div>
+            </div>
+
+            {/* CTA buttons */}
+            <div className={`flex flex-col sm:flex-row gap-4 transition-all duration-700 delay-500 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+              <a
+                href="#contact"
+                className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-picto-primary to-orange-400 hover:from-orange-400 hover:to-picto-primary text-white font-bold text-lg px-8 py-4 rounded-2xl shadow-2xl shadow-picto-primary/25 hover:shadow-3xl hover:shadow-picto-primary/40 transform hover:scale-105 transition-all duration-300 overflow-hidden"
+              >
+                <span className="relative z-10">Let's Work Together</span>
+                <FontAwesomeIcon icon={faRocket} className="relative z-10 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+
+                {/* Button shine effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -skew-x-12 translate-x-full group-hover:translate-x-0"></div>
+              </a>
+
+              <a
+                href={pdf}
+                download="Gihan-Tharuka-Resume.pdf"
+                className="group inline-flex items-center gap-3 bg-white border-2 border-gray-200 hover:border-picto-primary text-gray-700 hover:text-picto-primary font-semibold text-lg px-8 py-4 rounded-2xl hover:bg-picto-primary/5 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                <FontAwesomeIcon icon={faDownload} className="transition-transform duration-300 group-hover:animate-bounce" />
+                <span>Download CV</span>
+              </a>
             </div>
           </div>
         </div>

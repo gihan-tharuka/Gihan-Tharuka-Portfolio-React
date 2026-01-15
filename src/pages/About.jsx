@@ -157,7 +157,7 @@ const About = () => {
       </div>
 
       {/* Working in Agile & Cross-Functional Teams */}
-      <div id="agile-teams" className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-br from-slate-50 via-white to-gray-50">
+      <div id="agile-teams" className="relative py-8 md:py-12 overflow-hidden bg-gradient-to-br from-slate-50 via-white to-gray-50">
         {/* Background decorative elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-32 h-32 bg-picto-primary/5 rounded-full blur-2xl animate-pulse"></div>
@@ -177,7 +177,7 @@ const About = () => {
               </span>
             </div>
 
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
               <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
                 Working in Agile &
               </span>
@@ -187,7 +187,7 @@ const About = () => {
               </span>
             </h2>
 
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-md sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               During my coursework, I worked in a <strong>Scrum-based Agile environment</strong> on a university student portal project delivered across multiple sprints. What made this experience unique was rotating through different responsibilities within the same project.
             </p>
           </div>
@@ -210,7 +210,7 @@ const About = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
 
-              <div className="md:w-3/5 p-8 lg:p-10">
+              <div className="md:w-3/5 p-4 lg:p-6">
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
                   <div>
                     <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-2 group-hover:text-picto-primary transition-colors duration-300">APIIT University Portal</h3>
@@ -267,7 +267,7 @@ const About = () => {
       </div>
 
       {/* SaaS, Business & Product Thinking */}
-      <div id="product-thinking" className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-br from-slate-50 via-white to-gray-50">
+      <div id="product-thinking" className="relative py-8 md:py-12 overflow-hidden bg-gradient-to-br from-slate-50 via-white to-gray-50">
         {/* Background decorative elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-32 h-32 bg-picto-primary/5 rounded-full blur-2xl animate-pulse"></div>
@@ -287,7 +287,7 @@ const About = () => {
               </span>
             </div>
 
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
               <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
                 SaaS, Business &
               </span>
@@ -297,7 +297,7 @@ const About = () => {
               </span>
             </h2>
 
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-md sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               While studying, I co-founded a small startup with a university colleague. We initially explored freelancing and later shifted our focus toward building scalable products.
             </p>
           </div>
@@ -320,7 +320,7 @@ const About = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
 
-              <div className="md:w-3/5 p-8 lg:p-10">
+              <div className="md:w-3/5 p-4 lg:p-6">
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
                   <div>
                     <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-2 group-hover:text-picto-primary transition-colors duration-300">FlexiFit – Fitness Center Management SaaS</h3>
@@ -381,7 +381,7 @@ const About = () => {
       </div>
 
       {/* Full Ownership: From Idea to Deployment */}
-      <div id="full-ownership" className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-br from-slate-50 via-white to-gray-50">
+      <div id="full-ownership" className="relative py-8 md:py-12 overflow-hidden bg-gradient-to-br from-slate-50 via-white to-gray-50">
         {/* Background decorative elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-32 h-32 bg-picto-primary/5 rounded-full blur-2xl animate-pulse"></div>
@@ -401,7 +401,7 @@ const About = () => {
               </span>
             </div>
 
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
               <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
                 Full Ownership:
               </span>
@@ -411,7 +411,7 @@ const About = () => {
               </span>
             </h2>
 
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-md sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Taking complete responsibility for every aspect of development, from initial concept to final deployment and ongoing maintenance.
             </p>
           </div>
@@ -434,7 +434,7 @@ const About = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
 
-              <div className="md:w-3/5 p-8 lg:p-10">
+              <div className="md:w-3/5 p-4 lg:p-6">
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
                   <div>
                     <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-2 group-hover:text-picto-primary transition-colors duration-300">AutoMate – Automobile Service Center Management System</h3>
@@ -506,7 +506,7 @@ const About = () => {
       </div>
 
       {/* Working with International Clients */}
-      <div id="international-work" className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-br from-slate-50 via-white to-gray-50">
+      <div id="international-work" className="relative py-8 md:py-12 overflow-hidden bg-gradient-to-br from-slate-50 via-white to-gray-50">
         {/* Background decorative elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-32 h-32 bg-picto-primary/5 rounded-full blur-2xl animate-pulse"></div>
@@ -526,7 +526,7 @@ const About = () => {
               </span>
             </div>
 
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
               <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
                 Working with
               </span>
@@ -536,7 +536,7 @@ const About = () => {
               </span>
             </h2>
 
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-md sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               I've worked with <strong>international clients</strong>, delivering high-quality solutions despite geographical and timezone challenges.
             </p>
           </div>
@@ -559,7 +559,7 @@ const About = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
 
-              <div className="md:w-3/5 p-8 lg:p-10">
+              <div className="md:w-3/5 p-4 lg:p-6">
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
                   <div>
                     <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-2 group-hover:text-picto-primary transition-colors duration-300">Hevinly - Portfolio Website</h3>

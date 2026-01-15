@@ -37,7 +37,7 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <section ref={ref} className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-br from-white via-gray-50 to-slate-50" id="portfolio">
+    <section ref={ref} className="relative py-20 md:py-12 overflow-hidden bg-gradient-to-br from-white via-gray-50 to-slate-50" id="portfolio">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-32 h-32 bg-picto-primary/5 rounded-full blur-2xl animate-pulse"></div>
@@ -75,10 +75,10 @@ const Portfolio = () => {
 
         {/* Filter Buttons */}
         <div className="flex flex-wrap justify-center gap-3 mb-12 transition-all duration-700 delay-200 opacity-100 translate-y-0">
-          <div className="flex items-center gap-2 mb-2 mr-4">
+          {/* <div className="flex items-center gap-2 mb-2 mr-4">
             <FontAwesomeIcon icon={faFilter} className="text-picto-primary" />
             <span className="text-sm font-medium text-gray-600">Filter by Technology:</span>
-          </div>
+          </div> */}
           {projectTypes.map((type, index) => {
             const isActive = selectedFilter === type;
             const projectCount = type === "All"
@@ -150,7 +150,7 @@ const Portfolio = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center mt-16 transition-all duration-1000 delay-600 opacity-100 translate-y-0">
+        {/* <div className="text-center mt-16 transition-all duration-1000 delay-600 opacity-100 translate-y-0">
           <div className="flex items-center justify-center gap-4 mb-6">
             <div className="w-12 h-px bg-gradient-to-r from-transparent via-picto-primary to-transparent"></div>
             <FontAwesomeIcon icon={faRocket} className="text-picto-primary" />
@@ -164,10 +164,10 @@ const Portfolio = () => {
             <span className="relative z-10">View All Projects</span>
             <FontAwesomeIcon icon={faRocket} className="relative z-10 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
 
-            {/* Button shine effect */}
+            
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -skew-x-12 translate-x-full group-hover:translate-x-0"></div>
           </Link>
-        </div>
+        </div> */}
       </div>
     </section>
   );

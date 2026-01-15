@@ -114,7 +114,7 @@ const Education = () => {
   }, []);
 
   return (
-    <section ref={ref} className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-br from-slate-50 via-white to-gray-50" id="education">
+    <section ref={ref} className="relative py-20 md:py-12 overflow-hidden bg-gradient-to-br from-slate-50 via-white to-gray-50" id="education">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-32 h-32 bg-picto-primary/5 rounded-full blur-2xl animate-pulse"></div>

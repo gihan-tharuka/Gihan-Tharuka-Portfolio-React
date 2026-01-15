@@ -27,7 +27,7 @@ const WorkTogether = () => {
   }, []);
 
   return (
-    <section ref={ref} className="relative py-20 md:py-32 overflow-hidden">
+    <section ref={ref} className="relative py-20 md:py-12 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black">
         {/* Gradient overlays */}

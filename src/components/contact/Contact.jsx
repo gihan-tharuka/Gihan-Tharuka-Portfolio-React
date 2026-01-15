@@ -134,7 +134,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <section ref={ref} className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-gray-900 to-black" id="contact">
+    <section ref={ref} className="relative py-20 md:py-12 overflow-hidden bg-gradient-to-br from-slate-900 via-gray-900 to-black" id="contact">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-32 h-32 bg-picto-primary/10 rounded-full blur-2xl animate-pulse"></div>

@@ -157,65 +157,109 @@ const About = () => {
       </div>
 
       {/* Working in Agile & Cross-Functional Teams */}
-      <div id="agile-teams" className="bg-soft-white">
-        <div className="content px-4 sm:px-6 md:px-12 lg:px-20 py-16">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-8 flex items-center gap-3">
-            <FontAwesomeIcon icon={faUsers} className="text-picto-primary" />
-            Working in Agile & Cross-Functional Teams
-          </h2>
-          <p className="text-base md:text-lg text-gray-600 mb-8">
-            During my coursework, I worked in a <strong>Scrum-based Agile environment</strong> on a university student portal project delivered across multiple sprints. What made this experience unique was rotating through different responsibilities within the same project.
-          </p>
+      <div id="agile-teams" className="relative py-8 md:py-12 overflow-hidden bg-gradient-to-br from-slate-50 via-white to-gray-50">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-10 w-32 h-32 bg-picto-primary/5 rounded-full blur-2xl animate-pulse"></div>
+          <div className="absolute bottom-32 right-20 w-24 h-24 bg-orange-300/5 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/2 left-1/3 w-2 h-2 bg-picto-primary/30 rounded-full"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-3 h-3 bg-orange-400/20 rounded-full"></div>
+          <div className="absolute top-3/4 left-1/2 w-1.5 h-1.5 bg-picto-primary/50 rounded-full"></div>
+        </div>
+
+        <div className="relative z-10 content px-4 sm:px-6 md:px-12 lg:px-20">
+          {/* Header section */}
+          <div className="text-center mb-16">
+            <div className="inline-block mb-4">
+              <span className="inline-flex items-center gap-2 px-4 py-2 bg-picto-primary/10 text-picto-primary font-semibold text-sm rounded-full border border-picto-primary/20">
+                <FontAwesomeIcon icon={faUsers} />
+                Agile Teams
+              </span>
+            </div>
+
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+              <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
+                Working in Agile &
+              </span>
+              <br />
+              <span className="bg-gradient-to-r from-picto-primary via-orange-500 to-picto-primary bg-clip-text text-transparent">
+                Cross-Functional Teams
+              </span>
+            </h2>
+
+            <p className="text-md sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              During my coursework, I worked in a <strong>Scrum-based Agile environment</strong> on a university student portal project delivered across multiple sprints. What made this experience unique was rotating through different responsibilities within the same project.
+            </p>
+          </div>
 
           {/* APIIT University Portal Project Card */}
-          <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-            <div className="md:flex">
-              <div className="md:w-1/3">
-                <img
-                  src={studentBlogImage}
-                  alt="APIIT University Portal"
-                  className="w-full h-48 md:h-full object-cover"
-                />
+          <div className="group relative max-w-5xl mx-auto bg-white/80 backdrop-blur-sm hover:bg-white rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl hover:shadow-picto-primary/10 transition-all duration-500 transform hover:-translate-y-2 border border-gray-100/50 hover:border-picto-primary/20">
+            {/* Animated background gradient */}
+            <div className="absolute inset-0 bg-gradient-to-br from-picto-primary/5 via-transparent to-orange-100/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+            <div className="relative z-10 md:flex">
+              <div className="md:w-2/5 relative overflow-hidden">
+                <div className="aspect-[4/3] md:aspect-auto md:h-full">
+                  <img
+                    src={studentBlogImage}
+                    alt="APIIT University Portal"
+                    className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
+                  />
+                </div>
+                {/* Overlay gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
-              <div className="md:w-2/3 p-6">
-                <div className="flex justify-between items-center mb-3">
-                  <h3 className="text-2xl font-semibold text-picto-primary">APIIT University Portal</h3>
-                  <Link to="/projects/apiit-students-blog" className="btn btn-sm px-4 py-2 btn-primary text-sm">
-                    View Project
+
+              <div className="md:w-3/5 p-4 lg:p-6">
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
+                  <div>
+                    <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-2 group-hover:text-picto-primary transition-colors duration-300">APIIT University Portal</h3>
+                    <p className="text-picto-primary font-semibold text-sm uppercase tracking-wide">Agile Scrum Project</p>
+                  </div>
+                  <Link to="/projects/apiit-students-blog" className="group/btn relative inline-flex items-center gap-3 bg-gradient-to-r from-picto-primary to-orange-400 hover:from-orange-400 hover:to-picto-primary text-white font-bold text-lg px-6 py-3 rounded-xl shadow-2xl shadow-picto-primary/25 hover:shadow-3xl hover:shadow-picto-primary/40 transform hover:scale-105 transition-all duration-300 overflow-hidden shrink-0">
+                    <span className="relative z-10">View Project</span>
+                    <FontAwesomeIcon icon={faArrowRight} className="relative z-10 transition-transform duration-300 group-hover/btn:translate-x-1" />
+                    {/* Button shine effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300 transform -skew-x-12 translate-x-full group-hover/btn:translate-x-0"></div>
                   </Link>
                 </div>
-                <p className="text-gray-600 mb-4">
+
+                <p className="text-gray-600 mb-6 leading-relaxed text-base">
                   A <strong>comprehensive student portal system</strong> developed in an Agile Scrum environment with rotating team responsibilities across multiple sprints.
                 </p>
 
-                <div className="mb-4">
-                  <h4 className="font-semibold mb-2 flex items-center gap-2">
-                    <FontAwesomeIcon icon={faLightbulb} className="text-picto-primary" />
+                <div className="mb-6">
+                  <h4 className="font-bold mb-4 flex items-center gap-3 text-lg">
+                    <div className="w-8 h-8 bg-picto-primary/10 rounded-full flex items-center justify-center">
+                      <FontAwesomeIcon icon={faLightbulb} className="text-picto-primary" />
+                    </div>
                     Key Achievements & Exposure
                   </h4>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                    <div className="flex items-center gap-2">
-                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm" />
-                      <span className="text-sm">Requirements gathering and stakeholder communication</span>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div className="flex items-start gap-3 p-3 bg-picto-primary/5 rounded-lg">
+                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-gray-700">Requirements gathering and stakeholder communication</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm" />
-                      <span className="text-sm">User stories, acceptance criteria, and documentation</span>
+                    <div className="flex items-start gap-3 p-3 bg-orange-50 rounded-lg">
+                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-gray-700">User stories, acceptance criteria, and documentation</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm" />
-                      <span className="text-sm">Sprint planning, reviews, retrospectives, and daily stand-ups</span>
+                    <div className="flex items-start gap-3 p-3 bg-picto-primary/5 rounded-lg">
+                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-gray-700">Sprint planning, reviews, retrospectives, and daily stand-ups</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm" />
-                      <span className="text-sm">Collaboration between development, QA, and business roles</span>
+                    <div className="flex items-start gap-3 p-3 bg-orange-50 rounded-lg">
+                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-gray-700">Collaboration between development, QA, and business roles</span>
                     </div>
                   </div>
                 </div>
 
-                <p className="text-gray-600 text-sm italic">
-                  This experience taught me not only *how* software is built, but *why* communication, planning, and feedback loops are critical to successful delivery in cross-functional teams.
-                </p>
+                <div className="bg-gradient-to-r from-picto-primary/5 to-orange-50 p-4 rounded-xl border-l-4 border-picto-primary">
+                  <p className="text-gray-700 text-sm italic">
+                    This experience taught me not only <em>how</em> software is built, but <em>why</em> communication, planning, and feedback loops are critical to successful delivery in cross-functional teams.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -223,69 +267,113 @@ const About = () => {
       </div>
 
       {/* SaaS, Business & Product Thinking */}
-      <div id="product-thinking" className="introduction-profile-background">
-        <div className="content px-4 sm:px-6 md:px-12 lg:px-20 py-16">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-8 flex items-center gap-3">
-            <FontAwesomeIcon icon={faBuilding} className="text-picto-primary" />
-            SaaS, Business & Product Thinking
-          </h2>
-          <p className="text-base md:text-lg text-gray-600 mb-8">
-            While studying, I co-founded a small startup with a university colleague. We initially explored freelancing and later shifted our focus toward building scalable products.
-          </p>
+      <div id="product-thinking" className="relative py-8 md:py-12 overflow-hidden bg-gradient-to-br from-slate-50 via-white to-gray-50">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-10 w-32 h-32 bg-picto-primary/5 rounded-full blur-2xl animate-pulse"></div>
+          <div className="absolute bottom-32 right-20 w-24 h-24 bg-orange-300/5 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/2 left-1/3 w-2 h-2 bg-picto-primary/30 rounded-full"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-3 h-3 bg-orange-400/20 rounded-full"></div>
+          <div className="absolute top-3/4 left-1/2 w-1.5 h-1.5 bg-picto-primary/50 rounded-full"></div>
+        </div>
+
+        <div className="relative z-10 content px-4 sm:px-6 md:px-12 lg:px-20">
+          {/* Header section */}
+          <div className="text-center mb-16">
+            <div className="inline-block mb-4">
+              <span className="inline-flex items-center gap-2 px-4 py-2 bg-picto-primary/10 text-picto-primary font-semibold text-sm rounded-full border border-picto-primary/20">
+                <FontAwesomeIcon icon={faBuilding} />
+                Product Thinking
+              </span>
+            </div>
+
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+              <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
+                SaaS, Business &
+              </span>
+              <br />
+              <span className="bg-gradient-to-r from-picto-primary via-orange-500 to-picto-primary bg-clip-text text-transparent">
+                Product Thinking
+              </span>
+            </h2>
+
+            <p className="text-md sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              While studying, I co-founded a small startup with a university colleague. We initially explored freelancing and later shifted our focus toward building scalable products.
+            </p>
+          </div>
 
           {/* FlexiFit Project Card */}
-          <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-            <div className="md:flex">
-              <div className="md:w-1/3">
-                <img
-                  src={gymImage}
-                  alt="FlexiFit - Fitness Center Management SaaS"
-                  className="w-full h-48 md:h-full object-cover"
-                />
+          <div className="group relative max-w-5xl mx-auto bg-white/80 backdrop-blur-sm hover:bg-white rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl hover:shadow-picto-primary/10 transition-all duration-500 transform hover:-translate-y-2 border border-gray-100/50 hover:border-picto-primary/20">
+            {/* Animated background gradient */}
+            <div className="absolute inset-0 bg-gradient-to-br from-picto-primary/5 via-transparent to-orange-100/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+            <div className="relative z-10 md:flex">
+              <div className="md:w-2/5 relative overflow-hidden">
+                <div className="aspect-[4/3] md:aspect-auto md:h-full">
+                  <img
+                    src={gymImage}
+                    alt="FlexiFit - Fitness Center Management SaaS"
+                    className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
+                  />
+                </div>
+                {/* Overlay gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
-              <div className="md:w-2/3 p-6">
-                <div className="flex justify-between items-center mb-3">
-                  <h3 className="text-2xl font-semibold text-picto-primary">FlexiFit – Fitness Center Management SaaS</h3>
-                  <Link to="/projects/flexi-fit" className="btn btn-sm px-4 py-2 btn-primary text-sm">
-                    View Project
+
+              <div className="md:w-3/5 p-4 lg:p-6">
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
+                  <div>
+                    <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-2 group-hover:text-picto-primary transition-colors duration-300">FlexiFit – Fitness Center Management SaaS</h3>
+                    <p className="text-picto-primary font-semibold text-sm uppercase tracking-wide">Cloud-Based Business Solution</p>
+                  </div>
+                  <Link to="/projects/flexi-fit" className="group/btn relative inline-flex items-center gap-3 bg-gradient-to-r from-picto-primary to-orange-400 hover:from-orange-400 hover:to-picto-primary text-white font-bold text-lg px-6 py-3 rounded-xl shadow-2xl shadow-picto-primary/25 hover:shadow-3xl hover:shadow-picto-primary/40 transform hover:scale-105 transition-all duration-300 overflow-hidden shrink-0">
+                    <span className="relative z-10">View Project</span>
+                    <FontAwesomeIcon icon={faArrowRight} className="relative z-10 transition-transform duration-300 group-hover/btn:translate-x-1" />
+                    {/* Button shine effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300 transform -skew-x-12 translate-x-full group-hover/btn:translate-x-0"></div>
                   </Link>
                 </div>
-                <p className="text-gray-600 mb-4">
+
+                <p className="text-gray-600 mb-6 leading-relaxed text-base">
                   A <strong>cloud-based fitness center management system</strong> designed to solve day-to-day operational challenges faced by gym owners and members.
                 </p>
 
-                <div className="mb-4">
-                  <h4 className="font-semibold mb-2 flex items-center gap-2">
-                    <FontAwesomeIcon icon={faLightbulb} className="text-picto-primary" />
+                <div className="mb-6">
+                  <h4 className="font-bold mb-4 flex items-center gap-3 text-lg">
+                    <div className="w-8 h-8 bg-picto-primary/10 rounded-full flex items-center justify-center">
+                      <FontAwesomeIcon icon={faLightbulb} className="text-picto-primary" />
+                    </div>
                     Key Achievements
                   </h4>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                    <div className="flex items-center gap-2">
-                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm" />
-                      <span className="text-sm">Product ideation and market research</span>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div className="flex items-start gap-3 p-3 bg-picto-primary/5 rounded-lg">
+                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-gray-700">Product ideation and market research</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm" />
-                      <span className="text-sm">Requirement analysis and backlog management</span>
+                    <div className="flex items-start gap-3 p-3 bg-orange-50 rounded-lg">
+                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-gray-700">Requirement analysis and backlog management</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm" />
-                      <span className="text-sm">Daily stand-ups and task planning</span>
+                    <div className="flex items-start gap-3 p-3 bg-picto-primary/5 rounded-lg">
+                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-gray-700">Daily stand-ups and task planning</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm" />
-                      <span className="text-sm">Development, testing, and iterative improvement</span>
+                    <div className="flex items-start gap-3 p-3 bg-orange-50 rounded-lg">
+                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-gray-700">Development, testing, and iterative improvement</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm" />
-                      <span className="text-sm">Pricing, positioning, and basic product marketing</span>
+                    <div className="flex items-start gap-3 p-3 bg-picto-primary/5 rounded-lg md:col-span-2">
+                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-gray-700">Pricing, positioning, and basic product marketing</span>
                     </div>
                   </div>
                 </div>
 
-                <p className="text-gray-600 text-sm italic">
-                  This project introduced me to thinking beyond features—considering usability, scalability, and long-term maintainability.
-                </p>
+                <div className="bg-gradient-to-r from-picto-primary/5 to-orange-50 p-4 rounded-xl border-l-4 border-picto-primary">
+                  <p className="text-gray-700 text-sm italic">
+                    This project introduced me to thinking beyond features—considering usability, scalability, and long-term maintainability.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -293,71 +381,121 @@ const About = () => {
       </div>
 
       {/* Full Ownership: From Idea to Deployment */}
-      <div id="full-ownership" className="bg-soft-white">
-        <div className="content px-4 sm:px-6 md:px-12 lg:px-20 py-16">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-8 flex items-center gap-3">
-            <FontAwesomeIcon icon={faWrench} className="text-picto-primary" />
-            Full Ownership: From Idea to Deployment
-          </h2>
+      <div id="full-ownership" className="relative py-8 md:py-12 overflow-hidden bg-gradient-to-br from-slate-50 via-white to-gray-50">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-10 w-32 h-32 bg-picto-primary/5 rounded-full blur-2xl animate-pulse"></div>
+          <div className="absolute bottom-32 right-20 w-24 h-24 bg-orange-300/5 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/2 left-1/3 w-2 h-2 bg-picto-primary/30 rounded-full"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-3 h-3 bg-orange-400/20 rounded-full"></div>
+          <div className="absolute top-3/4 left-1/2 w-1.5 h-1.5 bg-picto-primary/50 rounded-full"></div>
+        </div>
+
+        <div className="relative z-10 content px-4 sm:px-6 md:px-12 lg:px-20">
+          {/* Header section */}
+          <div className="text-center mb-16">
+            <div className="inline-block mb-4">
+              <span className="inline-flex items-center gap-2 px-4 py-2 bg-picto-primary/10 text-picto-primary font-semibold text-sm rounded-full border border-picto-primary/20">
+                <FontAwesomeIcon icon={faWrench} />
+                Full Ownership
+              </span>
+            </div>
+
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+              <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
+                Full Ownership:
+              </span>
+              <br />
+              <span className="bg-gradient-to-r from-picto-primary via-orange-500 to-picto-primary bg-clip-text text-transparent">
+                From Idea to Deployment
+              </span>
+            </h2>
+
+            <p className="text-md sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Taking complete responsibility for every aspect of development, from initial concept to final deployment and ongoing maintenance.
+            </p>
+          </div>
 
           {/* AutoMate Project Card */}
-          <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-            <div className="md:flex">
-              <div className="md:w-1/3">
-                <img
-                  src={garageImage}
-                  alt="AutoMate - Automobile Service Center Management System"
-                  className="w-full h-48 md:h-full object-cover"
-                />
+          <div className="group relative max-w-5xl mx-auto bg-white/80 backdrop-blur-sm hover:bg-white rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl hover:shadow-picto-primary/10 transition-all duration-500 transform hover:-translate-y-2 border border-gray-100/50 hover:border-picto-primary/20">
+            {/* Animated background gradient */}
+            <div className="absolute inset-0 bg-gradient-to-br from-picto-primary/5 via-transparent to-orange-100/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+            <div className="relative z-10 md:flex">
+              <div className="md:w-2/5 relative overflow-hidden">
+                <div className="aspect-[4/3] md:aspect-auto md:h-full">
+                  <img
+                    src={garageImage}
+                    alt="AutoMate - Automobile Service Center Management System"
+                    className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
+                  />
+                </div>
+                {/* Overlay gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
-              <div className="md:w-2/3 p-6">
-                <div className="flex justify-between items-center mb-3">
-                  <h3 className="text-2xl font-semibold text-picto-primary">AutoMate – Automobile Service Center Management System</h3>
-                  <Link to="/projects/automate-service-system" className="btn btn-sm px-4 py-2 btn-primary text-sm">
-                    View Project
+
+              <div className="md:w-3/5 p-4 lg:p-6">
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
+                  <div>
+                    <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-2 group-hover:text-picto-primary transition-colors duration-300">AutoMate – Automobile Service Center Management System</h3>
+                    <p className="text-picto-primary font-semibold text-sm uppercase tracking-wide">End-to-End Development</p>
+                  </div>
+                  <Link to="/projects/automate-service-system" className="group/btn relative inline-flex items-center gap-3 bg-gradient-to-r from-picto-primary to-orange-400 hover:from-orange-400 hover:to-picto-primary text-white font-bold text-lg px-6 py-3 rounded-xl shadow-2xl shadow-picto-primary/25 hover:shadow-3xl hover:shadow-picto-primary/40 transform hover:scale-105 transition-all duration-300 overflow-hidden shrink-0">
+                    <span className="relative z-10">View Project</span>
+                    <FontAwesomeIcon icon={faArrowRight} className="relative z-10 transition-transform duration-300 group-hover/btn:translate-x-1" />
+                    {/* Button shine effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300 transform -skew-x-12 translate-x-full group-hover/btn:translate-x-0"></div>
                   </Link>
                 </div>
-                <p className="text-gray-600 mb-4">
+
+                <p className="text-gray-600 mb-6 leading-relaxed text-base">
                   A <strong>cloud-based automobile service center management system</strong> developed for a newly opened service center. Unlike FlexiFit, this project was <strong>designed, built, and deployed entirely by me</strong>.
                 </p>
 
-                <div className="mb-4">
-                  <h4 className="font-semibold mb-2 flex items-center gap-2">
-                    <FontAwesomeIcon icon={faCode} className="text-picto-primary" />
+                <div className="mb-6">
+                  <h4 className="font-bold mb-4 flex items-center gap-3 text-lg">
+                    <div className="w-8 h-8 bg-picto-primary/10 rounded-full flex items-center justify-center">
+                      <FontAwesomeIcon icon={faCode} className="text-picto-primary" />
+                    </div>
                     Tech Stack & Responsibilities
                   </h4>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-3">
-                    <div className="flex items-center gap-2">
-                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm" />
-                      <span className="text-sm">Direct requirement gathering from the business owner</span>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div className="flex items-start gap-3 p-3 bg-picto-primary/5 rounded-lg">
+                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-gray-700">Direct requirement gathering from the business owner</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm" />
-                      <span className="text-sm">System design and architecture decisions</span>
+                    <div className="flex items-start gap-3 p-3 bg-orange-50 rounded-lg">
+                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-gray-700">System design and architecture decisions</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm" />
-                      <span className="text-sm">Backend and frontend development</span>
+                    <div className="flex items-start gap-3 p-3 bg-picto-primary/5 rounded-lg">
+                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-gray-700">Backend and frontend development</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm" />
-                      <span className="text-sm">Testing, bug fixing, and performance considerations</span>
+                    <div className="flex items-start gap-3 p-3 bg-orange-50 rounded-lg">
+                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-gray-700">Testing, bug fixing, and performance considerations</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm" />
-                      <span className="text-sm">Deployment and hosting setup</span>
+                    <div className="flex items-start gap-3 p-3 bg-picto-primary/5 rounded-lg md:col-span-2">
+                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-gray-700">Deployment and hosting setup</span>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <p className="text-gray-700 text-sm mb-2">
-                    <strong>Technology:</strong> Latest Laravel and Filament stack
-                  </p>
-                  <p className="text-gray-700 text-sm mb-2">
-                    <strong>Deployment:</strong> Railway for cost efficiency and scalability
-                  </p>
-                  <p className="text-gray-600 text-sm italic">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="bg-gradient-to-r from-picto-primary/5 to-picto-primary/10 p-4 rounded-xl border-l-4 border-picto-primary">
+                    <p className="text-gray-700 text-sm font-semibold mb-1">Technology</p>
+                    <p className="text-gray-600 text-sm">Latest Laravel and Filament stack</p>
+                  </div>
+                  <div className="bg-gradient-to-r from-orange-50 to-orange-100 p-4 rounded-xl border-l-4 border-orange-400">
+                    <p className="text-gray-700 text-sm font-semibold mb-1">Deployment</p>
+                    <p className="text-gray-600 text-sm">Railway for cost efficiency and scalability</p>
+                  </div>
+                </div>
+
+                <div className="mt-4 bg-gradient-to-r from-gray-50 to-gray-100 p-4 rounded-xl border-l-4 border-gray-400">
+                  <p className="text-gray-700 text-sm italic">
                     The product is currently evolving based on feedback from additional automobile service centers.
                   </p>
                 </div>
@@ -368,65 +506,109 @@ const About = () => {
       </div>
 
       {/* Working with International Clients */}
-      <div id="international-work" className="introduction-profile-background">
-        <div className="content px-4 sm:px-6 md:px-12 lg:px-20 py-16">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-8 flex items-center gap-3">
-            <FontAwesomeIcon icon={faGlobe} className="text-picto-primary" />
-            Working with International Clients
-          </h2>
-          <p className="text-base md:text-lg text-gray-600 mb-8">
-            I've worked with <strong>international clients</strong>, delivering high-quality solutions despite geographical and timezone challenges.
-          </p>
+      <div id="international-work" className="relative py-8 md:py-12 overflow-hidden bg-gradient-to-br from-slate-50 via-white to-gray-50">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-10 w-32 h-32 bg-picto-primary/5 rounded-full blur-2xl animate-pulse"></div>
+          <div className="absolute bottom-32 right-20 w-24 h-24 bg-orange-300/5 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/2 left-1/3 w-2 h-2 bg-picto-primary/30 rounded-full"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-3 h-3 bg-orange-400/20 rounded-full"></div>
+          <div className="absolute top-3/4 left-1/2 w-1.5 h-1.5 bg-picto-primary/50 rounded-full"></div>
+        </div>
+
+        <div className="relative z-10 content px-4 sm:px-6 md:px-12 lg:px-20">
+          {/* Header section */}
+          <div className="text-center mb-16">
+            <div className="inline-block mb-4">
+              <span className="inline-flex items-center gap-2 px-4 py-2 bg-picto-primary/10 text-picto-primary font-semibold text-sm rounded-full border border-picto-primary/20">
+                <FontAwesomeIcon icon={faGlobe} />
+                International Work
+              </span>
+            </div>
+
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+              <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
+                Working with
+              </span>
+              <br />
+              <span className="bg-gradient-to-r from-picto-primary via-orange-500 to-picto-primary bg-clip-text text-transparent">
+                International Clients
+              </span>
+            </h2>
+
+            <p className="text-md sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              I've worked with <strong>international clients</strong>, delivering high-quality solutions despite geographical and timezone challenges.
+            </p>
+          </div>
 
           {/* Hevinly Portfolio Website Project Card */}
-          <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-            <div className="md:flex">
-              <div className="md:w-1/3">
-                <img
-                  src={portfolioImage}
-                  alt="Hevinly Portfolio Website"
-                  className="w-full h-48 md:h-full object-cover"
-                />
+          <div className="group relative max-w-5xl mx-auto bg-white/80 backdrop-blur-sm hover:bg-white rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl hover:shadow-picto-primary/10 transition-all duration-500 transform hover:-translate-y-2 border border-gray-100/50 hover:border-picto-primary/20">
+            {/* Animated background gradient */}
+            <div className="absolute inset-0 bg-gradient-to-br from-picto-primary/5 via-transparent to-orange-100/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+            <div className="relative z-10 md:flex">
+              <div className="md:w-2/5 relative overflow-hidden">
+                <div className="aspect-[4/3] md:aspect-auto md:h-full">
+                  <img
+                    src={portfolioImage}
+                    alt="Hevinly Portfolio Website"
+                    className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
+                  />
+                </div>
+                {/* Overlay gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
-              <div className="md:w-2/3 p-6">
-                <div className="flex justify-between items-center mb-3">
-                  <h3 className="text-2xl font-semibold text-picto-primary">Hevinly - Portfolio Website</h3>
-                  <Link to="/projects/hevin-portfolio-website" className="btn btn-sm px-4 py-2 btn-primary text-sm">
-                    View Project
+
+              <div className="md:w-3/5 p-4 lg:p-6">
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
+                  <div>
+                    <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-2 group-hover:text-picto-primary transition-colors duration-300">Hevinly - Portfolio Website</h3>
+                    <p className="text-picto-primary font-semibold text-sm uppercase tracking-wide">International Collaboration</p>
+                  </div>
+                  <Link to="/projects/hevin-portfolio-website" className="group/btn relative inline-flex items-center gap-3 bg-gradient-to-r from-picto-primary to-orange-400 hover:from-orange-400 hover:to-picto-primary text-white font-bold text-lg px-6 py-3 rounded-xl shadow-2xl shadow-picto-primary/25 hover:shadow-3xl hover:shadow-picto-primary/40 transform hover:scale-105 transition-all duration-300 overflow-hidden shrink-0">
+                    <span className="relative z-10">View Project</span>
+                    <FontAwesomeIcon icon={faArrowRight} className="relative z-10 transition-transform duration-300 group-hover/btn:translate-x-1" />
+                    {/* Button shine effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300 transform -skew-x-12 translate-x-full group-hover/btn:translate-x-0"></div>
                   </Link>
                 </div>
-                <p className="text-gray-600 mb-4">
+
+                <p className="text-gray-600 mb-6 leading-relaxed text-base">
                   A <strong>professional portfolio website</strong> developed for a photography and videography business based in <strong>Japan</strong>, showcasing their work with an elegant, responsive design.
                 </p>
 
-                <div className="mb-4">
-                  <h4 className="font-semibold mb-2 flex items-center gap-2">
-                    <FontAwesomeIcon icon={faLightbulb} className="text-picto-primary" />
+                <div className="mb-6">
+                  <h4 className="font-bold mb-4 flex items-center gap-3 text-lg">
+                    <div className="w-8 h-8 bg-picto-primary/10 rounded-full flex items-center justify-center">
+                      <FontAwesomeIcon icon={faLightbulb} className="text-picto-primary" />
+                    </div>
                     Remote Collaboration Achievements
                   </h4>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                    <div className="flex items-center gap-2">
-                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm" />
-                      <span className="text-sm">Clear milestone-based delivery</span>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div className="flex items-start gap-3 p-3 bg-picto-primary/5 rounded-lg">
+                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-gray-700">Clear milestone-based delivery</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm" />
-                      <span className="text-sm">Asynchronous communication</span>
+                    <div className="flex items-start gap-3 p-3 bg-orange-50 rounded-lg">
+                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-gray-700">Asynchronous communication</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm" />
-                      <span className="text-sm">Regular updates and feedback loops</span>
+                    <div className="flex items-start gap-3 p-3 bg-picto-primary/5 rounded-lg">
+                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-gray-700">Regular updates and feedback loops</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm" />
-                      <span className="text-sm">Timezone difference management</span>
+                    <div className="flex items-start gap-3 p-3 bg-orange-50 rounded-lg">
+                      <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-gray-700">Timezone difference management</span>
                     </div>
                   </div>
                 </div>
 
-                <p className="text-gray-600 text-sm italic">
-                  This international project experience strengthened my ability to communicate clearly, manage expectations, and deliver quality work in remote settings across different cultures and timezones.
-                </p>
+                <div className="bg-gradient-to-r from-picto-primary/5 to-orange-50 p-4 rounded-xl border-l-4 border-picto-primary">
+                  <p className="text-gray-700 text-sm italic">
+                    This international project experience strengthened my ability to communicate clearly, manage expectations, and deliver quality work in remote settings across different cultures and timezones.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -434,101 +616,236 @@ const About = () => {
       </div>
 
       {/* How I Work */}
-      <div id="work-philosophy" className="bg-soft-white">
-        <div className="content px-4 sm:px-6 md:px-12 lg:px-20 py-16">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-8 flex items-center gap-3">
-            <FontAwesomeIcon icon={faCog} className="text-picto-primary" />
-            How I Work
-          </h2>
-          <p className="text-base md:text-lg text-gray-600 mb-8">
-            These principles guide how I approach my work:
-          </p>
+      <div id="work-philosophy" className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-br from-slate-50 via-white to-gray-50">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-10 w-32 h-32 bg-picto-primary/5 rounded-full blur-2xl animate-pulse"></div>
+          <div className="absolute bottom-32 right-20 w-24 h-24 bg-orange-300/5 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/2 left-1/3 w-2 h-2 bg-picto-primary/30 rounded-full"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-3 h-3 bg-orange-400/20 rounded-full"></div>
+          <div className="absolute top-3/4 left-1/2 w-1.5 h-1.5 bg-picto-primary/50 rounded-full"></div>
+        </div>
 
-          {/* Principles Badges */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-l-4 border-picto-primary">
-              <div className="flex items-center gap-3 mb-3">
-                <FontAwesomeIcon icon={faStar} className="text-picto-primary text-xl" />
-                <h3 className="text-lg font-semibold text-picto-primary">Ownership</h3>
-              </div>
-              <p className="text-gray-600 text-sm">I take full responsibility from idea to delivery, ensuring end-to-end quality and accountability.</p>
+        <div className="relative z-10 content px-4 sm:px-6 md:px-12 lg:px-20">
+          {/* Header section */}
+          <div className="text-center mb-16">
+            <div className="inline-block mb-4">
+              <span className="inline-flex items-center gap-2 px-4 py-2 bg-picto-primary/10 text-picto-primary font-semibold text-sm rounded-full border border-picto-primary/20">
+                <FontAwesomeIcon icon={faCog} />
+                Work Philosophy
+              </span>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-l-4 border-picto-primary">
-              <div className="flex items-center gap-3 mb-3">
-                <FontAwesomeIcon icon={faLightbulb} className="text-picto-primary text-xl" />
-                <h3 className="text-lg font-semibold text-picto-primary">Clarity</h3>
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
+                How I
+              </span>
+              <br />
+              <span className="bg-gradient-to-r from-picto-primary via-orange-500 to-picto-primary bg-clip-text text-transparent">
+                Work
+              </span>
+            </h2>
+
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              These principles guide how I approach my work, ensuring consistent quality and professional excellence in every project.
+            </p>
+          </div>
+
+          {/* Principles Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <div className="group relative bg-white/80 backdrop-blur-sm hover:bg-white rounded-2xl p-8 hover:shadow-2xl hover:shadow-picto-primary/10 transition-all duration-500 transform hover:-translate-y-2 border border-gray-100/50 hover:border-picto-primary/20">
+              {/* Animated background gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-picto-primary/5 via-transparent to-orange-100/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+              <div className="relative z-10">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-picto-primary/10 rounded-2xl flex items-center justify-center group-hover:bg-picto-primary/20 transition-colors duration-300">
+                    <FontAwesomeIcon icon={faStar} className="text-picto-primary text-2xl" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-1 group-hover:text-picto-primary transition-colors duration-300">Ownership</h3>
+                    <div className="w-8 h-1 bg-picto-primary rounded-full"></div>
+                  </div>
+                </div>
+                <p className="text-gray-600 leading-relaxed">I take full responsibility from idea to delivery, ensuring end-to-end quality and accountability in every project I undertake.</p>
               </div>
-              <p className="text-gray-600 text-sm">I prefer clear requirements, comprehensive documentation, and transparent communication throughout the process.</p>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-l-4 border-picto-primary">
-              <div className="flex items-center gap-3 mb-3">
-                <FontAwesomeIcon icon={faRocket} className="text-picto-primary text-xl" />
-                <h3 className="text-lg font-semibold text-picto-primary">Continuous Learning</h3>
+            <div className="group relative bg-white/80 backdrop-blur-sm hover:bg-white rounded-2xl p-8 hover:shadow-2xl hover:shadow-picto-primary/10 transition-all duration-500 transform hover:-translate-y-2 border border-gray-100/50 hover:border-picto-primary/20">
+              {/* Animated background gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-picto-primary/5 via-transparent to-orange-100/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+              <div className="relative z-10">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-picto-primary/10 rounded-2xl flex items-center justify-center group-hover:bg-picto-primary/20 transition-colors duration-300">
+                    <FontAwesomeIcon icon={faLightbulb} className="text-picto-primary text-2xl" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-1 group-hover:text-picto-primary transition-colors duration-300">Clarity</h3>
+                    <div className="w-8 h-1 bg-picto-primary rounded-full"></div>
+                  </div>
+                </div>
+                <p className="text-gray-600 leading-relaxed">I prefer clear requirements, comprehensive documentation, and transparent communication throughout the entire development process.</p>
               </div>
-              <p className="text-gray-600 text-sm">I actively improve my skills through real projects, staying updated with the latest technologies and best practices.</p>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-l-4 border-picto-primary">
-              <div className="flex items-center gap-3 mb-3">
-                <FontAwesomeIcon icon={faCode} className="text-picto-primary text-xl" />
-                <h3 className="text-lg font-semibold text-picto-primary">Practical Engineering</h3>
+            <div className="group relative bg-white/80 backdrop-blur-sm hover:bg-white rounded-2xl p-8 hover:shadow-2xl hover:shadow-picto-primary/10 transition-all duration-500 transform hover:-translate-y-2 border border-gray-100/50 hover:border-picto-primary/20">
+              {/* Animated background gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-picto-primary/5 via-transparent to-orange-100/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+              <div className="relative z-10">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-picto-primary/10 rounded-2xl flex items-center justify-center group-hover:bg-picto-primary/20 transition-colors duration-300">
+                    <FontAwesomeIcon icon={faRocket} className="text-picto-primary text-2xl" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-1 group-hover:text-picto-primary transition-colors duration-300">Continuous Learning</h3>
+                    <div className="w-8 h-1 bg-picto-primary rounded-full"></div>
+                  </div>
+                </div>
+                <p className="text-gray-600 leading-relaxed">I actively improve my skills through real projects, staying updated with the latest technologies and best practices in the industry.</p>
               </div>
-              <p className="text-gray-600 text-sm">I focus on building maintainable and scalable solutions that stand the test of time.</p>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-l-4 border-picto-primary md:col-span-2 lg:col-span-1">
-              <div className="flex items-center gap-3 mb-3">
-                <FontAwesomeIcon icon={faCheckCircle} className="text-picto-primary text-xl" />
-                <h3 className="text-lg font-semibold text-picto-primary">Calm Execution</h3>
+            <div className="group relative bg-white/80 backdrop-blur-sm hover:bg-white rounded-2xl p-8 hover:shadow-2xl hover:shadow-picto-primary/10 transition-all duration-500 transform hover:-translate-y-2 border border-gray-100/50 hover:border-picto-primary/20">
+              {/* Animated background gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-picto-primary/5 via-transparent to-orange-100/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+              <div className="relative z-10">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-picto-primary/10 rounded-2xl flex items-center justify-center group-hover:bg-picto-primary/20 transition-colors duration-300">
+                    <FontAwesomeIcon icon={faCode} className="text-picto-primary text-2xl" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-1 group-hover:text-picto-primary transition-colors duration-300">Practical Engineering</h3>
+                    <div className="w-8 h-1 bg-picto-primary rounded-full"></div>
+                  </div>
+                </div>
+                <p className="text-gray-600 leading-relaxed">I focus on building maintainable and scalable solutions that stand the test of time, following industry best practices and standards.</p>
               </div>
-              <p className="text-gray-600 text-sm">I value steady progress over rushed output, maintaining quality and reliability in all deliverables.</p>
+            </div>
+
+            <div className="group relative bg-white/80 backdrop-blur-sm hover:bg-white rounded-2xl p-8 hover:shadow-2xl hover:shadow-picto-primary/10 transition-all duration-500 transform hover:-translate-y-2 border border-gray-100/50 hover:border-picto-primary/20 md:col-span-2 lg:col-span-1">
+              {/* Animated background gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-picto-primary/5 via-transparent to-orange-100/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+              <div className="relative z-10">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-picto-primary/10 rounded-2xl flex items-center justify-center group-hover:bg-picto-primary/20 transition-colors duration-300">
+                    <FontAwesomeIcon icon={faCheckCircle} className="text-picto-primary text-2xl" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-1 group-hover:text-picto-primary transition-colors duration-300">Calm Execution</h3>
+                    <div className="w-8 h-1 bg-picto-primary rounded-full"></div>
+                  </div>
+                </div>
+                <p className="text-gray-600 leading-relaxed">I value steady progress over rushed output, maintaining quality and reliability in all deliverables while managing expectations effectively.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Let's Connect */}
-      <div className="introduction-profile-background">
-        <div className="content px-4 sm:px-6 md:px-12 lg:px-20 py-16">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-8 flex items-center gap-3">
-            <FontAwesomeIcon icon={faHandshake} className="text-picto-primary" />
-            Let's Connect
-          </h2>
-          <p className="text-base md:text-lg text-gray-600 mb-8">
-            If you'd like to learn more about my work or discuss potential opportunities, feel free to explore my projects or reach out.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      <div className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-br from-slate-50 via-white to-gray-50">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-10 w-32 h-32 bg-picto-primary/5 rounded-full blur-2xl animate-pulse"></div>
+          <div className="absolute bottom-32 right-20 w-24 h-24 bg-orange-300/5 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/2 left-1/3 w-2 h-2 bg-picto-primary/30 rounded-full"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-3 h-3 bg-orange-400/20 rounded-full"></div>
+          <div className="absolute top-3/4 left-1/2 w-1.5 h-1.5 bg-picto-primary/50 rounded-full"></div>
+        </div>
+
+        <div className="relative z-10 content px-4 sm:px-6 md:px-12 lg:px-20">
+          {/* Header section */}
+          <div className="text-center mb-16">
+            <div className="inline-block mb-4">
+              <span className="inline-flex items-center gap-2 px-4 py-2 bg-picto-primary/10 text-picto-primary font-semibold text-sm rounded-full border border-picto-primary/20">
+                <FontAwesomeIcon icon={faHandshake} />
+                Let's Connect
+              </span>
+            </div>
+
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
+                Let's
+              </span>
+              <br />
+              <span className="bg-gradient-to-r from-picto-primary via-orange-500 to-picto-primary bg-clip-text text-transparent">
+                Connect
+              </span>
+            </h2>
+
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
+              If you'd like to learn more about my work or discuss potential opportunities, feel free to explore my projects or reach out through any of the channels below.
+            </p>
+          </div>
+
+          {/* Social Links Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-16">
             <a
               href="/"
-              className="btn btn-lg px-6 py-3 btn-primary text-base"
+              className="group relative bg-white/80 backdrop-blur-sm hover:bg-white rounded-2xl p-8 hover:shadow-2xl hover:shadow-picto-primary/10 transition-all duration-500 transform hover:-translate-y-2 border border-gray-100/50 hover:border-picto-primary/20 text-center"
             >
-              <FontAwesomeIcon icon={faExternalLinkAlt} className="mr-2" />
-              Portfolio
+              {/* Animated background gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-picto-primary/5 via-transparent to-orange-100/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+              <div className="relative z-10">
+                <div className="w-20 h-20 bg-picto-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-picto-primary/20 transition-colors duration-300">
+                  <FontAwesomeIcon icon={faExternalLinkAlt} className="text-picto-primary text-3xl" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-picto-primary transition-colors duration-300">Portfolio</h3>
+                <p className="text-gray-600 text-sm">Explore my complete work</p>
+              </div>
             </a>
+
             <a
               href="https://github.com/gihan-tharuka"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-lg px-6 py-3 bg-gray-800 text-white hover:bg-gray-700 text-base"
+              className="group relative bg-white/80 backdrop-blur-sm hover:bg-white rounded-2xl p-8 hover:shadow-2xl hover:shadow-gray-900/10 transition-all duration-500 transform hover:-translate-y-2 border border-gray-100/50 hover:border-gray-800/20 text-center"
             >
-              <FontAwesomeIcon icon={faGithub} className="mr-2" />
-              GitHub
+              {/* Animated background gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-gray-900/5 via-transparent to-gray-100/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+              <div className="relative z-10">
+                <div className="w-20 h-20 bg-gray-900/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-gray-900/20 transition-colors duration-300">
+                  <FontAwesomeIcon icon={faGithub} className="text-gray-900 text-3xl" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-gray-900 transition-colors duration-300">GitHub</h3>
+                <p className="text-gray-600 text-sm">View my code repositories</p>
+              </div>
             </a>
+
             <a
               href="https://www.linkedin.com/in/gihan-tharuka-7b592b296"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-lg px-6 py-3 bg-blue-600 text-white hover:bg-blue-500 text-base"
+              className="group relative bg-white/80 backdrop-blur-sm hover:bg-white rounded-2xl p-8 hover:shadow-2xl hover:shadow-blue-600/10 transition-all duration-500 transform hover:-translate-y-2 border border-gray-100/50 hover:border-blue-600/20 text-center"
             >
-              <FontAwesomeIcon icon={faLinkedin} className="mr-2" />
-              LinkedIn
+              {/* Animated background gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 via-transparent to-blue-100/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+              <div className="relative z-10">
+                <div className="w-20 h-20 bg-blue-600/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-600/20 transition-colors duration-300">
+                  <FontAwesomeIcon icon={faLinkedin} className="text-blue-600 text-3xl" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">LinkedIn</h3>
+                <p className="text-gray-600 text-sm">Connect professionally</p>
+              </div>
             </a>
           </div>
-          <p className="text-base md:text-lg text-gray-600 mt-8 text-center">
-            Thanks for taking the time to read my story.
-          </p>
+
+          {/* Thank you message */}
+          <div className="text-center">
+            <div className="inline-block bg-gradient-to-r from-picto-primary/10 to-orange-50 p-6 rounded-2xl border border-picto-primary/20">
+              <p className="text-lg text-gray-700 font-medium">
+                Thanks for taking the time to read my story.
+              </p>
+              <div className="w-16 h-1 bg-picto-primary rounded-full mx-auto mt-3"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

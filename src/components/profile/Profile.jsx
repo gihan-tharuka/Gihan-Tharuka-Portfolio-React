@@ -47,6 +47,14 @@ const Profile = () => {
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
           {/* Left Content - Profile Image */}
           <div className={`relative transition-all duration-700 delay-300 ${animate ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
+            {/* Full Stack Developer badge - moved above image */}
+            <div className={`text-center mb-6 transition-all duration-700 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+              <span className="inline-flex items-center gap-2 px-4 py-2 bg-picto-primary/10 text-picto-primary font-semibold text-sm rounded-full border border-picto-primary/20">
+                <FontAwesomeIcon icon={faStar} className="animate-pulse" />
+                Full Stack Developer
+              </span>
+            </div>
+
             {/* Creative profile image container */}
             <div className="relative w-full max-w-md mx-auto">
               {/* Decorative background shapes */}
@@ -98,7 +106,7 @@ const Profile = () => {
 
             {/* Enhanced social media section - now below the image */}
             <div className="mt-6 text-center opacity-100 transition-all duration-500 delay-300">
-              <div className="inline-block px-8 py-4 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-100/60 ring-1 ring-white/20">
+              <div className="inline-block px-8 py-2 bg-white/95 backdrop-blur-md rounded-2xl  border border-gray-100/60 ring-1 ring-white/20">
                 <SocialMedia />
               </div>
             </div>
@@ -129,13 +137,6 @@ const Profile = () => {
 
           {/* Right Content - Text Content */}
           <div className={`space-y-8 transition-all duration-700 ${animate ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
-            {/* Animated badge */}
-            <div className={`inline-block transition-all duration-700 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-              <span className="inline-flex items-center gap-2 px-4 py-2 bg-picto-primary/10 text-picto-primary font-semibold text-sm rounded-full border border-picto-primary/20">
-                <FontAwesomeIcon icon={faStar} className="animate-pulse" />
-                Full Stack Developer
-              </span>
-            </div>
 
             {/* Main heading */}
             <div className="space-y-4">

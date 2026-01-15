@@ -37,7 +37,7 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <section ref={ref} className="relative py-20 md:py-12 overflow-hidden bg-gradient-to-br from-white via-gray-50 to-slate-50" id="portfolio">
+    <section ref={ref} className="relative py-8 md:py-12 overflow-hidden bg-gradient-to-br from-white via-gray-50 to-slate-50" id="portfolio">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-32 h-32 bg-picto-primary/5 rounded-full blur-2xl animate-pulse"></div>

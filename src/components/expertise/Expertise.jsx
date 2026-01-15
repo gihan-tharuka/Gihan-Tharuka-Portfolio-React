@@ -131,7 +131,7 @@ const Expertise = () => {
   }, []);
 
   return (
-    <section id="expertise" className="content px-4 sm:px-6 md:px-12 lg:px-20 py-16 relative overflow-hidden">
+    <section id="expertise" className="content px-4 sm:px-6 md:px-12 lg:px-20 py-12 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-br from-picto-primary/5 via-transparent to-orange-100/5 pointer-events-none"></div>
 

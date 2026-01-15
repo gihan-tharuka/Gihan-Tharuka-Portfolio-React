@@ -1,18 +1,51 @@
+/* Modern Contact Section Styles */
+
+/* Smooth animations for contact cards */
 .contact-card {
-  transition: transform 150ms ease, background-color 150ms ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/* Enhanced hover effects */
 .contact-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(255, 122, 0, 0.15);
 }
+
+/* Icon container styling */
 .icon-wrapper {
-  width: 44px;
-  height: 44px;
+  width: 56px;
+  height: 56px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  border-radius: 16px;
+  transition: all 0.3s ease;
 }
 
-/* ensure text wraps nicely for small screens */
+/* Text wrapping for better mobile experience */
 .contact-card p {
   word-break: break-word;
+  hyphens: auto;
+}
+
+/* Smooth focus states for accessibility */
+.contact-card:focus {
+  outline: 2px solid #ff7a00;
+  outline-offset: 2px;
+}
+
+/* Loading animation for contact cards */
+@keyframes contactCardLoad {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact-card-loading {
+  animation: contactCardLoad 0.6s ease-out forwards;
 }

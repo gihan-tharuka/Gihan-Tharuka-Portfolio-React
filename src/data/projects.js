@@ -252,7 +252,7 @@ const projects = [
       conceptsUsed: ["Livewire reactive UIs", "RBAC", "MVC Architecture"],
       otherServices: [  "AWS S3", "Laravel Cloud", "Cloudflare", "Google Analytics", "Jetstream", "Filament","Livewire",
       ],
-      links: { live: "https://revlineautomotors.com/", repo: "https://github.com/gihan-tharuka/AutoMate-FG-Demo.git" },
+      links: { live: "https://pathmasiriautoelectricals.online/", repo: "https://github.com/gihan-tharuka/AutoMate-FG-Demo.git" },
       seo: { description: "AutoMate - automotive service management system (Laravel + Filament)", ogImage: garage },
     },
   {

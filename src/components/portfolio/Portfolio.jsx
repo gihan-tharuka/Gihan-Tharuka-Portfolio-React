@@ -50,6 +50,12 @@ const Portfolio = () => {
             Explore my latest projects and see how I transform ideas into digital experiences.
             Each project represents a unique challenge and innovative solution.
           </p>
+
+          {/* Private Repository Notice */}
+          <div className="mt-6 inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-picto-primary/10 to-orange-100/10 text-picto-primary font-medium rounded-full border border-picto-primary/20">
+            <FontAwesomeIcon icon={faLock} className="w-4 h-4" />
+            <span className="text-sm">Some repositories are private for client confidentiality. Click "Request Code Access" to view the code.</span>
+          </div>
         </div>
 
         {/* Filter Buttons */}

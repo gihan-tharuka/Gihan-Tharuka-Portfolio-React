@@ -1,7 +1,8 @@
 import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheckCircle, faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { faCheckCircle, faChevronDown, faChevronUp, faLock, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import projects from "../../data/projects";
 
 const ProjectDetail = () => {
@@ -237,7 +238,25 @@ const ProjectDetail = () => {
                   <a href={project.links.live} className="btn btn-primary" target="_blank" rel="noreferrer">Live</a>
                 )}
                 {project.links && project.links.repo && (
-                  <a href={project.links.repo} className="btn" target="_blank" rel="noreferrer">Repo</a>
+                  project.links.repo === "#!" ? (
+                    <button
+                      onClick={() => {
+                        const subject = encodeURIComponent(`Code Access Request for ${project.title}`);
+                        const body = encodeURIComponent(`Hi,\n\nI'm interested in viewing the code for ${project.title}.\n\nMy GitHub username is: [please provide your GitHub username]\n\nCould you please grant me access to the repository?\n\nThank you!`);
+                        window.location.href = `mailto:gihan.tharuka.2001@gmail.com?subject=${subject}&body=${body}`;
+                      }}
+                      className="btn flex items-center gap-2 bg-gray-100 hover:bg-gray-200 text-gray-700 border border-gray-300 hover:border-gray-400 transition-all duration-300"
+                      title="This repository is private. Click to request access via email."
+                    >
+                      <FontAwesomeIcon icon={faLock} className="w-4 h-4" />
+                      Request Code Access
+                    </button>
+                  ) : (
+                    <a href={project.links.repo} className="btn flex items-center gap-2" target="_blank" rel="noreferrer">
+                      <FontAwesomeIcon icon={faGithub} className="w-4 h-4" />
+                      View Repository
+                    </a>
+                  )
                 )}
               </div>
 

@@ -238,12 +238,12 @@ const ProjectDetail = () => {
                   <a href={project.links.live} className="btn btn-primary" target="_blank" rel="noreferrer">Live</a>
                 )}
                 {project.links && project.links.repo && (
-                  project.links.repo === "#!" ? (
+                  project.visibility === "private" ? (
                     <button
                       onClick={() => {
                         const subject = encodeURIComponent(`Code Access Request for ${project.title}`);
                         const body = encodeURIComponent(`Hi,\n\nI'm interested in viewing the code for ${project.title}.\n\nMy GitHub username is: [please provide your GitHub username]\n\nCould you please grant me access to the repository?\n\nThank you!`);
-                        window.location.href = `mailto:gihan.tharuka.2001@gmail.com?subject=${subject}&body=${body}`;
+                        window.location.href = `mailto:gihantharuka2499@gmail.com?subject=${subject}&body=${body}`;
                       }}
                       className="btn flex items-center gap-2 bg-gray-100 hover:bg-gray-200 text-gray-700 border border-gray-300 hover:border-gray-400 transition-all duration-300"
                       title="This repository is private. Click to request access via email."

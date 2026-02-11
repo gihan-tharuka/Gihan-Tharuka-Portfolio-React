@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import Projects from "./Projects";
 import { Link } from "react-router-dom";
 import projects from "../../data/projects";
-import { faBriefcase, faFilter, faRocket } from "@fortawesome/free-solid-svg-icons";
+import { faBriefcase, faFilter, faRocket, faLock } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Portfolio = () => {

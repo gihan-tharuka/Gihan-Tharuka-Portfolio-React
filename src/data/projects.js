@@ -8,6 +8,7 @@ import travelApp from "../assets/images/projects/travelapp.png";
 import garage from "../assets/images/projects/garage.jpg";
 import gym from "../assets/images/projects/gym.jpg";
 import portfolio from "../assets/images/projects/portfolio.jpg";
+import dharmaOcean from "../assets/images/projects/dharmaocean.jpg";
 
 const projects = [
   {
@@ -281,6 +282,35 @@ const projects = [
     otherServices: ["GitHub Pages Deployment", "Custom Domain Setup", "Performance Optimization"],
     links: { live: "https://www.ropeholdersmedia.com/", repo: "https://github.com/hevinperiyapperuma/Hevin" },
     seo: { description: "Hevinly - Professional videography and photography portfolio website", ogImage: portfolio },
+  },
+  {
+    id: "dharma-ocean-temple-website",
+    filtertag: "Laravel",
+    slug: "dharma-ocean-temple-website",
+    title: "Dharma Ocean - Buddhist Temple Website",
+    order: 11,
+    short: "A beautiful, responsive website for Diyagama Amashanthi Thapowana Buddhist Temple built with Laravel and Tailwind CSS. Features include home page with 'Today's Thought', Dhamma Deshana media page, events calendar, photo gallery, and contact/donations functionality.",
+    role: "Full Stack Developer",
+    year: 2025,
+    duration: "3 months",
+    heroImage: dharmaOcean,
+    gallery: [dharmaOcean],
+    tools: ["Laravel", "Blade", "Tailwind CSS", "Vite", "PHP"],
+    skills: ["Full Stack", "Laravel", "PHP"],
+    features: [
+      { name: "Home Page", description: "Welcome section with 'Today's Thought', temple information, and quick navigation." },
+      { name: "Dhamma Deshana", description: "Media page showcasing YouTube teachings and sermons for spiritual guidance." },
+      { name: "Events Management", description: "Display of Poya Day programs, meditation retreats, and special ceremonies." },
+      { name: "Photo Gallery", description: "Visual showcase of the temple, stupa, Bo tree, and community events." },
+      { name: "Contact & Donations", description: "Contact information, donation details, and contact form for community engagement." },
+      { name: "Responsive Design", description: "Fully responsive layout that works seamlessly across desktop, tablet, and mobile devices." },
+      { name: "Temple-Appropriate Design", description: "Culturally sensitive color palette with saffron orange, cream, and gold accents." },
+      { name: "Elegant Typography", description: "Serif fonts (Playfair Display and Georgia) for an elegant and readable presentation." },
+    ],
+    conceptsUsed: ["MVC Architecture", "Blade Templating", "Responsive Design", "Server-side Rendering", "Asset Compilation", "Cultural Design Sensitivity"],
+    otherServices: ["MySQL", "Vite", "Laravel Cloud"],
+    links: { live: "https://dharmaocean-main-toywvw.laravel.cloud/", repo: "https://github.com/gihan-tharuka/DharmaOcean.git" },
+    seo: { description: "Dharma Ocean Buddhist temple website case study", ogImage: dharmaOcean },
   },
 ];
 

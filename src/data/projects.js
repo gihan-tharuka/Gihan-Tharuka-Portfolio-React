@@ -232,7 +232,7 @@ const projects = [
     ],
     conceptsUsed: ["MVC Architecture","Livewire reactive UIs", "RBAC"],
     otherServices: ["Spatie Media Library","Hostinger", "Cloudflare","Filament"],
-    links: { live: "https://flexifit-fg-demo-main-p8lmpv.laravel.cloud/", repo: "https://github.com/gihan-tharuka/Flexifit-FG-Demo.git" },
+    links: { live: "https://flexifitofficial.online/", repo: "https://github.com/gihan-tharuka/Flexifit-FG-Demo.git" },
     seo: { description: "Flexi-Fit fitness center management system (Laravel + Livewire)", ogImage: studentBlog },
   },
   {

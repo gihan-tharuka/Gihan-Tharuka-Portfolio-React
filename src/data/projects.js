@@ -180,7 +180,7 @@ const projects = [
   },
   {
     id: "medisys-patient-monitoring",
-    filtertag: "AWS",
+    filtertag: "React",
     slug: "medisys-patient-monitoring",
     title: "MediSys - Patient Monitoring System",
     visibility: "public",

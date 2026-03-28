@@ -10,7 +10,7 @@ const Portfolio = () => {
   const [animate, setAnimate] = useState(true);
 
   // Filter tags in specific order
-  const projectTypes = ["All", "Laravel", "AWS", "Java", "C#", "Python", "Flutter", "Web Development"];
+  const projectTypes = ["All", "Laravel", "React", "Java", "C#", "Python", "Flutter", "Web Development"];
 
   // Filter projects based on selected type
   const filteredProjects = selectedFilter === "All" ? projects : projects.filter((p) => p.filtertag === selectedFilter);

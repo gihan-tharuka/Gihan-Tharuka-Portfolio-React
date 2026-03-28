@@ -202,7 +202,7 @@ const projects = [
     ],
     conceptsUsed: ["Serverless APIs","AWS Well-Architected Framework","Cost Optimization","Concurrent Data Handling", "Data Visualization", "Responsive Design","Disaster Recovery", "Security Best Practices",],
     otherServices: ["AWS Lambda", "API Gateway", "DynamoDB", "AWS Amplify","S3", "Cognito", "CloudWatch", "SNS", "IAM", "SQS", ],
-  links: { live: "#!", repo: "https://github.com/gihan-tharuka/medicare-patient-monitoring.git" },
+  links: { live: "https://api-update.dm3d5dvmoomnn.amplifyapp.com/", repo: "https://github.com/gihan-tharuka/medicare-patient-monitoring.git" },
     seo: { description: "MediSys patient monitoring dashboard", ogImage: healthMonitoring },
   },
   {

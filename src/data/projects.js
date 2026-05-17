@@ -1,4 +1,5 @@
 import medicareAssist from "../assets/images/projects/medicare assist.jpg";
+import tourism from "../assets/images/projects/tourism.jpg";
 import dinemateHero from "../assets/images/projects/dinemate-hero.png";
 import syosErp from "../assets/images/projects/syos erp system.jpg";
 import inventoryMgmt from "../assets/images/projects/inventory management system.jpg";
@@ -322,6 +323,36 @@ const projects = [
     otherServices: ["MySQL", "Vite", "Laravel Cloud"],
     links: { live: "https://dharmaocean-main-toywvw.laravel.cloud/", repo: "https://github.com/gihan-tharuka/DharmaOcean.git" },
     seo: { description: "Dharma Ocean Buddhist temple website case study", ogImage: dharmaOcean },
+  },
+  {
+    id: "beyond-sea-travels",
+    filtertag: "React",
+    slug: "beyond-sea-travels",
+    title: "Beyond Sea Travels — Luxury Tourism Platform",
+    visibility: "public",
+    order: 12,
+    short: "A modern, scalable, conversion-focused tourism website built with Next.js 15, TypeScript, and Tailwind CSS for a Sri Lankan travel agency. Features premium tourism UX, modular frontend architecture, WhatsApp-based lead generation, and mobile-first design.",
+    role: "Full Stack Developer",
+    year: 2025,
+    duration: "4 months",
+    heroImage: tourism,
+    gallery: [tourism],
+    tools: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion", "Swiper.js"],
+    skills: ["Full Stack", "Next.js", "React"],
+    features: [
+      { name: "Luxury Landing Page", description: "Cinematic hero section with featured tours, destination showcases, and conversion-focused CTAs." },
+      { name: "Dynamic Tour Listing", description: "Responsive tour grid with country filtering and featured tour highlights." },
+      { name: "Tour Detail Pages", description: "Itinerary timeline, activities showcase, pricing, vehicle guidance, and WhatsApp booking CTA." },
+      { name: "Custom Tour Builder", description: "Select destinations, duration, budget, and travel interests to generate itinerary previews." },
+      { name: "Private Transfer Booking", description: "Pickup/drop-off selection with passenger-based vehicle recommendations and dynamic pricing." },
+      { name: "WhatsApp Integration", description: "Direct inquiry and booking flow through WhatsApp for lead generation." },
+      { name: "SEO Optimization", description: "Semantic structure, metadata optimization, dynamic SEO pages, and clean URLs." },
+      { name: "Mobile-First Design", description: "Optimized for mobile tourism users with touch-friendly navigation and fast-loading UI." },
+    ],
+    conceptsUsed: ["Service-layer Architecture", "Modular Component Structure", "Mobile-first Design", "SEO-forward Development", "Conversion-focused UX"],
+    otherServices: ["Lucide React", "React Hook Form", "Zod"],
+    links: { live: "#!", repo: "#!" },
+    seo: { description: "Beyond Sea Travels luxury tourism website case study", ogImage: tourism },
   },
 ];
 

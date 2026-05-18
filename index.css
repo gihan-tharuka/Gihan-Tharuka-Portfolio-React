@@ -316,6 +316,19 @@ body {
   animation-delay: 2s;
 }
 
+/* Shimmer animation for active filter buttons */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) skewX(-12deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-12deg);
+  }
+}
+.animate-shimmer {
+  animation: shimmer 2s ease-in-out infinite;
+}
+
 /* 3D perspective utility */
 .perspective-1000 {
   perspective: 1000px;

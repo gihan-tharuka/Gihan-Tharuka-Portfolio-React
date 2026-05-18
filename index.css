@@ -316,6 +316,39 @@ body {
   animation-delay: 2s;
 }
 
+/* Floating animation for particles in the Work Together section */
+@keyframes particle-float {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.4;
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-10px) translateX(-5px);
+    opacity: 0.3;
+  }
+  75% {
+    transform: translateY(-25px) translateX(8px);
+    opacity: 0.5;
+  }
+}
+
+/* Scanline effect for the Work Together section */
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+.animate-scanline {
+  animation: scanline 8s linear infinite;
+}
+
 /* Shimmer animation for active filter buttons */
 @keyframes shimmer {
   0% {

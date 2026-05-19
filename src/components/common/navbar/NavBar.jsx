@@ -14,6 +14,7 @@ import {
   faXmark,
   faDotCircle,
 } from "@fortawesome/free-solid-svg-icons";
+import favicon from "../../../assets/favicon.png";
 
 const navItems = [
   { id: 1, name: "Home", url: "introduction", icon: faHome },
@@ -267,15 +268,16 @@ const NavBar = () => {
             >
               <div className="relative">
                 <div
-                  className={`relative flex items-center justify-center rounded-2xl bg-gradient-to-br from-picto-primary to-orange-400 text-white font-bold shadow-lg shadow-picto-primary/20 group-hover:shadow-xl group-hover:shadow-picto-primary/30 transition-all duration-300 group-hover:scale-105 group-hover:rotate-2 ${
-                    isScrolled ? "h-9 w-9 text-base" : "h-11 w-11 sm:h-12 sm:w-12 text-lg sm:text-xl"
+                  className={`relative overflow-hidden rounded-2xl bg-transparent transition-all duration-300 ${
+                    isScrolled ? "h-9 w-9" : "h-11 w-11 sm:h-12 sm:w-12"
                   }`}
                 >
-                  G
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-orange-400 to-picto-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <img
+                    src={favicon}
+                    alt="Gihan Tharuka logo"
+                    className="h-full w-full object-cover"
+                  />
                 </div>
-                {/* Logo glow ring */}
-                <div className="absolute -inset-2 rounded-2xl bg-picto-primary/15 blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
               </div>
               <div className="text-left">
                 <p

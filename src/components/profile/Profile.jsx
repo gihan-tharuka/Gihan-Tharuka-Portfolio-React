@@ -12,14 +12,18 @@ import {
   faCheckCircle,
   faArrowRight,
   faCloud,
+  faDatabase,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faReact,
   faNodeJs,
   faLaravel,
-  faDocker,
   faAws,
   faGitAlt,
+  faPython,
+  faJava,
+  faPhp,
+  faCss3Alt,
 } from "@fortawesome/free-brands-svg-icons";
 import SocialMedia from "../common/socialMedia/SocialMedia";
 import pdf from "../../data/Gihan-Tharuka-Resume.pdf";
@@ -33,11 +37,25 @@ const roles = [
 
 const techStack = [
   { icon: faReact, label: "React" },
+   { icon: faLaravel, label: "Laravel" },
+    { icon: faCode, label: "Next.js" },
+    { icon: faPython, label: "Python" },
+     { icon: faAws, label: "AWS" },
+     { icon: faPhp, label: "PHP" },
+      { icon: faJava, label: "Java" },
+      { icon: faDatabase, label: "MySQL" },
+       { icon: faCss3Alt, label: "Tailwind CSS" },
   { icon: faNodeJs, label: "Node.js" },
-  { icon: faLaravel, label: "Laravel" },
-  { icon: faDocker, label: "Docker" },
-  { icon: faAws, label: "AWS" },
+ 
+ 
   { icon: faGitAlt, label: "Git" },
+  
+ 
+ 
+ 
+  
+  { icon: faDatabase, label: "PostgreSQL" },
+ 
 ];
 
 const Profile = () => {

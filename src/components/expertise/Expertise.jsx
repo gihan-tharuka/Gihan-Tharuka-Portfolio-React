@@ -101,10 +101,7 @@ const SkillCard = ({ skill, animate, index, reducedMotion }) => {
             </span>
           </div>
 
-          {/* Years of experience */}
-          <p className="text-xs text-gray-400 mb-3">
-            {skill.years} {skill.years === 1 ? "year" : "years"} experience
-          </p>
+          {/* Years removed per request */}
 
           {/* ===== PROGRESS BAR ===== */}
           <div className="space-y-1.5">
@@ -319,8 +316,7 @@ const Expertise = () => {
           {/* Description */}
           <p className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
             A comprehensive showcase of my technical expertise across various
-            domains. Each skill is rated by proficiency level with years of
-            hands-on experience.
+            domains. Each skill is rated by proficiency level.
           </p>
 
           {/* Stats bar */}

@@ -87,23 +87,23 @@ const Profesion = () => {
   return (
     <section
       ref={ref}
-      className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-br from-slate-50 via-white to-gray-50"
+      className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-br from-gray-950 via-gray-900 to-black"
       id="services"
       aria-label="What I Do Best"
     >
       {/* ===== ADVANCED BACKGROUND EFFECTS ===== */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
         {/* Gradient orbs */}
-        <div className="absolute -top-40 -left-40 w-[450px] h-[450px] bg-gradient-to-br from-picto-primary/10 via-orange-200/5 to-transparent rounded-full blur-3xl animate-blob"></div>
-        <div className="absolute -bottom-40 -right-40 w-[400px] h-[400px] bg-gradient-to-tl from-picto-primary/8 via-blue-200/5 to-transparent rounded-full blur-3xl animate-blob animation-delay-4"></div>
-        <div className="absolute top-1/2 right-1/4 w-[300px] h-[300px] bg-gradient-to-r from-amber-100/10 to-picto-primary/5 rounded-full blur-3xl animate-blob animation-delay-8"></div>
+        <div className="absolute -top-40 -left-40 w-[450px] h-[450px] bg-gradient-to-br from-picto-primary/12 via-orange-500/8 to-transparent rounded-full blur-3xl animate-blob"></div>
+        <div className="absolute -bottom-40 -right-40 w-[400px] h-[400px] bg-gradient-to-tl from-picto-primary/8 via-blue-500/5 to-transparent rounded-full blur-3xl animate-blob animation-delay-4"></div>
+        <div className="absolute top-1/2 right-1/4 w-[300px] h-[300px] bg-gradient-to-r from-amber-200/8 to-picto-primary/5 rounded-full blur-3xl animate-blob animation-delay-8"></div>
 
         {/* Grid overlay */}
         <div
-          className="absolute inset-0 opacity-[0.015]"
+          className="absolute inset-0 opacity-[0.03]"
           style={{
             backgroundImage:
-              "linear-gradient(rgba(255,122,0,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255,122,0,0.2) 1px, transparent 1px)",
+              "linear-gradient(rgba(255,122,0,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(255,122,0,0.4) 1px, transparent 1px)",
             backgroundSize: "80px 80px",
           }}
         ></div>
@@ -129,7 +129,7 @@ const Profesion = () => {
             }`}
           >
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-picto-primary/10 to-orange-100/20 rounded-full border border-picto-primary/20">
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-picto-primary/20 via-picto-primary/10 to-transparent backdrop-blur-md rounded-full border border-picto-primary/25">
               <div className="w-2 h-2 bg-picto-primary rounded-full animate-pulse"></div>
               <span className="text-sm font-semibold text-picto-primary">
                 Full Stack Services
@@ -139,7 +139,7 @@ const Profesion = () => {
             {/* Main heading */}
             <div className="space-y-3">
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-                <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-white via-gray-100 to-white/80 bg-clip-text text-transparent">
                   What I Do
                 </span>
                 <br />
@@ -151,7 +151,7 @@ const Profesion = () => {
 
             {/* Description */}
             <div className="space-y-4 max-w-lg">
-              <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+              <p className="text-base sm:text-lg text-gray-400 leading-relaxed">
                 I specialize in crafting end-to-end digital solutions that
                 combine technical excellence with exceptional user experiences.
                 From concept to deployment, I bring ideas to life with precision
@@ -166,7 +166,7 @@ const Profesion = () => {
 
             {/* Stats bar */}
             <div className="flex flex-wrap gap-4">
-              <div className="flex items-center gap-2 px-4 py-2.5 bg-white/60 backdrop-blur-sm rounded-xl border border-gray-100/60">
+              <div className="flex items-center gap-2 px-4 py-2.5 bg-white/[0.04] backdrop-blur-sm rounded-xl border border-white/[0.06]">
                 <FontAwesomeIcon
                   icon={faLayerGroup}
                   className="text-picto-primary"
@@ -176,7 +176,7 @@ const Profesion = () => {
                 </span>
                 <span className="text-gray-500">Core Services</span>
               </div>
-              <div className="flex items-center gap-2 px-4 py-2.5 bg-white/60 backdrop-blur-sm rounded-xl border border-gray-100/60">
+              <div className="flex items-center gap-2 px-4 py-2.5 bg-white/[0.04] backdrop-blur-sm rounded-xl border border-white/[0.06]">
                 <FontAwesomeIcon
                   icon={faTools}
                   className="text-picto-primary"
@@ -186,7 +186,7 @@ const Profesion = () => {
                 </span>
                 <span className="text-gray-500">Technologies</span>
               </div>
-              <div className="flex items-center gap-2 px-4 py-2.5 bg-white/60 backdrop-blur-sm rounded-xl border border-gray-100/60">
+              <div className="flex items-center gap-2 px-4 py-2.5 bg-white/[0.04] backdrop-blur-sm rounded-xl border border-white/[0.06]">
                 <FontAwesomeIcon
                   icon={faStar}
                   className="text-picto-primary"

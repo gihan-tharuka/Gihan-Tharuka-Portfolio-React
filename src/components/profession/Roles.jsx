@@ -52,7 +52,7 @@ const Roles = ({ role, animate, index, reducedMotion }) => {
       onMouseEnter={() => setMouseHover(true)}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className={`group relative bg-white/70 backdrop-blur-xl hover:bg-white/95 rounded-2xl p-6 lg:p-7 hover:shadow-2xl hover:shadow-picto-primary/10 transition-all duration-500 border border-gray-100/50 hover:border-picto-primary/20 overflow-hidden ${
+      className={`group relative bg-white/[0.04] backdrop-blur-xl hover:bg-white/[0.08] rounded-2xl p-6 lg:p-7 hover:shadow-2xl hover:shadow-picto-primary/10 transition-all duration-500 border border-white/[0.06] hover:border-picto-primary/20 overflow-hidden ${
         cardVisible
           ? "opacity-100 translate-y-0"
           : "opacity-0 translate-y-12"
@@ -67,7 +67,7 @@ const Roles = ({ role, animate, index, reducedMotion }) => {
     >
       {/* ===== HOVER EFFECTS ===== */}
       {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-picto-primary/[0.03] via-transparent to-orange-100/[0.06] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-picto-primary/[0.03] via-transparent to-orange-100/[0.04] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
 
       {/* Animated border glow */}
       <div
@@ -134,10 +134,10 @@ const Roles = ({ role, animate, index, reducedMotion }) => {
 
           {/* Title + description */}
           <div className="flex-1 min-w-0">
-            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 group-hover:text-picto-primary transition-colors duration-300 mb-2">
+            <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-picto-primary transition-colors duration-300 mb-2">
               {role?.title}
             </h3>
-            <p className="text-sm sm:text-base text-gray-500 leading-relaxed">
+            <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
               {role?.description}
             </p>
           </div>
@@ -148,7 +148,7 @@ const Roles = ({ role, animate, index, reducedMotion }) => {
           <div className="ml-16 mb-4">
             <div className="flex items-center gap-2">
               <div
-                className={`h-1.5 flex-1 rounded-full bg-gray-100 overflow-hidden transition-all duration-1000 ${
+                className={`h-1.5 flex-1 rounded-full bg-gray-800 overflow-hidden transition-all duration-1000 ${
                   progressAnimate ? "opacity-100" : "opacity-0"
                 }`}
               >
@@ -163,7 +163,7 @@ const Roles = ({ role, animate, index, reducedMotion }) => {
                   }}
                 ></div>
               </div>
-              <span className="text-xs font-semibold text-gray-400 flex-shrink-0">
+              <span className="text-xs font-semibold text-gray-500 flex-shrink-0">
                 {role.techCount} technologies
               </span>
             </div>
@@ -175,7 +175,7 @@ const Roles = ({ role, animate, index, reducedMotion }) => {
           {role.features.map((feature, index) => (
             <span
               key={feature}
-              className={`inline-flex items-center gap-1.5 px-3 py-1.5 bg-gray-50 hover:bg-picto-primary/5 text-gray-600 hover:text-picto-primary text-xs font-semibold rounded-full border border-gray-200 hover:border-picto-primary/20 transition-all duration-300 hover:scale-105 hover:shadow-sm ${
+              className={`inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/[0.06] hover:bg-picto-primary/10 text-gray-400 hover:text-picto-primary text-xs font-semibold rounded-full border border-white/[0.1] hover:border-picto-primary/20 transition-all duration-300 hover:scale-105 hover:shadow-sm ${
                 cardVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-4"

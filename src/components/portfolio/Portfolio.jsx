@@ -63,30 +63,30 @@ const Portfolio = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-br from-white via-gray-50 to-slate-50"
+      className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-br from-gray-950 via-gray-900 to-black"
       id="portfolio"
       aria-label="Portfolio"
     >
       {/* ===== ADVANCED BACKGROUND EFFECTS ===== */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
         {/* Gradient orbs */}
-        <div className="absolute -top-60 -right-40 w-[600px] h-[600px] bg-gradient-to-bl from-picto-primary/10 via-orange-200/5 to-transparent rounded-full blur-3xl animate-blob"></div>
-        <div className="absolute -bottom-60 -left-40 w-[500px] h-[500px] bg-gradient-to-tr from-picto-primary/8 via-purple-200/5 to-transparent rounded-full blur-3xl animate-blob animation-delay-4"></div>
-        <div className="absolute top-1/3 left-1/4 w-[300px] h-[300px] bg-gradient-to-r from-orange-100/10 to-picto-primary/5 rounded-full blur-3xl animate-blob animation-delay-8"></div>
+        <div className="absolute -top-60 -right-40 w-[600px] h-[600px] bg-gradient-to-bl from-picto-primary/12 via-orange-500/8 to-transparent rounded-full blur-3xl animate-blob"></div>
+        <div className="absolute -bottom-60 -left-40 w-[500px] h-[500px] bg-gradient-to-tr from-picto-primary/8 via-purple-500/5 to-transparent rounded-full blur-3xl animate-blob animation-delay-4"></div>
+        <div className="absolute top-1/3 left-1/4 w-[300px] h-[300px] bg-gradient-to-r from-orange-300/8 to-picto-primary/5 rounded-full blur-3xl animate-blob animation-delay-8"></div>
 
         {/* Grid overlay */}
         <div
-          className="absolute inset-0 opacity-[0.015]"
+          className="absolute inset-0 opacity-[0.03]"
           style={{
             backgroundImage:
-              "linear-gradient(rgba(255,122,0,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255,122,0,0.2) 1px, transparent 1px)",
+              "linear-gradient(rgba(255,122,0,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(255,122,0,0.4) 1px, transparent 1px)",
             backgroundSize: "80px 80px",
           }}
         ></div>
 
         {/* Subtle floating dots */}
         <div className="hidden lg:block">
-          <div className="absolute top-32 right-[20%] w-2 h-2 bg-picto-primary/20 rounded-full animate-float"></div>
+          <div className="absolute top-32 right-[20%] w-2 h-2 bg-picto-primary/25 rounded-full animate-float"></div>
           <div className="absolute bottom-48 left-[15%] w-3 h-3 border border-picto-primary/20 rounded-full animate-float animation-delay-3"></div>
           <div className="absolute top-[40%] right-[8%] w-1.5 h-1.5 bg-orange-300/30 rounded-full animate-float animation-delay-6"></div>
         </div>
@@ -101,7 +101,7 @@ const Portfolio = () => {
           }`}
         >
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-picto-primary/10 to-orange-100/20 rounded-full border border-picto-primary/20 mb-6">
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-picto-primary/20 via-picto-primary/10 to-transparent backdrop-blur-md rounded-full border border-picto-primary/25 mb-6">
             <div className="w-2 h-2 bg-picto-primary rounded-full animate-pulse"></div>
             <span className="text-sm font-semibold text-picto-primary">
               Featured Work
@@ -110,7 +110,7 @@ const Portfolio = () => {
 
           {/* Title */}
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-            <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-white via-gray-100 to-white/80 bg-clip-text text-transparent">
               My Portfolio &
             </span>
             <br />
@@ -120,7 +120,7 @@ const Portfolio = () => {
           </h2>
 
           {/* Description */}
-          <p className="text-base sm:text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
             Explore my latest projects where code meets creativity. Each project
             represents a unique challenge solved with modern technologies and
             thoughtful architecture.
@@ -128,19 +128,19 @@ const Portfolio = () => {
 
           {/* Stats bar */}
           <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm">
-            <div className="flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur-sm rounded-xl border border-gray-100/60">
+            <div className="flex items-center gap-2 px-4 py-2 bg-white/[0.04] backdrop-blur-sm rounded-xl border border-white/[0.06]">
               <span className="text-2xl font-bold bg-gradient-to-r from-picto-primary to-orange-400 bg-clip-text text-transparent">
                 {projects.length}
               </span>
               <span className="text-gray-500">Total Projects</span>
             </div>
-            <div className="flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur-sm rounded-xl border border-gray-100/60">
+            <div className="flex items-center gap-2 px-4 py-2 bg-white/[0.04] backdrop-blur-sm rounded-xl border border-white/[0.06]">
               <span className="text-2xl font-bold bg-gradient-to-r from-picto-primary to-orange-400 bg-clip-text text-transparent">
                 {projects.filter((p) => p.visibility === "public").length}
               </span>
               <span className="text-gray-500">Open Source</span>
             </div>
-            <div className="flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur-sm rounded-xl border border-gray-100/60">
+            <div className="flex items-center gap-2 px-4 py-2 bg-white/[0.04] backdrop-blur-sm rounded-xl border border-white/[0.06]">
               <span className="text-2xl font-bold bg-gradient-to-r from-picto-primary to-orange-400 bg-clip-text text-transparent">
                 {new Set(projects.map((p) => p.filtertag)).size}
               </span>
@@ -149,8 +149,8 @@ const Portfolio = () => {
           </div>
 
           {/* Private repo notice */}
-          <div className="mt-6 inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-amber-50/80 to-orange-50/80 text-amber-700 font-medium rounded-2xl border border-amber-200/50 backdrop-blur-sm shadow-sm">
-            <FontAwesomeIcon icon={faLock} className="w-4 h-4 text-amber-500" />
+          <div className="mt-6 inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-amber-500/10 to-orange-500/10 text-amber-300 font-medium rounded-2xl border border-amber-500/20 backdrop-blur-sm shadow-sm">
+            <FontAwesomeIcon icon={faLock} className="w-4 h-4 text-amber-400" />
             <span className="text-sm">
               Some repositories are private for client confidentiality. Click
               "Request Code Access" to view the code.
@@ -178,7 +178,7 @@ const Portfolio = () => {
                 className={`group relative px-5 py-3 rounded-2xl text-sm font-semibold transition-all duration-300 transform hover:scale-105 active:scale-95 overflow-hidden ${
                   isActive
                     ? "bg-gradient-to-r from-picto-primary to-orange-400 text-white shadow-lg shadow-picto-primary/25"
-                    : "bg-white/80 backdrop-blur-sm text-gray-600 hover:text-picto-primary border border-gray-200/80 hover:border-picto-primary/30 hover:shadow-md hover:bg-white"
+                    : "bg-white/[0.06] backdrop-blur-sm text-gray-400 hover:text-picto-primary border border-white/[0.1] hover:border-picto-primary/30 hover:shadow-md hover:bg-white/[0.08]"
                 }`}
                 style={{
                   transitionDelay: reducedMotion ? "0ms" : `${index * 60}ms`,
@@ -250,13 +250,13 @@ const Portfolio = () => {
             </div>
           ) : (
             <div className="text-center py-20">
-              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-picto-primary/10 to-orange-100/20 rounded-2xl flex items-center justify-center">
+              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-picto-primary/10 to-orange-100/10 rounded-2xl flex items-center justify-center">
                 <FontAwesomeIcon
                   icon={faEye}
                   className="text-3xl text-picto-primary/50"
                 />
               </div>
-              <h3 className="text-2xl font-bold text-gray-700 mb-2">
+              <h3 className="text-2xl font-bold text-gray-300 mb-2">
                 No projects found
               </h3>
               <p className="text-gray-500">

@@ -138,7 +138,7 @@ const EducationCard = ({ education: edu, index, animate, reducedMotion }) => {
               : "opacity-0 translate-x-8"
           }`}
         >
-          <div className="relative bg-white/70 backdrop-blur-xl rounded-2xl p-6 lg:p-7 hover:bg-white/90 hover:shadow-2xl hover:shadow-picto-primary/10 transition-all duration-500 transform hover:-translate-y-1.5 border border-gray-100/50 hover:border-picto-primary/20 overflow-hidden">
+          <div className="relative bg-white/[0.04] backdrop-blur-xl rounded-2xl p-6 lg:p-7 hover:bg-white/[0.08] hover:shadow-2xl hover:shadow-picto-primary/10 transition-all duration-500 transform hover:-translate-y-1.5 border border-white/[0.06] hover:border-picto-primary/20 overflow-hidden">
             {/* Hover gradient overlay */}
             <div
               className={`absolute inset-0 bg-gradient-to-br ${meta.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`}
@@ -160,22 +160,22 @@ const EducationCard = ({ education: edu, index, animate, reducedMotion }) => {
                   <div className="flex items-center gap-2.5 mb-1.5">
                     <FontAwesomeIcon
                       icon={faSchool}
-                      className="text-gray-400 text-sm"
+                      className="text-gray-500 text-sm"
                     />
-                    <h3 className="text-lg font-bold text-gray-900 group-hover:text-picto-primary transition-colors duration-300">
+                    <h3 className="text-lg font-bold text-white group-hover:text-picto-primary transition-colors duration-300">
                       {edu.institution}
                     </h3>
                   </div>
 
                   {/* Degree */}
-                  <h4 className="text-base font-semibold text-gray-700 leading-snug ml-7">
+                  <h4 className="text-base font-semibold text-gray-300 leading-snug ml-7">
                     {edu.degree}
                   </h4>
                 </div>
 
                 {/* Period badge */}
                 <div className="flex-shrink-0">
-                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-picto-primary/10 to-orange-100/20 text-picto-primary font-semibold text-sm rounded-xl border border-picto-primary/20 group-hover:shadow-md group-hover:scale-105 transition-all duration-300">
+                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-picto-primary/20 via-picto-primary/10 to-transparent backdrop-blur-md text-picto-primary font-semibold text-sm rounded-xl border border-picto-primary/25 group-hover:shadow-md group-hover:scale-105 transition-all duration-300">
                     <FontAwesomeIcon
                       icon={faCalendarAlt}
                       className="text-xs"
@@ -192,7 +192,7 @@ const EducationCard = ({ education: edu, index, animate, reducedMotion }) => {
                     className="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0"
                     style={{ backgroundColor: meta.color }}
                   ></div>
-                  <p className="text-sm text-gray-500 leading-relaxed">
+                  <p className="text-sm text-gray-400 leading-relaxed">
                     {edu.details}
                   </p>
                 </div>
@@ -274,30 +274,30 @@ const Education = () => {
   return (
     <section
       ref={ref}
-      className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-br from-slate-50 via-white to-gray-50"
+      className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-br from-gray-950 via-gray-900 to-black"
       id="education"
       aria-label="Education & Qualifications"
     >
       {/* ===== ADVANCED BACKGROUND EFFECTS ===== */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
         {/* Gradient orbs */}
-        <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-gradient-to-bl from-picto-primary/10 via-orange-200/5 to-transparent rounded-full blur-3xl animate-blob"></div>
-        <div className="absolute -bottom-60 -left-40 w-[450px] h-[450px] bg-gradient-to-tr from-picto-primary/8 via-blue-200/5 to-transparent rounded-full blur-3xl animate-blob animation-delay-4"></div>
-        <div className="absolute top-1/2 left-1/3 w-[300px] h-[300px] bg-gradient-to-r from-amber-100/10 to-picto-primary/5 rounded-full blur-3xl animate-blob animation-delay-8"></div>
+        <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-gradient-to-bl from-picto-primary/12 via-orange-500/8 to-transparent rounded-full blur-3xl animate-blob"></div>
+        <div className="absolute -bottom-60 -left-40 w-[450px] h-[450px] bg-gradient-to-tr from-picto-primary/8 via-blue-500/5 to-transparent rounded-full blur-3xl animate-blob animation-delay-4"></div>
+        <div className="absolute top-1/2 left-1/3 w-[300px] h-[300px] bg-gradient-to-r from-amber-200/8 to-picto-primary/5 rounded-full blur-3xl animate-blob animation-delay-8"></div>
 
         {/* Grid overlay */}
         <div
-          className="absolute inset-0 opacity-[0.015]"
+          className="absolute inset-0 opacity-[0.03]"
           style={{
             backgroundImage:
-              "linear-gradient(rgba(255,122,0,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255,122,0,0.2) 1px, transparent 1px)",
+              "linear-gradient(rgba(255,122,0,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(255,122,0,0.4) 1px, transparent 1px)",
             backgroundSize: "80px 80px",
           }}
         ></div>
 
         {/* Floating shapes */}
         <div className="hidden lg:block">
-          <div className="absolute top-32 left-[12%] w-3 h-3 bg-picto-primary/20 rounded-full animate-float"></div>
+          <div className="absolute top-32 left-[12%] w-3 h-3 bg-picto-primary/25 rounded-full animate-float"></div>
           <div className="absolute top-1/4 right-[15%] w-5 h-5 border-2 border-picto-primary/15 rounded-lg rotate-45 animate-float animation-delay-3"></div>
           <div className="absolute bottom-1/3 left-[8%] w-2 h-2 bg-orange-300/30 rounded-full animate-float animation-delay-6"></div>
           <div className="absolute bottom-40 right-[20%] w-4 h-4 border border-picto-primary/20 rounded-full animate-float animation-delay-2"></div>
@@ -313,7 +313,7 @@ const Education = () => {
           }`}
         >
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-picto-primary/10 to-orange-100/20 rounded-full border border-picto-primary/20 mb-6">
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-picto-primary/20 via-picto-primary/10 to-transparent backdrop-blur-md rounded-full border border-picto-primary/25 mb-6">
             <div className="w-2 h-2 bg-picto-primary rounded-full animate-pulse"></div>
             <span className="text-sm font-semibold text-picto-primary">
               Academic Journey
@@ -322,7 +322,7 @@ const Education = () => {
 
           {/* Title */}
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-            <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-white via-gray-100 to-white/80 bg-clip-text text-transparent">
               Education &
             </span>
             <br />
@@ -332,7 +332,7 @@ const Education = () => {
           </h2>
 
           {/* Description */}
-          <p className="text-base sm:text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
             My academic foundation and continuous learning journey that have
             shaped my expertise in software engineering and technology.
           </p>
@@ -345,7 +345,7 @@ const Education = () => {
                 : "opacity-0 translate-y-4"
             }`}
           >
-            <div className="flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur-sm rounded-xl border border-gray-100/60">
+            <div className="flex items-center gap-2 px-4 py-2 bg-white/[0.04] backdrop-blur-sm rounded-xl border border-white/[0.06]">
               <FontAwesomeIcon
                 icon={faGraduationCap}
                 className="text-picto-primary"
@@ -355,7 +355,7 @@ const Education = () => {
               </span>
               <span className="text-gray-500">Qualifications</span>
             </div>
-            <div className="flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur-sm rounded-xl border border-gray-100/60">
+            <div className="flex items-center gap-2 px-4 py-2 bg-white/[0.04] backdrop-blur-sm rounded-xl border border-white/[0.06]">
               <FontAwesomeIcon
                 icon={faCalendarAlt}
                 className="text-picto-primary"
@@ -365,7 +365,7 @@ const Education = () => {
               </span>
               <span className="text-gray-500">Years Learning</span>
             </div>
-            <div className="flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur-sm rounded-xl border border-gray-100/60">
+            <div className="flex items-center gap-2 px-4 py-2 bg-white/[0.04] backdrop-blur-sm rounded-xl border border-white/[0.06]">
               <FontAwesomeIcon
                 icon={faTrophy}
                 className="text-picto-primary"
@@ -375,7 +375,7 @@ const Education = () => {
               </span>
               <span className="text-gray-500">Degrees</span>
             </div>
-            <div className="flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur-sm rounded-xl border border-gray-100/60">
+            <div className="flex items-center gap-2 px-4 py-2 bg-white/[0.04] backdrop-blur-sm rounded-xl border border-white/[0.06]">
               <FontAwesomeIcon
                 icon={faLightbulb}
                 className="text-picto-primary"
@@ -391,7 +391,7 @@ const Education = () => {
         {/* ===== TIMELINE ===== */}
         <div className="relative">
           {/* Vertical timeline line (desktop decorative) */}
-          <div className="hidden md:block absolute left-7 top-0 bottom-0 w-0.5 bg-gradient-to-b from-picto-primary via-orange-400 to-blue-500 opacity-20"></div>
+          <div className="hidden md:block absolute left-7 top-0 bottom-0 w-0.5 bg-gradient-to-b from-picto-primary via-orange-400 to-blue-500 opacity-30"></div>
 
           <div className="space-y-12 lg:space-y-16">
             {education.map((edu, index) => (
@@ -420,12 +420,12 @@ const Education = () => {
             />
             <div className="h-px w-12 bg-gradient-to-r from-transparent via-picto-primary/40 to-transparent"></div>
           </div>
-          <div className="inline-flex items-center gap-2 px-6 py-3 bg-white/70 backdrop-blur-md border border-gray-100/60 rounded-2xl shadow-sm">
+          <div className="inline-flex items-center gap-2 px-6 py-3 bg-white/[0.04] backdrop-blur-md border border-white/[0.06] rounded-2xl shadow-sm">
             <FontAwesomeIcon
               icon={faLightbulb}
               className="text-amber-400 text-sm"
             />
-            <span className="text-gray-600 font-medium text-sm">
+            <span className="text-gray-400 font-medium text-sm">
               Lifelong Learner — Always exploring new frontiers
             </span>
           </div>

@@ -10,13 +10,13 @@ import { Link } from "react-router-dom";
 
 const Projects = ({ data }) => {
   return (
-    <div className="group relative h-full rounded-2xl overflow-hidden bg-white hover:bg-gradient-to-br hover:from-white hover:to-gray-50/80 shadow-lg hover:shadow-2xl hover:shadow-picto-primary/10 transition-all duration-500 transform hover:-translate-y-2 border border-gray-100/50 hover:border-picto-primary/20">
+    <div className="group relative h-full rounded-2xl overflow-hidden bg-white/[0.04] backdrop-blur-md hover:bg-white/[0.08] shadow-lg hover:shadow-2xl hover:shadow-picto-primary/10 transition-all duration-500 transform hover:-translate-y-2 border border-white/[0.06] hover:border-picto-primary/20">
       {/* ===== HOVER BACKGROUND EFFECTS ===== */}
-      <div className="absolute inset-0 bg-gradient-to-br from-picto-primary/[0.03] via-transparent to-orange-100/[0.06] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-picto-primary/[0.03] via-transparent to-orange-100/[0.04] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
       <div className="absolute -inset-1 bg-gradient-to-r from-picto-primary/5 via-transparent to-orange-300/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl pointer-events-none"></div>
 
       {/* ===== IMAGE SECTION ===== */}
-      <div className="relative h-52 overflow-hidden bg-gradient-to-br from-gray-100 via-gray-200 to-gray-100">
+      <div className="relative h-52 overflow-hidden bg-gradient-to-br from-gray-800 via-gray-900 to-gray-800">
         {/* Gradient overlays */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-picto-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
@@ -79,7 +79,7 @@ const Projects = ({ data }) => {
             {data.skills.slice(0, 3).map((s, i) => (
               <span
                 key={i}
-                className="text-[11px] bg-gradient-to-r from-picto-primary/8 to-orange-100/15 text-picto-primary font-semibold px-2.5 py-1 rounded-full border border-picto-primary/15 hover:border-picto-primary/30 transition-all duration-300 hover:scale-105 hover:shadow-sm"
+                className="text-[11px] bg-gradient-to-r from-picto-primary/15 to-orange-100/10 text-picto-primary font-semibold px-2.5 py-1 rounded-full border border-picto-primary/20 hover:border-picto-primary/30 transition-all duration-300 hover:scale-105 hover:shadow-sm"
                 style={{ animationDelay: `${i * 80}ms` }}
                 title={s}
               >
@@ -87,7 +87,7 @@ const Projects = ({ data }) => {
               </span>
             ))}
             {data.skills.length > 3 && (
-              <span className="text-[11px] text-gray-400 font-medium px-2 py-1">
+              <span className="text-[11px] text-gray-500 font-medium px-2 py-1">
                 +{data.skills.length - 3}
               </span>
             )}
@@ -95,19 +95,19 @@ const Projects = ({ data }) => {
         )}
 
         {/* ===== TITLE ===== */}
-        <h3 className="text-gray-900 text-lg font-bold mb-3 leading-snug group-hover:text-picto-primary transition-colors duration-300 line-clamp-2">
+        <h3 className="text-white text-lg font-bold mb-3 leading-snug group-hover:text-picto-primary transition-colors duration-300 line-clamp-2">
           {data?.title}
         </h3>
 
         {/* ===== DESCRIPTION ===== */}
-        <p className="text-gray-500 text-sm leading-relaxed line-clamp-3 min-h-[3.9rem]">
+        <p className="text-gray-400 text-sm leading-relaxed line-clamp-3 min-h-[3.9rem]">
           {data?.description?.length > 140
             ? `${data.description.substring(0, 140)}...`
             : data?.description}
         </p>
 
         {/* ===== ACTION BUTTON ===== */}
-        <div className="mt-5 pt-4 border-t border-gray-100/80">
+        <div className="mt-5 pt-4 border-t border-white/[0.06]">
           <Link
             to={data?.link}
             className="group/btn relative inline-flex items-center gap-2.5 bg-gradient-to-r from-picto-primary to-orange-400 hover:from-orange-400 hover:to-picto-primary text-white font-semibold text-sm py-3 px-5 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-picto-primary/25 transform hover:scale-[1.02] active:scale-95 overflow-hidden w-full justify-center"

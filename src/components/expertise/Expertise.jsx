@@ -17,56 +17,14 @@ import {
   faBolt,
   faCheckCircle,
 } from "@fortawesome/free-solid-svg-icons";
-import {
-  faJs,
-  faReact,
-  faPython,
-  faPhp,
-  faHtml5,
-  faCss3,
-  faAws,
-  faJava,
-  faLaravel,
-  faBootstrap,
-  faGitAlt,
-} from "@fortawesome/free-brands-svg-icons";
-
-const iconMap = {
-  code: faCode,
-  palette: faPalette,
-  cubes: faCubes,
-  mobile: faMobileAlt,
-  feather: faFeather,
-  wrench: faWrench,
-  server: faServer,
-  database: faDatabase,
-  cloud: faCloud,
-  // brand icons
-  js: faJs,
-  react: faReact,
-  python: faPython,
-  php: faPhp,
-  html5: faHtml5,
-  css3: faCss3,
-  aws: faAws,
-};
-
-const typeColors = {
-  Language: "from-blue-500/20 to-blue-600/10",
-  Framework: "from-purple-500/20 to-purple-600/10",
-  Cloud: "from-cyan-500/20 to-cyan-600/10",
-  Database: "from-emerald-500/20 to-emerald-600/10",
-  Tool: "from-amber-500/20 to-amber-600/10",
-  Styling: "from-pink-500/20 to-pink-600/10",
-};
 
 const typeBadgeColors = {
-  Language: "bg-blue-100 text-blue-700 border-blue-200",
-  Framework: "bg-purple-100 text-purple-700 border-purple-200",
-  Cloud: "bg-cyan-100 text-cyan-700 border-cyan-200",
-  Database: "bg-emerald-100 text-emerald-700 border-emerald-200",
-  Tool: "bg-amber-100 text-amber-700 border-amber-200",
-  Styling: "bg-pink-100 text-pink-700 border-pink-200",
+  Language: "bg-blue-500/20 text-blue-300 border-blue-400/30",
+  Framework: "bg-purple-500/20 text-purple-300 border-purple-400/30",
+  Cloud: "bg-cyan-500/20 text-cyan-300 border-cyan-400/30",
+  Database: "bg-emerald-500/20 text-emerald-300 border-emerald-400/30",
+  Tool: "bg-amber-500/20 text-amber-300 border-amber-400/30",
+  Styling: "bg-pink-500/20 text-pink-300 border-pink-400/30",
 };
 
 const SkillCard = ({ skill, animate, index, reducedMotion }) => {
@@ -86,7 +44,7 @@ const SkillCard = ({ skill, animate, index, reducedMotion }) => {
   return (
     <div
       ref={cardRef}
-      className={`group relative bg-white/90 backdrop-blur-sm rounded-2xl p-5 hover:bg-white hover:shadow-xl hover:shadow-picto-primary/8 transition-all duration-500 border border-gray-100/60 hover:border-picto-primary/20 transform hover:-translate-y-1 ${
+      className={`group relative bg-white/[0.04] backdrop-blur-sm rounded-2xl p-5 hover:bg-white/[0.08] hover:shadow-xl hover:shadow-picto-primary/8 transition-all duration-500 border border-white/[0.06] hover:border-picto-primary/20 transform hover:-translate-y-1 ${
         animate
           ? "opacity-100 translate-y-0"
           : "opacity-0 translate-y-8"
@@ -133,11 +91,11 @@ const SkillCard = ({ skill, animate, index, reducedMotion }) => {
         <div className="flex-1 min-w-0">
           {/* Name and type badge */}
           <div className="flex items-center gap-2 mb-1.5 flex-wrap">
-            <h3 className="font-bold text-base text-gray-900 group-hover:text-picto-primary transition-colors duration-300 truncate">
+            <h3 className="font-bold text-base text-white group-hover:text-picto-primary transition-colors duration-300 truncate">
               {skill.name}
             </h3>
             <span
-              className={`text-[10px] font-semibold px-2 py-0.5 rounded-full border ${typeBadgeColors[skill.type] || "bg-gray-100 text-gray-600 border-gray-200"}`}
+              className={`text-[10px] font-semibold px-2 py-0.5 rounded-full border ${typeBadgeColors[skill.type] || "bg-gray-500/20 text-gray-300 border-gray-400/30"}`}
             >
               {skill.type}
             </span>
@@ -158,7 +116,7 @@ const SkillCard = ({ skill, animate, index, reducedMotion }) => {
                 {skill.level}/5
               </span>
             </div>
-            <div className="relative h-2.5 bg-gray-100 rounded-full overflow-hidden group-hover:bg-gray-200/80 transition-colors">
+            <div className="relative h-2.5 bg-gray-800 rounded-full overflow-hidden group-hover:bg-gray-700/80 transition-colors">
               {/* Progress fill */}
               <div
                 className="absolute inset-y-0 left-0 rounded-full transition-all duration-1000 ease-out"
@@ -169,7 +127,7 @@ const SkillCard = ({ skill, animate, index, reducedMotion }) => {
                 }}
               ></div>
               {/* Shimmer on hover */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 translate-x-full group-hover:translate-x-[-200%] transition-transform duration-1000"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 translate-x-full group-hover:translate-x-[-200%] transition-transform duration-1000"></div>
             </div>
           </div>
 
@@ -186,7 +144,7 @@ const SkillCard = ({ skill, animate, index, reducedMotion }) => {
                       : "opacity-30"
                   }`}
                   style={{
-                    backgroundColor: filled ? skill.color : "#d1d5db",
+                    backgroundColor: filled ? skill.color : "#4b5563",
                     transitionDelay: `${i * 60}ms`,
                   }}
                 ></div>
@@ -197,6 +155,41 @@ const SkillCard = ({ skill, animate, index, reducedMotion }) => {
       </div>
     </div>
   );
+};
+
+// Keep the import for icon map needed by SkillCard
+import {
+  faJs,
+  faReact,
+  faPython,
+  faPhp,
+  faHtml5,
+  faCss3,
+  faAws,
+  faJava,
+  faLaravel,
+  faBootstrap,
+  faGitAlt,
+} from "@fortawesome/free-brands-svg-icons";
+
+const iconMap = {
+  code: faCode,
+  palette: faPalette,
+  cubes: faCubes,
+  mobile: faMobileAlt,
+  feather: faFeather,
+  wrench: faWrench,
+  server: faServer,
+  database: faDatabase,
+  cloud: faCloud,
+  // brand icons
+  js: faJs,
+  react: faReact,
+  python: faPython,
+  php: faPhp,
+  html5: faHtml5,
+  css3: faCss3,
+  aws: faAws,
 };
 
 const Expertise = () => {
@@ -266,23 +259,23 @@ const Expertise = () => {
   return (
     <section
       ref={ref}
-      className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-br from-white via-gray-50 to-slate-50"
+      className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-br from-gray-950 via-gray-900 to-black"
       id="expertise"
       aria-label="Expertise & Proficiency"
     >
       {/* ===== ADVANCED BACKGROUND EFFECTS ===== */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
         {/* Gradient orbs */}
-        <div className="absolute -top-40 -left-40 w-[450px] h-[450px] bg-gradient-to-br from-picto-primary/10 via-orange-200/5 to-transparent rounded-full blur-3xl animate-blob"></div>
-        <div className="absolute -bottom-40 -right-40 w-[400px] h-[400px] bg-gradient-to-tl from-picto-primary/8 via-purple-200/5 to-transparent rounded-full blur-3xl animate-blob animation-delay-4"></div>
-        <div className="absolute top-1/2 right-1/4 w-[250px] h-[250px] bg-gradient-to-r from-cyan-100/10 to-picto-primary/5 rounded-full blur-3xl animate-blob animation-delay-8"></div>
+        <div className="absolute -top-40 -left-40 w-[450px] h-[450px] bg-gradient-to-br from-picto-primary/12 via-orange-500/8 to-transparent rounded-full blur-3xl animate-blob"></div>
+        <div className="absolute -bottom-40 -right-40 w-[400px] h-[400px] bg-gradient-to-tl from-picto-primary/8 via-purple-500/5 to-transparent rounded-full blur-3xl animate-blob animation-delay-4"></div>
+        <div className="absolute top-1/2 right-1/4 w-[250px] h-[250px] bg-gradient-to-r from-cyan-300/8 to-picto-primary/5 rounded-full blur-3xl animate-blob animation-delay-8"></div>
 
         {/* Grid overlay */}
         <div
-          className="absolute inset-0 opacity-[0.015]"
+          className="absolute inset-0 opacity-[0.03]"
           style={{
             backgroundImage:
-              "linear-gradient(rgba(255,122,0,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255,122,0,0.2) 1px, transparent 1px)",
+              "linear-gradient(rgba(255,122,0,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(255,122,0,0.4) 1px, transparent 1px)",
             backgroundSize: "80px 80px",
           }}
         ></div>
@@ -305,7 +298,7 @@ const Expertise = () => {
           }`}
         >
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-picto-primary/10 to-orange-100/20 rounded-full border border-picto-primary/20 mb-6">
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-picto-primary/20 via-picto-primary/10 to-transparent backdrop-blur-md rounded-full border border-picto-primary/25 mb-6">
             <div className="w-2 h-2 bg-picto-primary rounded-full animate-pulse"></div>
             <span className="text-sm font-semibold text-picto-primary">
               Technical Skills
@@ -314,7 +307,7 @@ const Expertise = () => {
 
           {/* Title */}
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-            <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-white via-gray-100 to-white/80 bg-clip-text text-transparent">
               Expertise &
             </span>
             <br />
@@ -324,7 +317,7 @@ const Expertise = () => {
           </h2>
 
           {/* Description */}
-          <p className="text-base sm:text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
             A comprehensive showcase of my technical expertise across various
             domains. Each skill is rated by proficiency level with years of
             hands-on experience.
@@ -332,7 +325,7 @@ const Expertise = () => {
 
           {/* Stats bar */}
           <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm">
-            <div className="flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur-sm rounded-xl border border-gray-100/60">
+            <div className="flex items-center gap-2 px-4 py-2 bg-white/[0.04] backdrop-blur-sm rounded-xl border border-white/[0.06]">
               <FontAwesomeIcon
                 icon={faLayerGroup}
                 className="text-picto-primary"
@@ -342,7 +335,7 @@ const Expertise = () => {
               </span>
               <span className="text-gray-500">Skills</span>
             </div>
-            <div className="flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur-sm rounded-xl border border-gray-100/60">
+            <div className="flex items-center gap-2 px-4 py-2 bg-white/[0.04] backdrop-blur-sm rounded-xl border border-white/[0.06]">
               <FontAwesomeIcon
                 icon={faTools}
                 className="text-picto-primary"
@@ -352,7 +345,7 @@ const Expertise = () => {
               </span>
               <span className="text-gray-500">Categories</span>
             </div>
-            <div className="flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur-sm rounded-xl border border-gray-100/60">
+            <div className="flex items-center gap-2 px-4 py-2 bg-white/[0.04] backdrop-blur-sm rounded-xl border border-white/[0.06]">
               <FontAwesomeIcon
                 icon={faStar}
                 className="text-picto-primary"
@@ -365,7 +358,7 @@ const Expertise = () => {
               </span>
               <span className="text-gray-500">Avg Level</span>
             </div>
-            <div className="flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur-sm rounded-xl border border-gray-100/60">
+            <div className="flex items-center gap-2 px-4 py-2 bg-white/[0.04] backdrop-blur-sm rounded-xl border border-white/[0.06]">
               <FontAwesomeIcon
                 icon={faBolt}
                 className="text-picto-primary"
@@ -398,7 +391,7 @@ const Expertise = () => {
                 className={`group relative px-5 py-3 rounded-2xl text-sm font-semibold transition-all duration-300 transform hover:scale-105 active:scale-95 overflow-hidden ${
                   isActive
                     ? "bg-gradient-to-r from-picto-primary to-orange-400 text-white shadow-lg shadow-picto-primary/25"
-                    : "bg-white/80 backdrop-blur-sm text-gray-600 hover:text-picto-primary border border-gray-200/80 hover:border-picto-primary/30 hover:shadow-md hover:bg-white"
+                    : "bg-white/[0.06] backdrop-blur-sm text-gray-400 hover:text-picto-primary border border-white/[0.1] hover:border-picto-primary/30 hover:shadow-md hover:bg-white/[0.08]"
                 }`}
                 style={{
                   transitionDelay: reducedMotion
@@ -464,13 +457,13 @@ const Expertise = () => {
             </div>
           ) : (
             <div className="text-center py-20">
-              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-picto-primary/10 to-orange-100/20 rounded-2xl flex items-center justify-center">
+              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-picto-primary/10 to-orange-100/10 rounded-2xl flex items-center justify-center">
                 <FontAwesomeIcon
                   icon={faCheckCircle}
                   className="text-3xl text-picto-primary/50"
                 />
               </div>
-              <h3 className="text-2xl font-bold text-gray-700 mb-2">
+              <h3 className="text-2xl font-bold text-gray-300 mb-2">
                 No skills found
               </h3>
               <p className="text-gray-500">

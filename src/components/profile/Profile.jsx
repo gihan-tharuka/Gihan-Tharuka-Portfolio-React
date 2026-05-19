@@ -124,7 +124,7 @@ const Profile = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen py-12 md:py-20 overflow-hidden bg-gradient-to-br from-slate-50 via-white to-gray-50"
+      className="relative min-h-screen py-12 md:py-20 overflow-hidden bg-gradient-to-br from-gray-950 via-gray-900 to-black"
       id="profile"
       aria-label="Profile"
     >
@@ -139,10 +139,10 @@ const Profile = () => {
 
         {/* Grid pattern overlay */}
         <div
-          className="absolute inset-0 opacity-[0.02]"
+          className="absolute inset-0 opacity-[0.03]"
           style={{
             backgroundImage:
-              "linear-gradient(rgba(255,122,0,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,122,0,0.3) 1px, transparent 1px)",
+              "linear-gradient(rgba(255,122,0,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(255,122,0,0.4) 1px, transparent 1px)",
             backgroundSize: "60px 60px",
           }}
         ></div>
@@ -170,7 +170,7 @@ const Profile = () => {
                   : "opacity-0 translate-y-8"
               } ${reducedMotion ? "" : "animate-float-slow"}`}
             >
-              <div className="bg-white/95 backdrop-blur-md rounded-2xl px-5 py-3 shadow-2xl border border-gray-100/60">
+              <div className="bg-gray-900/95 backdrop-blur-md rounded-2xl px-5 py-3 shadow-2xl border border-white/[0.08]">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 bg-gradient-to-br from-picto-primary to-orange-400 rounded-xl flex items-center justify-center shadow-lg">
                     <FontAwesomeIcon icon={faStar} className="text-white text-lg" />
@@ -179,7 +179,7 @@ const Profile = () => {
                     <p className="text-2xl font-bold bg-gradient-to-r from-picto-primary to-orange-400 bg-clip-text text-transparent">
                       5+ Years
                     </p>
-                    <p className="text-xs text-gray-500 font-medium">
+                    <p className="text-xs text-gray-400 font-medium">
                       Experience
                     </p>
                   </div>
@@ -201,7 +201,7 @@ const Profile = () => {
 
               {/* Main image card */}
               <div
-                className="relative rounded-[2rem] overflow-hidden bg-gradient-to-br from-picto-primary/10 to-orange-100/20 border border-white/50 shadow-2xl shadow-picto-primary/10"
+                className="relative rounded-[2rem] overflow-hidden bg-gradient-to-br from-picto-primary/10 to-orange-100/10 border border-white/10 shadow-2xl shadow-picto-primary/10"
                 style={{
                   transform: reducedMotion
                     ? "none"
@@ -250,7 +250,7 @@ const Profile = () => {
                   : "opacity-0 translate-y-4"
               }`}
             >
-              <div className="inline-flex items-center gap-1 px-6 py-3 bg-white/90 backdrop-blur-md rounded-full shadow-lg border border-gray-100/60 ring-1 ring-white/20">
+              <div className="inline-flex items-center gap-1 px-6 py-3 bg-white/[0.06] backdrop-blur-md rounded-full shadow-lg border border-white/[0.08] ring-1 ring-white/10">
                 <span className="text-xs text-gray-400 mr-2 font-medium uppercase tracking-wider">
                   Connect
                 </span>
@@ -263,7 +263,7 @@ const Profile = () => {
           <div className="relative order-1 lg:order-2">
             {/* Role badge */}
             <div
-              className={`inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-picto-primary/10 to-orange-100/20 rounded-full border border-picto-primary/20 mb-6 transition-all duration-700 ${
+              className={`inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-picto-primary/20 via-picto-primary/10 to-transparent rounded-full border border-picto-primary/25 mb-6 transition-all duration-700 ${
                 animate
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-4"
@@ -290,7 +290,7 @@ const Profile = () => {
               }`}
             >
               <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
-                <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-white via-gray-100 to-white/80 bg-clip-text text-transparent">
                   Hi, I'm
                 </span>
                 <br />
@@ -308,7 +308,7 @@ const Profile = () => {
                   : "opacity-0 translate-y-4"
               }`}
             >
-              <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-xl">
+              <p className="text-base sm:text-lg text-gray-400 leading-relaxed max-w-xl">
                 I'm a passionate Full Stack Developer who transforms ideas into
                 powerful digital experiences. I craft scalable applications with
                 clean, maintainable code that makes a real difference.
@@ -327,36 +327,36 @@ const Profile = () => {
                   : "opacity-0 translate-y-4"
               }`}
             >
-              <div className="group flex items-center gap-2 px-4 py-2.5 bg-white rounded-xl border border-gray-200/80 hover:border-picto-primary/30 hover:bg-picto-primary/5 shadow-sm hover:shadow-md transition-all duration-300 cursor-default">
-                <div className="w-8 h-8 bg-gradient-to-br from-picto-primary/10 to-orange-100/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+              <div className="group flex items-center gap-2 px-4 py-2.5 bg-white/[0.04] backdrop-blur-sm rounded-xl border border-white/[0.06] hover:border-picto-primary/30 hover:bg-white/[0.06] shadow-sm hover:shadow-md transition-all duration-300 cursor-default">
+                <div className="w-8 h-8 bg-gradient-to-br from-picto-primary/20 to-orange-100/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                   <FontAwesomeIcon
                     icon={faCode}
                     className="text-picto-primary text-sm"
                   />
                 </div>
-                <span className="text-sm font-semibold text-gray-700">
+                <span className="text-sm font-semibold text-gray-300">
                   Clean Code
                 </span>
               </div>
-              <div className="group flex items-center gap-2 px-4 py-2.5 bg-white rounded-xl border border-gray-200/80 hover:border-orange-300/30 hover:bg-orange-50/30 shadow-sm hover:shadow-md transition-all duration-300 cursor-default">
-                <div className="w-8 h-8 bg-gradient-to-br from-orange-100/20 to-amber-100/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+              <div className="group flex items-center gap-2 px-4 py-2.5 bg-white/[0.04] backdrop-blur-sm rounded-xl border border-white/[0.06] hover:border-orange-300/30 hover:bg-white/[0.06] shadow-sm hover:shadow-md transition-all duration-300 cursor-default">
+                <div className="w-8 h-8 bg-gradient-to-br from-orange-100/20 to-amber-100/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                   <FontAwesomeIcon
                     icon={faRocket}
                     className="text-orange-500 text-sm"
                   />
                 </div>
-                <span className="text-sm font-semibold text-gray-700">
+                <span className="text-sm font-semibold text-gray-300">
                   Performance
                 </span>
               </div>
-              <div className="group flex items-center gap-2 px-4 py-2.5 bg-white rounded-xl border border-gray-200/80 hover:border-green-300/30 hover:bg-green-50/30 shadow-sm hover:shadow-md transition-all duration-300 cursor-default">
-                <div className="w-8 h-8 bg-gradient-to-br from-green-100/20 to-emerald-100/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+              <div className="group flex items-center gap-2 px-4 py-2.5 bg-white/[0.04] backdrop-blur-sm rounded-xl border border-white/[0.06] hover:border-green-300/30 hover:bg-white/[0.06] shadow-sm hover:shadow-md transition-all duration-300 cursor-default">
+                <div className="w-8 h-8 bg-gradient-to-br from-green-100/20 to-emerald-100/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                   <FontAwesomeIcon
                     icon={faCheckCircle}
                     className="text-green-600 text-sm"
                   />
                 </div>
-                <span className="text-sm font-semibold text-gray-700">
+                <span className="text-sm font-semibold text-gray-300">
                   Quality
                 </span>
               </div>
@@ -374,23 +374,23 @@ const Profile = () => {
               {stats.map((stat, index) => (
                 <div
                   key={index}
-                  className="text-center p-3 bg-white/70 backdrop-blur-sm rounded-2xl border border-gray-100/60 hover:border-picto-primary/20 hover:bg-white hover:shadow-lg transition-all duration-300 group"
+                  className="text-center p-3 bg-white/[0.04] backdrop-blur-sm rounded-2xl border border-white/[0.06] hover:border-picto-primary/20 hover:bg-white/[0.06] hover:shadow-lg transition-all duration-300 group"
                   style={{
                     transitionDelay: reducedMotion
                       ? "0ms"
                       : `${300 + index * 100}ms`,
                   }}
                 >
-                  <div className="w-10 h-10 mx-auto mb-2 bg-gradient-to-br from-picto-primary/10 to-orange-100/20 rounded-xl flex items-center justify-center group-hover:scale-110 group-hover:from-picto-primary/20 group-hover:to-orange-100/30 transition-all duration-300">
+                  <div className="w-10 h-10 mx-auto mb-2 bg-gradient-to-br from-picto-primary/20 to-orange-100/10 rounded-xl flex items-center justify-center group-hover:scale-110 group-hover:from-picto-primary/30 group-hover:to-orange-100/20 transition-all duration-300">
                     <FontAwesomeIcon
                       icon={stat.icon}
                       className="text-picto-primary text-sm"
                     />
                   </div>
-                  <p className="text-xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+                  <p className="text-xl font-bold bg-gradient-to-r from-white via-gray-100 to-white/80 bg-clip-text text-transparent">
                     {stat.value}
                   </p>
-                  <p className="text-[10px] text-gray-400 font-medium uppercase tracking-wider mt-0.5">
+                  <p className="text-[10px] text-gray-500 font-medium uppercase tracking-wider mt-0.5">
                     {stat.label}
                   </p>
                 </div>
@@ -427,7 +427,7 @@ const Profile = () => {
               <a
                 href={pdf}
                 download="Gihan-Tharuka-Resume.pdf"
-                className="group relative inline-flex items-center justify-center gap-3 bg-white border-2 border-gray-200 hover:border-picto-primary text-gray-700 hover:text-picto-primary font-semibold text-lg px-8 py-4 rounded-2xl hover:bg-picto-primary/5 transition-all duration-300 transform hover:scale-[1.03] active:scale-[0.98] shadow-lg hover:shadow-xl overflow-hidden"
+                className="group relative inline-flex items-center justify-center gap-3 bg-white/[0.06] backdrop-blur-sm border-2 border-white/[0.15] hover:border-picto-primary text-white hover:text-picto-primary font-semibold text-lg px-8 py-4 rounded-2xl hover:bg-white/[0.1] transition-all duration-300 transform hover:scale-[1.03] active:scale-[0.98] shadow-lg hover:shadow-xl overflow-hidden"
               >
                 <span className="relative z-10 flex items-center gap-2">
                   <FontAwesomeIcon
@@ -436,7 +436,7 @@ const Profile = () => {
                   />
                   Download CV
                 </span>
-                <span className="absolute inset-0 bg-picto-primary/5 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></span>
+                <span className="absolute inset-0 bg-picto-primary/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></span>
               </a>
             </div>
           </div>
@@ -450,13 +450,13 @@ const Profile = () => {
               : "opacity-0 translate-y-8"
           }`}
         >
-          <p className="text-center text-xs text-gray-400 uppercase tracking-[0.2em] font-semibold mb-4">
+          <p className="text-center text-xs text-gray-500 uppercase tracking-[0.2em] font-semibold mb-4">
             Technologies I work with
           </p>
           <div className="relative overflow-hidden">
             {/* Fade edges */}
-            <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[#f8f9fa] to-transparent z-10 pointer-events-none"></div>
-            <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#f8f9fa] to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-gray-950 to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-gray-950 to-transparent z-10 pointer-events-none"></div>
 
             <div
               className={`flex gap-12 items-center ${
@@ -467,15 +467,15 @@ const Profile = () => {
               {[...techStack, ...techStack].map((tech, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-3 px-6 py-3 bg-white/80 rounded-xl border border-gray-100/60 shadow-sm hover:shadow-md hover:border-picto-primary/20 transition-all duration-300 group flex-shrink-0"
+                  className="flex items-center gap-3 px-6 py-3 bg-white/[0.04] backdrop-blur-sm rounded-xl border border-white/[0.06] shadow-sm hover:shadow-md hover:border-picto-primary/20 transition-all duration-300 group flex-shrink-0"
                 >
-                  <div className="w-10 h-10 bg-gradient-to-br from-picto-primary/5 to-gray-50 rounded-lg flex items-center justify-center group-hover:scale-110 group-hover:from-picto-primary/10 transition-all duration-300">
+                  <div className="w-10 h-10 bg-gradient-to-br from-picto-primary/10 to-gray-800 rounded-lg flex items-center justify-center group-hover:scale-110 group-hover:from-picto-primary/20 transition-all duration-300">
                     <FontAwesomeIcon
                       icon={tech.icon}
-                      className="text-gray-600 group-hover:text-picto-primary transition-colors duration-300 text-xl"
+                      className="text-gray-400 group-hover:text-picto-primary transition-colors duration-300 text-xl"
                     />
                   </div>
-                  <span className="text-sm font-semibold text-gray-600 group-hover:text-gray-900 transition-colors">
+                  <span className="text-sm font-semibold text-gray-400 group-hover:text-white transition-colors">
                     {tech.label}
                   </span>
                 </div>
@@ -493,11 +493,11 @@ const Profile = () => {
             : "opacity-0 translate-y-4"
         }`}
       >
-        <div className="flex flex-col items-center gap-2 text-gray-400">
+        <div className="flex flex-col items-center gap-2 text-gray-500">
           <span className="text-[10px] uppercase tracking-[0.3em] font-medium">
             Scroll
           </span>
-          <div className="w-5 h-8 border-2 border-gray-300 rounded-full flex justify-center p-1">
+          <div className="w-5 h-8 border-2 border-gray-600 rounded-full flex justify-center p-1">
             <div className="w-1.5 h-1.5 bg-picto-primary rounded-full animate-scroll-dot"></div>
           </div>
         </div>

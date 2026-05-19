@@ -29,13 +29,13 @@ const Introduction = () => {
     >
       <div className="w-full flex flex-col justify-between max-lg:text-center">
         <div className="pt-13 me-31.5 w-full lg:w-auto transition-all duration-500">
-          <p className="text-3xl xxs:text-4xl sm:max-xl:text-5xl xl:text-6xl font-semibold w-full">
-            Hello, I’m
+          <p className="text-3xl xxs:text-4xl sm:max-xl:text-5xl xl:text-6xl font-semibold w-full text-white">
+            Hello, I'm
             <span className="text-nowrap shrink-0 inline-block w-full">
               Brooklyn Gilbert
             </span>
           </p>
-          <p className="text-xs xxs:text-lg lg:text-[18px] my-6">
+          <p className="text-xs xxs:text-lg lg:text-[18px] my-6 text-gray-400">
             I'm a Freelance <span className="bg-highlight">UI/UX Designer</span>{" "}
             and <span className="bg-highlight"> Developer</span> based in
             London, England. I strives to build immersive and beautiful web
@@ -62,7 +62,7 @@ const Introduction = () => {
         className={`max-w-134 w-full h-full max-lg:mx-auto aspect-[536/636] relative`}
       >
         <img
-          className={`shadow-2xl shadow-gray-200 w-full h-full absolute bottom-0 object-cover bg-white rounded-3xl`}
+          className={`shadow-2xl w-full h-full absolute bottom-0 object-cover rounded-3xl`}
           src={person}
           alt="person"
         />

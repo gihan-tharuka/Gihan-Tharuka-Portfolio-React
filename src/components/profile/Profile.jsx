@@ -195,13 +195,13 @@ const Profile = () => {
             >
               {/* Outer glow ring */}
               <div
-                className="absolute inset-0 rounded-[2rem] bg-gradient-to-r from-picto-primary/30 via-orange-300/20 to-picto-primary/30 blur-2xl animate-pulse-slow"
+                className="absolute inset-0 rounded-full bg-gradient-to-r from-picto-primary/30 via-orange-300/20 to-picto-primary/30 blur-2xl animate-pulse-slow"
                 style={{ animationDelay: "1s" }}
               ></div>
 
               {/* Main image card */}
               <div
-                className="relative rounded-[2rem] overflow-hidden bg-gradient-to-br from-picto-primary/10 to-orange-100/10 border border-white/10 shadow-2xl shadow-picto-primary/10"
+                className="relative rounded-full overflow-hidden bg-gradient-to-br from-picto-primary/10 to-orange-100/10 border border-white/10 shadow-2xl shadow-picto-primary/10"
                 style={{
                   transform: reducedMotion
                     ? "none"
@@ -209,11 +209,8 @@ const Profile = () => {
                   transition: "transform 0.3s ease-out",
                 }}
               >
-                {/* Decorative top accent line */}
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-picto-primary via-orange-400 to-picto-primary z-10"></div>
-
                 {/* Image */}
-                <div className="aspect-[4/5] relative overflow-hidden">
+                <div className="aspect-square relative overflow-hidden">
                   <img
                     className={`w-full h-full object-cover ${
                       reducedMotion ? "" : "hover:scale-105"
@@ -223,7 +220,7 @@ const Profile = () => {
                     loading="eager"
                   />
                   {/* Gradient overlay at bottom */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent rounded-full"></div>
                 </div>
 
                 {/* Bottom info bar */}
@@ -236,10 +233,6 @@ const Profile = () => {
                   </div>
                 </div>
               </div>
-
-              {/* Decorative corner elements */}
-              <div className="absolute -bottom-3 -left-3 w-8 h-8 border-l-2 border-b-2 border-picto-primary/30 rounded-bl-xl"></div>
-              <div className="absolute -top-3 -right-3 w-8 h-8 border-r-2 border-t-2 border-picto-primary/30 rounded-tr-xl"></div>
             </div>
 
             {/* Social media bar below image */}

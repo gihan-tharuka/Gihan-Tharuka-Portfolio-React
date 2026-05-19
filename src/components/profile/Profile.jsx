@@ -176,7 +176,7 @@ const Profile = () => {
           <div className="relative order-2 lg:order-1">
             {/* Image container with tilt effect */}
             <div
-              className="relative w-full max-w-sm mx-auto perspective-1000"
+              className="relative w-full max-w-xs mx-auto perspective-1000"
               onMouseMove={handleMouseMove}
               onMouseLeave={() => setMousePos({ x: 0, y: 0 })}
             >

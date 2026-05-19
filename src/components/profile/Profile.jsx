@@ -223,15 +223,6 @@ const Profile = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent rounded-full"></div>
                 </div>
 
-                {/* Bottom info bar */}
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 via-black/20 to-transparent">
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                    <span className="text-white/90 text-sm font-medium tracking-wide">
-                      Available for opportunities
-                    </span>
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -478,23 +469,6 @@ const Profile = () => {
         </div>
       </div>
 
-      {/* ===== SCROLL INDICATOR ===== */}
-      <div
-        className={`absolute bottom-8 left-1/2 -translate-x-1/2 transition-all duration-1000 delay-[1200ms] ${
-          animate
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 translate-y-4"
-        }`}
-      >
-        <div className="flex flex-col items-center gap-2 text-gray-500">
-          <span className="text-[10px] uppercase tracking-[0.3em] font-medium">
-            Scroll
-          </span>
-          <div className="w-5 h-8 border-2 border-gray-600 rounded-full flex justify-center p-1">
-            <div className="w-1.5 h-1.5 bg-picto-primary rounded-full animate-scroll-dot"></div>
-          </div>
-        </div>
-      </div>
     </section>
   );
 };

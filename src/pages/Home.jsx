@@ -14,9 +14,8 @@ const Home = () => {
       <Expertise />
       <Education />
       <WorkTogether />
-      <div className="px-4 sm:px-6 md:px-12 lg:px-20">
         <Profession />
-      </div>
+    
       <Contact />
     </div>
   );

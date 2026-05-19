@@ -23,8 +23,8 @@ const typeBadgeColors = {
   Framework: "bg-purple-500/20 text-purple-300 border-purple-400/30",
   Cloud: "bg-cyan-500/20 text-cyan-300 border-cyan-400/30",
   Database: "bg-emerald-500/20 text-emerald-300 border-emerald-400/30",
+  AWS: "bg-yellow-500/20 text-yellow-300 border-yellow-400/30",
   Tool: "bg-amber-500/20 text-amber-300 border-amber-400/30",
-  Styling: "bg-pink-500/20 text-pink-300 border-pink-400/30",
 };
 
 const SkillCard = ({ skill, animate, index, reducedMotion }) => {
@@ -241,9 +241,9 @@ const Expertise = () => {
     "Language",
     "Framework",
     "Cloud",
+    "AWS",
     "Database",
     "Tool",
-    "Styling",
   ];
 
   const sortedSkills = [...skills].sort((a, b) => a.order - b.order);
@@ -423,7 +423,52 @@ const Expertise = () => {
             filtering ? "opacity-50 scale-[0.98]" : "opacity-100 scale-100"
           }`}
         >
-          {filteredSkills.length > 0 ? (
+          {selectedFilter === "All" ? (
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {skillTypes
+                .filter((t) => t !== "All")
+                .map((type) => {
+                  const items = sortedSkills.filter((s) => s.type === type);
+                  return (
+                    <div
+                      key={type}
+                      className="bg-white/[0.02] backdrop-blur-sm rounded-2xl p-5 border border-white/[0.04]"
+                    >
+                      <div className="flex items-center justify-between mb-3">
+                        <h4 className="text-sm font-semibold text-white">
+                          {type}
+                        </h4>
+                        <span className="text-xs text-gray-400">{items.length}</span>
+                      </div>
+
+                      <div className="flex flex-wrap gap-2">
+                        {items.map((s) => (
+                          <div
+                            key={s.id}
+                            className="flex items-center gap-2 px-3 py-1 bg-white/[0.03] text-sm text-gray-200 rounded-full border border-white/[0.03]"
+                          >
+                            {s.brandIcon ? (
+                              <FontAwesomeIcon
+                                icon={iconMap[s.brandIcon]}
+                                className="text-xs text-white/90"
+                              />
+                            ) : s.icon ? (
+                              <FontAwesomeIcon
+                                icon={iconMap[s.icon]}
+                                className="text-xs text-white/90"
+                              />
+                            ) : (
+                              <span className="text-xs font-semibold text-white/90">{s.name[0]}</span>
+                            )}
+                            <span className="text-xs">{s.name}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })}
+            </div>
+          ) : filteredSkills.length > 0 ? (
             <div className="grid gap-5 sm:gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {filteredSkills.map((s, index) => {
                 const isVisible = visibleCards.includes(s.id);

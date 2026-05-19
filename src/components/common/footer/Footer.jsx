@@ -458,18 +458,8 @@ const Footer = () => {
 
               {/* Made with love */}
               <div className="flex items-center gap-2 text-gray-500 text-sm">
-                <span>Made with</span>
-                <span className="relative">
-                  <FontAwesomeIcon
-                    icon={faHeart}
-                    className="text-red-500 animate-pulse"
-                  />
-                  <FontAwesomeIcon
-                    icon={faHeart}
-                    className="text-red-500/30 absolute inset-0 blur-md animate-pulse"
-                  />
-                </span>
                 <span>by Gihan Tharuka</span>
+                <span>made with React and Tailwind</span>
               </div>
 
               {/* Version badge */}

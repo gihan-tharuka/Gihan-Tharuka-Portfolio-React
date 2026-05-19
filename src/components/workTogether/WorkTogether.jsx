@@ -37,13 +37,6 @@ const collaborationBenefits = [
   },
 ];
 
-const statsData = [
-  { value: "50+", label: "Projects Delivered" },
-  { value: "30+", label: "Happy Clients" },
-  { value: "5+", label: "Years Experience" },
-  { value: "100%", label: "Client Satisfaction" },
-];
-
 const particles = Array.from({ length: 30 }).map((_, i) => ({
   id: i,
   size: Math.random() * 3 + 1,
@@ -56,7 +49,6 @@ const particles = Array.from({ length: 30 }).map((_, i) => ({
 const WorkTogether = () => {
   const ref = useRef(null);
   const [animate, setAnimate] = useState(false);
-  const [statsVisible, setStatsVisible] = useState(false);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [reducedMotion, setReducedMotion] = useState(false);
   const [hoveredBenefit, setHoveredBenefit] = useState(null);
@@ -80,7 +72,6 @@ const WorkTogether = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setAnimate(true);
-          setTimeout(() => setStatsVisible(true), 600);
           obs.disconnect();
         }
       },
@@ -278,35 +269,6 @@ const WorkTogether = () => {
             collaborate and turn your vision into reality.
           </p>
 
-          {/* ===== STATS COUNTERS ===== */}
-          <div
-            className={`flex flex-wrap justify-center gap-4 mb-14 transition-all duration-700 delay-500 ${
-              statsVisible
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-6"
-            }`}
-          >
-            {statsData.map((stat, index) => (
-              <div
-                key={index}
-                className="group relative px-5 py-3 bg-white/[0.04] backdrop-blur-sm border border-white/[0.06] rounded-2xl hover:bg-white/[0.08] hover:border-picto-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-picto-primary/5"
-                style={{
-                  transitionDelay: reducedMotion
-                    ? "0ms"
-                    : `${index * 100}ms`,
-                }}
-              >
-                <div className="text-center">
-                  <p className="text-2xl font-bold bg-gradient-to-r from-picto-primary to-orange-400 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">
-                    {stat.value}
-                  </p>
-                  <p className="text-xs text-gray-500 font-medium mt-0.5">
-                    {stat.label}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* ===== BENEFITS CARDS ===== */}

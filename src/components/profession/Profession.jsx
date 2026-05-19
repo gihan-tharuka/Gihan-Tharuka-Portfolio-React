@@ -40,12 +40,12 @@ const rolesData = [
   },
   {
     id: 3,
-    title: "Deployment & DevOps",
+    title: "Hosting & Maintenance",
     description:
-      "I deploy applications reliably to production using CI/CD, cloud platforms, and automated build pipelines to ensure fast and safe releases.",
+      "I provide reliable hosting and ongoing maintenance so applications stay secure, fast, and available with proactive monitoring and updates.",
     icon: "rocket",
     color: "#10B981",
-    features: ["CI/CD", "Cloud Platforms", "Automation", "Monitoring"],
+    features: ["Hosting Setup", "Infrastructure Management", "Updates", "Monitoring"],
     techCount: 9,
   },
 ];

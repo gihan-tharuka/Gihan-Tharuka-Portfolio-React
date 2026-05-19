@@ -75,9 +75,9 @@ const NavBar = () => {
 
   const renderNavLink = (item) => {
     const linkClasses =
-      "group relative px-4 py-2.5 mx-0.5 rounded-xl text-sm font-medium transition-all duration-300 hover:bg-picto-primary/5 flex items-center gap-2.5";
-    const activeLinkClasses = `${linkClasses} text-picto-primary bg-picto-primary/5`;
-    const inactiveLinkClasses = `${linkClasses} text-gray-600 hover:text-picto-primary`;
+      "group relative px-4 py-2.5 mx-0.5 rounded-xl text-sm font-medium transition-all duration-300 hover:bg-white/[0.06] flex items-center gap-2.5";
+    const activeLinkClasses = `${linkClasses} text-picto-primary bg-white/[0.06]`;
+    const inactiveLinkClasses = `${linkClasses} text-gray-400 hover:text-picto-primary`;
 
     const underline = (
       <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-picto-primary to-orange-400 group-hover:w-full transition-all duration-300 ease-out rounded-full"></span>
@@ -140,12 +140,12 @@ const NavBar = () => {
 
   const renderMobileNavLink = (item) => {
     const baseClasses =
-      "group flex items-center gap-3.5 px-5 py-3.5 rounded-xl text-sm font-semibold transition-all duration-300 hover:bg-picto-primary/5";
-    const inactiveClasses = `${baseClasses} text-gray-700 hover:text-picto-primary hover:translate-x-1`;
+      "group flex items-center gap-3.5 px-5 py-3.5 rounded-xl text-sm font-semibold transition-all duration-300 hover:bg-white/[0.06]";
+    const inactiveClasses = `${baseClasses} text-gray-300 hover:text-picto-primary hover:translate-x-1`;
 
     const content = (
       <>
-        <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-picto-primary/10 to-orange-100/20 flex items-center justify-center group-hover:from-picto-primary/20 group-hover:scale-110 transition-all duration-300">
+        <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-picto-primary/20 to-orange-100/10 flex items-center justify-center group-hover:from-picto-primary/30 group-hover:scale-110 transition-all duration-300">
           <FontAwesomeIcon
             icon={item.icon}
             className="text-picto-primary text-sm"
@@ -227,8 +227,8 @@ const NavBar = () => {
       <div
         className={`sticky top-0 z-40 transition-all duration-500 ${
           isScrolled
-            ? "bg-white/85 backdrop-blur-xl border-b border-gray-200/50 shadow-lg shadow-gray-200/30"
-            : "bg-white/70 backdrop-blur-sm border-b border-transparent"
+            ? "bg-gray-950/90 backdrop-blur-xl border-b border-white/[0.06] shadow-lg shadow-black/20"
+            : "bg-gray-950/70 backdrop-blur-sm border-b border-white/[0.04]"
         }`}
       >
         <div className="navbar flex justify-between mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-2 lg:py-0">
@@ -237,22 +237,22 @@ const NavBar = () => {
             {/* Mobile hamburger */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="lg:hidden btn btn-ghost btn-circle hover:bg-picto-primary/10 transition-all duration-300"
+              className="lg:hidden btn btn-ghost btn-circle hover:bg-white/[0.06] transition-all duration-300"
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
             >
               <div className="relative w-5 h-5 flex items-center justify-center">
                 <span
-                  className={`absolute block h-0.5 w-5 bg-gray-600 rounded-full transition-all duration-300 ${
+                  className={`absolute block h-0.5 w-5 bg-gray-400 rounded-full transition-all duration-300 ${
                     mobileOpen ? "rotate-45" : "-translate-y-1.5"
                   }`}
                 ></span>
                 <span
-                  className={`absolute block h-0.5 bg-gray-600 rounded-full transition-all duration-300 ${
+                  className={`absolute block h-0.5 bg-gray-400 rounded-full transition-all duration-300 ${
                     mobileOpen ? "w-0 opacity-0" : "w-5"
                   }`}
                 ></span>
                 <span
-                  className={`absolute block h-0.5 w-5 bg-gray-600 rounded-full transition-all duration-300 ${
+                  className={`absolute block h-0.5 w-5 bg-gray-400 rounded-full transition-all duration-300 ${
                     mobileOpen ? "-rotate-45" : "translate-y-1.5"
                   }`}
                 ></span>
@@ -279,7 +279,7 @@ const NavBar = () => {
               </div>
               <div className="text-left">
                 <p
-                  className={`font-bold bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent group-hover:from-picto-primary group-hover:via-orange-400 group-hover:to-picto-primary transition-all duration-500 ${
+                  className={`font-bold bg-gradient-to-r from-white via-gray-100 to-white/80 bg-clip-text text-transparent group-hover:from-picto-primary group-hover:via-orange-400 group-hover:to-picto-primary transition-all duration-500 ${
                     isScrolled ? "text-lg sm:text-xl" : "text-xl sm:text-2xl"
                   }`}
                 >
@@ -345,14 +345,14 @@ const NavBar = () => {
         {/* ===== MOBILE OVERLAY ===== */}
         {mobileOpen && (
           <div
-            className="fixed inset-0 bg-black/20 backdrop-blur-sm z-30 lg:hidden"
+            className="fixed inset-0 bg-black/40 backdrop-blur-sm z-30 lg:hidden"
             onClick={() => setMobileOpen(false)}
           ></div>
         )}
 
         {/* ===== MOBILE DRAWER ===== */}
         <div
-          className={`fixed top-0 right-0 h-full w-72 max-w-[85vw] bg-white/95 backdrop-blur-2xl border-l border-gray-100/80 shadow-2xl z-40 lg:hidden transition-all duration-500 ${
+          className={`fixed top-0 right-0 h-full w-72 max-w-[85vw] bg-gray-900/95 backdrop-blur-2xl border-l border-white/[0.06] shadow-2xl z-40 lg:hidden transition-all duration-500 ${
             reducedMotion
               ? mobileOpen
                 ? "translate-x-0"
@@ -363,24 +363,24 @@ const NavBar = () => {
           }`}
         >
           {/* Mobile drawer header */}
-          <div className="flex items-center justify-between p-5 border-b border-gray-100/80">
+          <div className="flex items-center justify-between p-5 border-b border-white/[0.06]">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-picto-primary to-orange-400 flex items-center justify-center text-white font-bold shadow-lg">
                 G
               </div>
               <div>
-                <p className="text-sm font-bold text-gray-900">Gihan Tharuka</p>
+                <p className="text-sm font-bold text-white">Gihan Tharuka</p>
                 <p className="text-[10px] text-gray-400">Full Stack Developer</p>
               </div>
             </div>
             <button
               onClick={() => setMobileOpen(false)}
-              className="btn btn-ghost btn-circle btn-sm hover:bg-picto-primary/10 transition-all duration-300"
+              className="btn btn-ghost btn-circle btn-sm hover:bg-white/[0.06] transition-all duration-300"
               aria-label="Close menu"
             >
               <FontAwesomeIcon
                 icon={faXmark}
-                className="text-gray-600 text-lg"
+                className="text-gray-400 text-lg"
               />
             </button>
           </div>
@@ -406,7 +406,7 @@ const NavBar = () => {
             ))}
 
             {/* Mobile Contact CTA */}
-            <li className="pt-3 border-t border-gray-100/80 mt-3">
+            <li className="pt-3 border-t border-white/[0.06] mt-3">
               {inHome ? (
                 <ScrollLink
                   to="contact"
@@ -444,8 +444,8 @@ const NavBar = () => {
           </ul>
 
           {/* Mobile drawer footer */}
-          <div className="absolute bottom-0 left-0 right-0 p-5 border-t border-gray-100/80">
-            <p className="text-[11px] text-gray-400 text-center">
+          <div className="absolute bottom-0 left-0 right-0 p-5 border-t border-white/[0.06]">
+            <p className="text-[11px] text-gray-500 text-center">
               Available for opportunities
             </p>
           </div>

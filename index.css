@@ -181,7 +181,7 @@ body {
 /* Active navigation item styles */
 .active-nav-item {
   color: var(--color-picto-primary) !important;
-  background-color: rgba(255, 122, 0, 0.05) !important;
+  background-color: rgba(255, 122, 0, 0.12) !important;
 }
 
 /* ===== MODERN PROFILE SECTION ANIMATIONS ===== */

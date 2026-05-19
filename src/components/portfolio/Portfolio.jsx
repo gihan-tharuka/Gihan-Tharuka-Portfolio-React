@@ -126,36 +126,6 @@ const Portfolio = () => {
             thoughtful architecture.
           </p>
 
-          {/* Stats bar */}
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm">
-            <div className="flex items-center gap-2 px-4 py-2 bg-white/[0.04] backdrop-blur-sm rounded-xl border border-white/[0.06]">
-              <span className="text-2xl font-bold bg-gradient-to-r from-picto-primary to-orange-400 bg-clip-text text-transparent">
-                {projects.length}
-              </span>
-              <span className="text-gray-500">Total Projects</span>
-            </div>
-            <div className="flex items-center gap-2 px-4 py-2 bg-white/[0.04] backdrop-blur-sm rounded-xl border border-white/[0.06]">
-              <span className="text-2xl font-bold bg-gradient-to-r from-picto-primary to-orange-400 bg-clip-text text-transparent">
-                {projects.filter((p) => p.visibility === "public").length}
-              </span>
-              <span className="text-gray-500">Open Source</span>
-            </div>
-            <div className="flex items-center gap-2 px-4 py-2 bg-white/[0.04] backdrop-blur-sm rounded-xl border border-white/[0.06]">
-              <span className="text-2xl font-bold bg-gradient-to-r from-picto-primary to-orange-400 bg-clip-text text-transparent">
-                {new Set(projects.map((p) => p.filtertag)).size}
-              </span>
-              <span className="text-gray-500">Technologies</span>
-            </div>
-          </div>
-
-          {/* Private repo notice */}
-          <div className="mt-6 inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-amber-500/10 to-orange-500/10 text-amber-300 font-medium rounded-2xl border border-amber-500/20 backdrop-blur-sm shadow-sm">
-            <FontAwesomeIcon icon={faLock} className="w-4 h-4 text-amber-400" />
-            <span className="text-sm">
-              Some repositories are private for client confidentiality. Click
-              "Request Code Access" to view the code.
-            </span>
-          </div>
         </div>
 
         {/* ===== FILTER BUTTONS ===== */}
@@ -242,6 +212,7 @@ const Portfolio = () => {
                           link: `/projects/${p.slug}`,
                           visibility: p.visibility,
                           filtertag: p.filtertag,
+                          links: p.links,
                         }}
                       />
                     </div>

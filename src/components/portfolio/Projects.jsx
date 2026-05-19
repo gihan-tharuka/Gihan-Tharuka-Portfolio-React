@@ -4,11 +4,16 @@ import {
   faCode,
   faExternalLinkAlt,
   faClock,
+  faEye,
 } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
 const Projects = ({ data }) => {
+  const hasLive = data?.links?.live && data.links.live !== "#!";
+  const hasRepo = data?.links?.repo;
+
   return (
     <div className="group relative h-full rounded-2xl overflow-hidden bg-white/[0.04] backdrop-blur-md hover:bg-white/[0.08] shadow-lg hover:shadow-2xl hover:shadow-picto-primary/10 transition-all duration-500 transform hover:-translate-y-2 border border-white/[0.06] hover:border-picto-primary/20">
       {/* ===== HOVER BACKGROUND EFFECTS ===== */}
@@ -106,28 +111,49 @@ const Projects = ({ data }) => {
             : data?.description}
         </p>
 
-        {/* ===== ACTION BUTTON ===== */}
-        <div className="mt-5 pt-4 border-t border-white/[0.06]">
+        {/* ===== THREE ACTION BUTTONS ===== */}
+        <div className="mt-5 pt-4 border-t border-white/[0.06] flex flex-wrap gap-2">
+          {/* Details button */}
           <Link
             to={data?.link}
-            className="group/btn relative inline-flex items-center gap-2.5 bg-gradient-to-r from-picto-primary to-orange-400 hover:from-orange-400 hover:to-picto-primary text-white font-semibold text-sm py-3 px-5 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-picto-primary/25 transform hover:scale-[1.02] active:scale-95 overflow-hidden w-full justify-center"
+            className="group/btn relative inline-flex items-center gap-2 bg-gradient-to-r from-picto-primary to-orange-400 hover:from-orange-400 hover:to-picto-primary text-white font-semibold text-xs py-2.5 px-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-picto-primary/25 transform hover:scale-[1.02] active:scale-95 overflow-hidden flex-1 justify-center"
           >
-            <span className="relative z-10 flex items-center gap-2">
-              <FontAwesomeIcon
-                icon={faExternalLinkAlt}
-                className="text-[10px]"
-              />
-              Project Details
-              <FontAwesomeIcon
-                icon={faArrowRight}
-                className="relative z-10 transition-transform duration-300 group-hover/btn:translate-x-1 text-xs"
-              />
+            <span className="relative z-10 flex items-center gap-1.5">
+              <FontAwesomeIcon icon={faEye} className="text-[10px]" />
+              Details
             </span>
-            {/* Hover overlay */}
-            <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-picto-primary opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
-            {/* Shine */}
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/15 to-transparent opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300 -skew-x-12 translate-x-full group-hover/btn:translate-x-0"></div>
           </Link>
+
+          {/* Live button */}
+          {hasLive && (
+            <a
+              href={data.links.live}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group/btn relative inline-flex items-center gap-2 bg-white/[0.08] hover:bg-white/[0.12] text-white font-semibold text-xs py-2.5 px-4 rounded-xl border border-white/[0.15] hover:border-picto-primary/30 transition-all duration-300 transform hover:scale-[1.02] active:scale-95 overflow-hidden flex-1 justify-center"
+            >
+              <span className="relative z-10 flex items-center gap-1.5">
+                <FontAwesomeIcon icon={faExternalLinkAlt} className="text-[10px]" />
+                Live
+              </span>
+            </a>
+          )}
+
+          {/* GitHub button */}
+          {hasRepo && (
+            <a
+              href={data.links.repo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group/btn relative inline-flex items-center gap-2 bg-white/[0.08] hover:bg-white/[0.12] text-white font-semibold text-xs py-2.5 px-4 rounded-xl border border-white/[0.15] hover:border-picto-primary/30 transition-all duration-300 transform hover:scale-[1.02] active:scale-95 overflow-hidden flex-1 justify-center"
+            >
+              <span className="relative z-10 flex items-center gap-1.5">
+                <FontAwesomeIcon icon={faGithub} className="text-[10px]" />
+                GitHub
+              </span>
+            </a>
+          )}
         </div>
       </div>
     </div>

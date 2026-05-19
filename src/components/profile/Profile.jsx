@@ -11,6 +11,7 @@ import {
   faClock,
   faCheckCircle,
   faArrowRight,
+  faCloud,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faReact,
@@ -37,13 +38,6 @@ const techStack = [
   { icon: faDocker, label: "Docker" },
   { icon: faAws, label: "AWS" },
   { icon: faGitAlt, label: "Git" },
-];
-
-const stats = [
-  { icon: faLayerGroup, value: "50+", label: "Projects" },
-  { icon: faClock, value: "5+", label: "Years Exp" },
-  { icon: faUsers, value: "30+", label: "Clients" },
-  { icon: faCheckCircle, value: "100%", label: "Satisfaction" },
 ];
 
 const Profile = () => {
@@ -162,31 +156,6 @@ const Profile = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-center min-h-[calc(100vh-8rem)]">
           {/* ===== LEFT: PROFILE IMAGE SECTION ===== */}
           <div className="relative order-2 lg:order-1">
-            {/* Floating experience badge */}
-            <div
-              className={`absolute -top-4 -right-4 z-20 transition-all duration-1000 delay-500 ${
-                animate
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-8"
-              } ${reducedMotion ? "" : "animate-float-slow"}`}
-            >
-              <div className="bg-gray-900/95 backdrop-blur-md rounded-2xl px-5 py-3 shadow-2xl border border-white/[0.08]">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-picto-primary to-orange-400 rounded-xl flex items-center justify-center shadow-lg">
-                    <FontAwesomeIcon icon={faStar} className="text-white text-lg" />
-                  </div>
-                  <div>
-                    <p className="text-2xl font-bold bg-gradient-to-r from-picto-primary to-orange-400 bg-clip-text text-transparent">
-                      5+ Years
-                    </p>
-                    <p className="text-xs text-gray-400 font-medium">
-                      Experience
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             {/* Image container with tilt effect */}
             <div
               className="relative w-full max-w-md mx-auto perspective-1000"
@@ -344,41 +313,6 @@ const Profile = () => {
                   Quality
                 </span>
               </div>
-            </div>
-
-            {/* Stats row */}
-            <div
-              ref={statsRef}
-              className={`mt-10 grid grid-cols-4 gap-3 transition-all duration-700 delay-500 ${
-                statsVisible
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-8"
-              }`}
-            >
-              {stats.map((stat, index) => (
-                <div
-                  key={index}
-                  className="text-center p-3 bg-white/[0.04] backdrop-blur-sm rounded-2xl border border-white/[0.06] hover:border-picto-primary/20 hover:bg-white/[0.06] hover:shadow-lg transition-all duration-300 group"
-                  style={{
-                    transitionDelay: reducedMotion
-                      ? "0ms"
-                      : `${300 + index * 100}ms`,
-                  }}
-                >
-                  <div className="w-10 h-10 mx-auto mb-2 bg-gradient-to-br from-picto-primary/20 to-orange-100/10 rounded-xl flex items-center justify-center group-hover:scale-110 group-hover:from-picto-primary/30 group-hover:to-orange-100/20 transition-all duration-300">
-                    <FontAwesomeIcon
-                      icon={stat.icon}
-                      className="text-picto-primary text-sm"
-                    />
-                  </div>
-                  <p className="text-xl font-bold bg-gradient-to-r from-white via-gray-100 to-white/80 bg-clip-text text-transparent">
-                    {stat.value}
-                  </p>
-                  <p className="text-[10px] text-gray-500 font-medium uppercase tracking-wider mt-0.5">
-                    {stat.label}
-                  </p>
-                </div>
-              ))}
             </div>
 
             {/* CTA Buttons */}

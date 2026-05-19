@@ -159,7 +159,7 @@ const Profile = () => {
           }}
         ></div>
 
-        {/* Floating geometric shapes */}
+        {/* Floating geometric shapes ss*/}
         <div className="hidden lg:block">
           <div className="absolute top-20 left-[15%] w-4 h-4 bg-picto-primary/30 rounded-full animate-float"></div>
           <div className="absolute top-40 right-[20%] w-6 h-6 border-2 border-picto-primary/20 rounded-lg rotate-45 animate-float animation-delay-2"></div>

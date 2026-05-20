@@ -108,7 +108,7 @@ const NavBar = () => {
           smooth={true}
           duration={1000}
           spy={true}
-          offset={-100}
+          offset={-80}
           activeClass="active-nav-item"
           className={inactiveLinkClasses}
         >

@@ -137,7 +137,7 @@ const Profile = () => {
     <section
       ref={sectionRef}
       className="relative min-h-screen py-12 md:py-20 overflow-hidden bg-gradient-to-br from-gray-950 via-gray-900 to-black"
-      id="profile"
+      id="introduction"
       aria-label="Profile"
     >
       {/* ===== ADVANCED BACKGROUND EFFECTS ===== */}

@@ -10,6 +10,10 @@ import garage from "../assets/images/projects/garage.jpg";
 import gym from "../assets/images/projects/gym.jpg";
 import portfolio from "../assets/images/projects/portfolio.jpg";
 import dharmaOcean from "../assets/images/projects/dharmaocean.jpg";
+import flexifitHero from "../assets/images/projects/flexifit-hero.png";
+import automateHero from "../assets/images/projects/automate-hero.png";
+import medisysHero from "../assets/images/projects/medisys-hero.png";
+import beyondseaHero from "../assets/images/projects/Beyondsea-hero.png";
 
 const projects = [
   {
@@ -190,8 +194,8 @@ const projects = [
     role: "Frontend Engineer",
     year: 2025,
     duration: "4 months",
-    heroImage: healthMonitoring,
-    gallery: [healthMonitoring],
+    heroImage: medisysHero,
+    gallery: [medisysHero],
     tools: ["React", "JavaScript", "Bootstrap 5"],
     skills: ["Cloud", "AWS", "React"],
     features: [
@@ -217,8 +221,8 @@ const projects = [
     role: "Full Stack Developer",
     year: 2024,
     duration: "6 months",
-    heroImage: gym,
-    gallery: [gym],
+    heroImage: flexifitHero,
+    gallery: [flexifitHero],
     tools: ["Laravel", "PHP", "Livewire", , "Tailwind CSS", "MySQL", "JavaScript"],
     skills: ["Full Stack", "Laravel", "PHP"],
     features: [
@@ -247,8 +251,8 @@ const projects = [
       role: "Full Stack Developer",
       year: 2025,
       duration: "5 months",
-    heroImage: garage,
-    gallery: [garage],
+    heroImage: automateHero,
+    gallery: [automateHero],
       tools: ["Laravel", "PHP", "Tailwind CSS", "JavaScript", "PostgreSQL"],
       skills: ["Full Stack", "Laravel", "PHP"],
       features: [
@@ -362,8 +366,8 @@ const projects = [
     role: "Full Stack Developer",
     year: 2025,
     duration: "4 months",
-    heroImage: tourism,
-    gallery: [tourism],
+    heroImage: beyondseaHero,
+    gallery: [beyondseaHero],
     tools: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion", "Swiper.js"],
     skills: ["Full Stack", "Next.js", "React"],
     features: [

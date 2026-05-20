@@ -233,11 +233,11 @@ const NavBar = () => {
       >
         <div className="navbar flex justify-between mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-2 lg:py-0">
           {/* ===== LEFT: LOGO + MOBILE TOGGLE ===== */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 min-w-0">
             {/* Mobile hamburger */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="lg:hidden btn btn-ghost btn-circle hover:bg-white/[0.06] transition-all duration-300"
+              className="lg:hidden btn btn-ghost btn-circle btn-sm hover:bg-white/[0.06] transition-all duration-300 flex-shrink-0"
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
             >
               <div className="relative w-5 h-5 flex items-center justify-center">
@@ -262,12 +262,12 @@ const NavBar = () => {
             {/* Logo */}
             <RouterLink
               to="/"
-              className="group flex items-center gap-3 border-0 transition-all duration-300"
+              className="group flex items-center gap-3 border-0 transition-all duration-300 min-w-0"
               onClick={handleMenuClick}
             >
-              <div className="text-left">
+              <div className="text-left min-w-0">
                 <p
-                  className={`font-bold bg-gradient-to-r from-white via-gray-100 to-white/80 bg-clip-text text-transparent group-hover:from-picto-primary group-hover:via-orange-400 group-hover:to-picto-primary transition-all duration-500 ${
+                  className={`truncate font-bold bg-gradient-to-r from-white via-gray-100 to-white/80 bg-clip-text text-transparent group-hover:from-picto-primary group-hover:via-orange-400 group-hover:to-picto-primary transition-all duration-500 ${
                     isScrolled ? "text-lg sm:text-xl" : "text-xl sm:text-2xl"
                   }`}
                 >
@@ -340,7 +340,7 @@ const NavBar = () => {
 
         {/* ===== MOBILE DRAWER ===== */}
         <div
-          className={`fixed top-0 right-0 h-full w-72 max-w-[85vw] bg-gray-900/95 backdrop-blur-2xl border-l border-white/[0.06] shadow-2xl z-40 lg:hidden transition-all duration-500 ${
+          className={`fixed top-0 right-0 h-full w-72 max-w-[85vw] bg-gray-950 backdrop-blur-2xl border-l border-white/[0.06] shadow-2xl z-40 lg:hidden transition-all duration-500 ${
             reducedMotion
               ? mobileOpen
                 ? "translate-x-0"

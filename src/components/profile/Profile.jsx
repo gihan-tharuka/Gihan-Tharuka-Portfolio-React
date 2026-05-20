@@ -173,7 +173,7 @@ const Profile = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-center min-h-[calc(100vh-8rem)]">
           {/* ===== LEFT: PROFILE IMAGE SECTION ===== */}
-          <div className="relative order-2 lg:order-1">
+          <div className="relative order-1 lg:order-1">
             {/* Image container with tilt effect */}
             <div
               className="relative w-full max-w-xs mx-auto perspective-1000"
@@ -231,7 +231,7 @@ const Profile = () => {
           </div>
 
           {/* ===== RIGHT: TEXT CONTENT ===== */}
-          <div className="relative order-1 lg:order-2">
+          <div className="relative order-2 lg:order-2">
             {/* Role badge */}
             <div
               className={`inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-picto-primary/20 via-picto-primary/10 to-transparent rounded-full border border-picto-primary/25 mb-6 transition-all duration-700 ${

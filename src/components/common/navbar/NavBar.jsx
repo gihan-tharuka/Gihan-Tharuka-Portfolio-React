@@ -14,7 +14,6 @@ import {
   faXmark,
   faDotCircle,
 } from "@fortawesome/free-solid-svg-icons";
-import favicon from "../../../assets/favicon.png";
 
 const navItems = [
   { id: 1, name: "Home", url: "introduction", icon: faHome },
@@ -229,7 +228,7 @@ const NavBar = () => {
         className={`sticky top-0 z-40 transition-all duration-500 ${
           isScrolled
             ? "bg-gray-950/90 backdrop-blur-xl border-b border-white/[0.06] shadow-lg shadow-black/20"
-            : "bg-gray-950/70 backdrop-blur-sm border-b border-white/[0.04]"
+            : "bg-gray-950/95 backdrop-blur-sm border-b border-white/[0.08]"
         }`}
       >
         <div className="navbar flex justify-between mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-2 lg:py-0">
@@ -266,19 +265,6 @@ const NavBar = () => {
               className="group flex items-center gap-3 border-0 transition-all duration-300"
               onClick={handleMenuClick}
             >
-              <div className="relative">
-                <div
-                  className={`relative overflow-hidden rounded-2xl bg-transparent transition-all duration-300 ${
-                    isScrolled ? "h-9 w-9" : "h-11 w-11 sm:h-12 sm:w-12"
-                  }`}
-                >
-                  <img
-                    src={favicon}
-                    alt="Gihan Tharuka logo"
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-              </div>
               <div className="text-left">
                 <p
                   className={`font-bold bg-gradient-to-r from-white via-gray-100 to-white/80 bg-clip-text text-transparent group-hover:from-picto-primary group-hover:via-orange-400 group-hover:to-picto-primary transition-all duration-500 ${

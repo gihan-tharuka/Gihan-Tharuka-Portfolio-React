@@ -57,7 +57,15 @@ const Portfolio = () => {
 
   const filteredProjects =
     selectedFilter === "All"
-      ? projects
+      ? projects.filter(
+          (p) =>
+            p.id === "flexi-fit" ||
+            p.id === "medisys-patient-monitoring" ||
+            p.id === "dine-mate-recommendation" ||
+            p.id === "beyond-sea-travels" ||
+            p.id === "automate-service-system" ||
+            p.id === "syos-erp-v3"
+        )
       : projects.filter((p) => p.filtertag === selectedFilter);
 
   return (

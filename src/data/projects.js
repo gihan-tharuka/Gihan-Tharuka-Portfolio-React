@@ -382,7 +382,7 @@ const projects = [
     ],
     conceptsUsed: ["Service-layer Architecture", "Modular Component Structure", "Mobile-first Design", "SEO-forward Development", "Conversion-focused UX"],
     otherServices: ["Lucide React", "React Hook Form", "Zod"],
-    links: { live: "https://beyond-sea-travels.vercel.app/", repo: "https://github.com/gihan-tharuka/Tourism-Website.git" },
+    links: { live: "https://tourism-website-pi-one.vercel.app/", repo: "https://github.com/gihan-tharuka/Tourism-Website.git" },
     seo: { description: "Beyond Sea Travels luxury tourism website case study", ogImage: tourism },
   },
 ];

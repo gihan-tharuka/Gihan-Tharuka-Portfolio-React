@@ -14,6 +14,8 @@ import flexifitHero from "../assets/images/projects/flexifit-hero.png";
 import automateHero from "../assets/images/projects/automate-hero.png";
 import medisysHero from "../assets/images/projects/medisys-hero.png";
 import beyondseaHero from "../assets/images/projects/Beyondsea-hero.png";
+import gihanPortfolioHero from "../assets/images/projects/gihantharukaportfolio.png";
+import lumeneHero from "../assets/images/projects/lumene.png";
 
 const projects = [
   {
@@ -309,8 +311,8 @@ const projects = [
     role: "Frontend Developer",
     year: 2026,
     duration: "2 months",
-    heroImage: portfolio,
-    gallery: [portfolio],
+    heroImage: gihanPortfolioHero,
+    gallery: [gihanPortfolioHero],
     tools: ["React", "Vite", "Tailwind CSS", "React Router", "JavaScript"],
     skills: ["Full Stack", "React", "Frontend"],
     features: [
@@ -323,7 +325,7 @@ const projects = [
     conceptsUsed: ["SPA Architecture", "Component-driven UI", "Responsive Design", "Accessibility", "Modern React"],
     otherServices: ["React Router", "Tailwind CSS", "Vercel Deployment"],
     links: { live: "#!", repo: "https://github.com/gihan-tharuka/Gihan-Tharuka-Portfolio-React.git" },
-    seo: { description: "Personal portfolio website for Gihan Tharuka built with React and Tailwind CSS", ogImage: portfolio },
+    seo: { description: "Personal portfolio website for Gihan Tharuka built with React and Tailwind CSS", ogImage: gihanPortfolioHero },
   },
   {
     id: "dharma-ocean-temple-website",
@@ -384,6 +386,34 @@ const projects = [
     otherServices: ["Lucide React", "React Hook Form", "Zod"],
     links: { live: "https://tourism-website-pi-one.vercel.app/", repo: "https://github.com/gihan-tharuka/Tourism-Website.git" },
     seo: { description: "Beyond Sea Travels luxury tourism website case study", ogImage: tourism },
+  },
+  {
+    id: "lumene-fashion-designer-portfolio",
+    filtertag: "React",
+    slug: "lumene-fashion-designer-portfolio",
+    title: "LUMENE - Fashion Designer Portfolio",
+    visibility: "public",
+    order: 14,
+    short: "A premium Next.js fashion portfolio for a contemporary womenswear collection, combining cinematic editorial storytelling, animated portfolio sections, collection look pages, garment costing, and responsive luxury UI design.",
+    role: "Frontend Developer",
+    year: 2026,
+    duration: "1 month",
+    heroImage: lumeneHero,
+    gallery: [lumeneHero],
+    tools: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    skills: ["Frontend", "Next.js", "React"],
+    features: [
+      { name: "Cinematic Homepage", description: "Full-screen fashion hero section with responsive artwork, editorial typography, and clear calls to action." },
+      { name: "Collection Portfolio", description: "Six-look portfolio grid with dynamic detail pages for garment concepts, materials, problems, improvements, and outcomes." },
+      { name: "Creative Process", description: "Structured storytelling for research, mood boards, color direction, textile experiments, draping, refinement, and final outcomes." },
+      { name: "Garment Pricing Archive", description: "Costing section presenting production cost, profit margin, final selling price, and collection totals." },
+      { name: "Responsive Navigation", description: "Mobile-first navigation with a full-screen menu overlay and polished section routing." },
+      { name: "Portfolio Contact Flow", description: "Contact section with email, phone, LinkedIn, downloadable portfolio PDF, and collaboration-focused calls to action." },
+    ],
+    conceptsUsed: ["App Router Architecture", "Component-driven UI", "Responsive Design", "Editorial Web Design", "Animation Systems", "Dynamic Routes"],
+    otherServices: ["Next.js Image", "Local Asset Pipeline", "Portfolio PDF Download", "Vercel Deployment"],
+    links: { live: "https://www.lumene.online/", repo: "https://github.com/gihan-tharuka/Fashion-Designer-Portfolio.git" },
+    seo: { description: "LUMENE luxury fashion designer portfolio website case study", ogImage: lumeneHero },
   },
 ];
 

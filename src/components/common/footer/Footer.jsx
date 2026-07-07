@@ -12,13 +12,15 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link as RouterLink } from "react-router-dom";
 
 const navItems = [
   { id: 1, name: "Home", url: "introduction" },
   { id: 2, name: "Portfolio", url: "portfolio" },
-  { id: 3, name: "Expertise", url: "expertise" },
-  { id: 4, name: "Services", url: "services" },
-  { id: 5, name: "Contact", url: "contact" },
+  { id: 3, name: "Writing", url: "/blog", route: true },
+  { id: 4, name: "Expertise", url: "expertise" },
+  { id: 5, name: "Services", url: "services" },
+  { id: 6, name: "Contact", url: "contact" },
 ];
 
 const servicesData = [
@@ -312,27 +314,45 @@ const Footer = () => {
                 Quick Links
               </h3>
               <div className="space-y-3">
-                {navItems.map((item, index) => (
-                  <a
-                    key={item.id}
-                    className="group flex items-center gap-3 text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-1"
-                    href={`#${item.url.toLowerCase()}`}
-                    style={{
-                      transitionDelay: reducedMotion
-                        ? "0ms"
-                        : `${index * 60}ms`,
-                    }}
-                  >
-                    <FontAwesomeIcon
-                      icon={faChevronRight}
-                      className="text-[8px] text-picto-primary/50 group-hover:text-picto-primary transition-colors duration-300"
-                    />
-                    <span className="relative">
-                      {item.name}
-                      <span className="absolute left-0 bottom-0 h-0.5 bg-gradient-to-r from-picto-primary to-orange-400 transition-all duration-300 w-0 group-hover:w-full"></span>
-                    </span>
-                  </a>
-                ))}
+                {navItems.map((item, index) => {
+                  const className =
+                    "group flex items-center gap-3 text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-1";
+                  const style = {
+                    transitionDelay: reducedMotion ? "0ms" : `${index * 60}ms`,
+                  };
+                  const content = (
+                    <>
+                      <FontAwesomeIcon
+                        icon={faChevronRight}
+                        className="text-[8px] text-picto-primary/50 group-hover:text-picto-primary transition-colors duration-300"
+                      />
+                      <span className="relative">
+                        {item.name}
+                        <span className="absolute left-0 bottom-0 h-0.5 bg-gradient-to-r from-picto-primary to-orange-400 transition-all duration-300 w-0 group-hover:w-full"></span>
+                      </span>
+                    </>
+                  );
+
+                  return item.route ? (
+                    <RouterLink
+                      key={item.id}
+                      className={className}
+                      to={item.url}
+                      style={style}
+                    >
+                      {content}
+                    </RouterLink>
+                  ) : (
+                    <a
+                      key={item.id}
+                      className={className}
+                      href={`#${item.url.toLowerCase()}`}
+                      style={style}
+                    >
+                      {content}
+                    </a>
+                  );
+                })}
               </div>
             </div>
 

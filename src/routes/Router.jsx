@@ -5,6 +5,8 @@ const Home = lazy(() => import("../pages/Home"));
 const ProjectDetail = lazy(() => import("../components/projects/ProjectDetail"));
 const ProjectsPage = lazy(() => import("../pages/Projects"));
 const About = lazy(() => import("../pages/About"));
+const Blog = lazy(() => import("../pages/Blog"));
+const BlogDetail = lazy(() => import("../pages/BlogDetail"));
 const Main = lazy(() => import("../layouts/Main"));
 
 export const router = createBrowserRouter(
@@ -32,6 +34,14 @@ export const router = createBrowserRouter(
         {
           path: "/projects/:slug",
           element: <ProjectDetail />,
+        },
+        {
+          path: "/blog",
+          element: <Blog />,
+        },
+        {
+          path: "/blog/:slug",
+          element: <BlogDetail />,
         },
       ],
     },

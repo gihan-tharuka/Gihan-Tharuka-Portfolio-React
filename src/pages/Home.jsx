@@ -1,5 +1,6 @@
 import Profile from "../components/profile/Profile";
 import Portfolio from "../components/portfolio/Portfolio";
+import LatestWriting from "../components/blog/LatestWriting";
 import WorkTogether from "../components/workTogether/WorkTogether";
 import Profession from "../components/profession/Profession";
 import Contact from "../components/contact/Contact";
@@ -11,11 +12,11 @@ const Home = () => {
     <div className="relative">
       <Profile />
       <Portfolio />
+      <LatestWriting />
       <Expertise />
       <Education />
       <WorkTogether />
-        <Profession />
-    
+      <Profession />
       <Contact />
     </div>
   );

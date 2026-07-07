@@ -8,6 +8,7 @@ import {
   faCode,
   faGraduationCap,
   faCog,
+  faPenNib,
   faEnvelope,
   faBars,
   faXmark,
@@ -17,6 +18,7 @@ import {
 const navItems = [
   { id: 1, name: "Home", url: "introduction", icon: faHome },
   { id: 3, name: "Portfolio", url: "portfolio", icon: faBriefcase },
+  { id: 7, name: "Blog", url: "/blog", icon: faPenNib },
   { id: 4, name: "Expertise", url: "expertise", icon: faCode },
   { id: 5, name: "Education", url: "education", icon: faGraduationCap },
   { id: 6, name: "Services", url: "services", icon: faCog },

@@ -449,7 +449,7 @@ const About = () => {
                 </div>
 
                 <p className="text-gray-300 mb-6 leading-relaxed text-base">
-                  A <strong>cloud-based automobile service center management system</strong> developed for a newly opened service center. Unlike FlexiFit, this project was <strong>designed, built, and deployed entirely by me</strong>.
+                  A <strong>production-style automotive service management platform</strong> for Padmasiri Auto Electricals, covering vehicles, customers, job cards, technician assignment, inventory, stock movements, invoicing, low-stock alerts, reporting, and customer portal workflows.
                 </p>
 
                 <div className="mb-6">
@@ -470,15 +470,15 @@ const About = () => {
                     </div>
                     <div className="flex items-start gap-3 p-3 bg-picto-primary/5 rounded-lg">
                       <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-gray-300">Backend and frontend development</span>
+                      <span className="text-sm text-gray-300">Laravel, Filament, Vue, Inertia, and Tailwind full stack development</span>
                     </div>
                     <div className="flex items-start gap-3 p-3 bg-orange-500/10 rounded-lg">
                       <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-gray-300">Testing, bug fixing, and performance considerations</span>
+                      <span className="text-sm text-gray-300">Event-driven low-stock alerts with observers, events, listeners, queues, and notifications</span>
                     </div>
                     <div className="flex items-start gap-3 p-3 bg-picto-primary/5 rounded-lg md:col-span-2">
                       <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-sm mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-gray-300">Deployment and hosting setup</span>
+                      <span className="text-sm text-gray-300">Authentication, role-based access, PDF invoicing, testing, and deployment readiness</span>
                     </div>
                   </div>
                 </div>
@@ -486,11 +486,11 @@ const About = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="bg-gradient-to-r from-picto-primary/5 to-picto-primary/10 p-4 rounded-xl border-l-4 border-picto-primary">
                     <p className="text-gray-300 text-sm font-semibold mb-1">Technology</p>
-                    <p className="text-gray-300 text-sm">Latest Laravel and Filament stack</p>
+                    <p className="text-gray-300 text-sm">Laravel 12, Filament, Vue, Inertia, Fortify, Jetstream</p>
                   </div>
                   <div className="bg-gradient-to-r from-orange-50 to-orange-100 p-4 rounded-xl border-l-4 border-orange-400">
                     <p className="text-gray-300 text-sm font-semibold mb-1">Deployment</p>
-                    <p className="text-gray-300 text-sm">Railway for cost efficiency and scalability</p>
+                    <p className="text-gray-300 text-sm">Database queues, Filament notifications, DomPDF, production-ready config</p>
                   </div>
                 </div>
 

@@ -18,11 +18,9 @@ import {
   faReact,
   faNodeJs,
   faLaravel,
-  faAws,
   faGitAlt,
   faPython,
   faJava,
-  faPhp,
   faCss3Alt,
 } from "@fortawesome/free-brands-svg-icons";
 import SocialMedia from "../common/socialMedia/SocialMedia";
@@ -37,25 +35,14 @@ const roles = [
 
 const techStack = [
   { icon: faReact, label: "React" },
-   { icon: faLaravel, label: "Laravel" },
-    { icon: faCode, label: "Next.js" },
-    { icon: faPython, label: "Python" },
-     { icon: faAws, label: "AWS" },
-     { icon: faPhp, label: "PHP" },
-      { icon: faJava, label: "Java" },
-      { icon: faDatabase, label: "MySQL" },
-       { icon: faCss3Alt, label: "Tailwind CSS" },
   { icon: faNodeJs, label: "Node.js" },
- 
- 
+  { icon: faLaravel, label: "Laravel" },
+  { icon: faCloud, label: "Docker" },
   { icon: faGitAlt, label: "Git" },
-  
- 
- 
- 
-  
   { icon: faDatabase, label: "PostgreSQL" },
- 
+  { icon: faPython, label: "Python" },
+  { icon: faJava, label: "Java" },
+  { icon: faCss3Alt, label: "Tailwind CSS" },
 ];
 
 const Profile = () => {

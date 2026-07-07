@@ -4,7 +4,6 @@ import { Link as RouterLink, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHome,
-  faUser,
   faBriefcase,
   faCode,
   faGraduationCap,
@@ -17,7 +16,6 @@ import {
 
 const navItems = [
   { id: 1, name: "Home", url: "introduction", icon: faHome },
-  { id: 2, name: "Experience", url: "/about", icon: faUser },
   { id: 3, name: "Portfolio", url: "portfolio", icon: faBriefcase },
   { id: 4, name: "Expertise", url: "expertise", icon: faCode },
   { id: 5, name: "Education", url: "education", icon: faGraduationCap },

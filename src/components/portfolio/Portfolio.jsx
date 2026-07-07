@@ -48,12 +48,34 @@ const Portfolio = () => {
     "All",
     "Laravel",
     "React",
+    "Node.js",
     "Java",
     "C#",
     "Python",
     "Flutter",
-    "Web Development",
   ];
+
+  const matchesProjectType = (project, type) => {
+    if (type === "Node.js") {
+      const stack = [
+        ...(project.tools || []),
+        ...(project.skills || []),
+        ...(project.conceptsUsed || []),
+        ...(project.otherServices || []),
+      ].join(" ").toLowerCase();
+
+      return (
+        stack.includes("node.js") ||
+        stack.includes("nodejs") ||
+        stack.includes("next.js") ||
+        stack.includes("nextjs") ||
+        stack.includes("nestjs") ||
+        stack.includes("express")
+      );
+    }
+
+    return project.filtertag === type;
+  };
 
   const filteredProjects =
     selectedFilter === "All"
@@ -62,11 +84,13 @@ const Portfolio = () => {
             p.id === "flexi-fit" ||
             p.id === "medisys-patient-monitoring" ||
             p.id === "dine-mate-recommendation" ||
+            p.id === "growth-os" ||
+            p.id === "lumene-fashion-designer-portfolio" ||
             p.id === "beyond-sea-travels" ||
             p.id === "automate-service-system" ||
             p.id === "syos-erp-v3"
         )
-      : projects.filter((p) => p.filtertag === selectedFilter);
+      : projects.filter((p) => matchesProjectType(p, selectedFilter));
 
   return (
     <section
@@ -147,7 +171,7 @@ const Portfolio = () => {
             const projectCount =
               type === "All"
                 ? projects.length
-                : projects.filter((p) => p.filtertag === type).length;
+                : projects.filter((p) => matchesProjectType(p, type)).length;
 
             return (
               <button

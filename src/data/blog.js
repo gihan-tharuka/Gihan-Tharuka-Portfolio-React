@@ -1,5 +1,134 @@
 const blogPosts = [
   {
+    id: "growthos-career-chaos-full-stack-product",
+    slug: "building-growthos-turning-career-chaos-into-a-full-stack-product",
+    title: "Building GrowthOS: Turning Career Chaos Into a Full-Stack Product",
+    description:
+      "How a personal need to organize job applications, portfolio work, side projects, learning, and fitness-inspired consistency became a full-stack productivity product.",
+    date: "2026-07-08",
+    readingTime: "7 min read",
+    category: "Project Breakdown",
+    tags: ["GrowthOS", "Next.js", "NestJS", "TypeScript", "Prisma", "Product Thinking"],
+    featured: true,
+    relatedProjectSlug: "growth-os",
+    links: {
+      github: "https://github.com/gihan-tharuka/GrowthOS.git",
+    },
+    content: [
+      {
+        type: "paragraph",
+        text:
+          "GrowthOS did not start as a portfolio project. It started because I was overwhelmed.",
+      },
+      {
+        type: "paragraph",
+        text:
+          "While applying for software engineering roles, I found myself juggling job applications, resume updates, portfolio improvements, side projects, and learning new technologies. I was doing the work, but everything felt scattered. I needed a better system to manage my goals, break them into smaller tasks, assign dates, prioritize what mattered, and track progress.",
+      },
+      {
+        type: "paragraph",
+        text:
+          "At the same time, fitness has been a big part of my life for more than a decade. Working out and focusing on nutrition taught me that progress does not come from motivation alone. It comes from systems, consistency, tracking, and feedback.",
+      },
+      {
+        type: "callout",
+        text:
+          "That idea became the root of GrowthOS: turn scattered effort into a system that creates clarity, consistency, and momentum.",
+      },
+      {
+        type: "heading",
+        text: "The Deeper Vision",
+      },
+      {
+        type: "paragraph",
+        text:
+          "Before GrowthOS, I had an idea to build an end-to-end personal training platform one day. I have helped a few friends with their fitness goals, and that experience showed me that people need more than workout and meal plans. They need onboarding, assessments, check-ins, tracking, accountability, habits, and continuous improvement.",
+      },
+      {
+        type: "paragraph",
+        text:
+          "But before building a system for others, I realized I needed to build one for myself.",
+      },
+      {
+        type: "paragraph",
+        text:
+          "GrowthOS began as a personal productivity system for my software engineering journey, but the long-term vision is bigger: a platform for productivity, fitness, habits, coaching, and self-improvement.",
+      },
+      {
+        type: "heading",
+        text: "Building The First Version",
+      },
+      {
+        type: "paragraph",
+        text:
+          "At first, I had many feature ideas: Pomodoro timers, analytics, habit tracking, weekly reviews, and fitness tracking. But I knew building everything at once would slow me down.",
+      },
+      {
+        type: "paragraph",
+        text:
+          "So I focused on the smallest useful version: creating projects, breaking them into tasks, planning work by date, and tracking progress.",
+      },
+      {
+        type: "list",
+        items: [
+          "Authentication and protected user data.",
+          "Project and task management workflows.",
+          "Planner views for assigning work to specific dates.",
+          "Task status updates and timer-related state.",
+          "A responsive frontend that could grow with the product.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Choosing The Tech Stack",
+      },
+      {
+        type: "paragraph",
+        text:
+          "I considered full-stack Next.js, Laravel with React, Firebase, Supabase, Neon, MongoDB, and PostgreSQL. But I wanted GrowthOS to help me grow as a developer, not just choose the easiest path.",
+      },
+      {
+        type: "paragraph",
+        text:
+          "While analyzing job descriptions, I noticed many full-stack roles expected TypeScript, Next.js, backend APIs, database design, testing, deployment, and sometimes NestJS. Since I wanted stronger hands-on experience with NestJS, I chose Next.js for the frontend, NestJS for the backend, PostgreSQL with Prisma, Zustand for state management, Playwright for testing, Vercel, GCP Cloud Run, and Neon.",
+      },
+      {
+        type: "subheading",
+        text: "Why This Stack Helped",
+      },
+      {
+        type: "list",
+        items: [
+          "Next.js gave me a modern frontend structure for protected app pages and product UI.",
+          "NestJS helped me practice structured backend architecture with controllers, services, validation, and guards.",
+          "Prisma and PostgreSQL made ownership-based data modeling clearer.",
+          "Zustand kept shared client state simple for auth, planner date, and timer flows.",
+          "Playwright helped me think about real user journeys instead of only individual functions.",
+          "Vercel, Cloud Run, and Neon pushed me to think beyond local development.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "What I Learned",
+      },
+      {
+        type: "paragraph",
+        text:
+          "GrowthOS taught me that building locally and preparing for production are very different. I learned more about NestJS structure, user-owned data, frontend state, CORS, environment variables, Docker, GCP deployment, and testing real user flows.",
+      },
+      {
+        type: "paragraph",
+        text:
+          "I also used ChatGPT and Codex as learning partners to break down problems, compare solutions, debug issues, and understand new concepts faster.",
+      },
+      {
+        type: "callout",
+        text:
+          "GrowthOS is still a work in progress, but that is what makes it valuable. It reflects how I want to grow as a developer: by turning problems into systems, challenges into learning, and ideas into real products.",
+      },
+    ],
+  },
+  {
     id: "beyond-sea-full-stack-tourism-platform",
     slug: "building-beyond-sea-travels-full-stack-tourism-platform",
     title: "How I Built Beyond Sea Travels: A Full-Stack Tourism Platform",
